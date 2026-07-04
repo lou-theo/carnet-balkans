@@ -1,0 +1,613 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}</style></head><body>
+<title>Carnet Balkans — Serbie · Bosnie · Monténégro</title>
+<style>
+  :root {
+    --sea-deep:#0d3b45; --sea:#17606d; --sea-light:#3b8b96;
+    --paper:#f4efe2; --paper-2:#efe7d5; --card:#fffdf7;
+    --ink:#182a2c; --muted:#5d7176; --line:#cdc1a6; --line-soft:#e4dcc8;
+    --coral:#cf5f38; --green:#4f8a5b; --amber:#c88a2e;
+    --srb:#c88a2e; --bih:#17606d; --mne:#cf5f38;
+    --focus:#cf5f38;
+  }
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; overflow-x:hidden; }
+  body { margin:0; background:var(--paper); color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; line-height:1.55; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
+  img, svg, video, table { max-width:100%; }
+  section, header, .mapwrap, .mapcard, .chips { min-width:0; }
+  a { color:inherit; }
+  :focus-visible { outline:2.5px solid var(--focus); outline-offset:2px; border-radius:3px; }
+  .skip { position:absolute; left:-999px; top:8px; background:var(--ink); color:#fff; padding:8px 14px; border-radius:8px; z-index:100; text-decoration:none; font-weight:600; }
+  .skip:focus { left:8px; }
+  .wrap { max-width:1240px; margin:0 auto; padding:clamp(18px,3.5vw,56px); }
+
+  .eyebrow { font-size:11.5px; letter-spacing:.2em; text-transform:uppercase; color:var(--coral); font-weight:700; margin:0 0 12px; }
+  h1 { font-family:Georgia,"Times New Roman",serif; font-weight:700; font-size:clamp(32px,6.5vw,58px); line-height:1; margin:0 0 16px; text-wrap:balance; letter-spacing:-.02em; }
+  .lede { font-size:clamp(15.5px,2vw,18px); color:var(--muted); max-width:60ch; margin:0; }
+  .lede b { color:var(--ink); font-weight:600; }
+  .chips { display:flex; flex-wrap:wrap; gap:9px; margin:24px 0 0; }
+  .chip { font-size:12.5px; font-weight:600; background:var(--card); border:1px solid var(--line); border-radius:999px; padding:7px 14px; }
+  .chip b { color:var(--coral); }
+
+  nav.toc { position:sticky; top:0; z-index:30; margin:30px calc(clamp(18px,3.5vw,56px) * -1) 0; padding:11px clamp(18px,3.5vw,56px); background:rgba(244,239,226,.9); backdrop-filter:blur(10px); border-top:1px solid var(--line); border-bottom:1px solid var(--line); display:flex; gap:8px; overflow-x:auto; scrollbar-width:thin; }
+  nav.toc a { flex:0 0 auto; font-size:13px; font-weight:600; text-decoration:none; color:var(--muted); border:1px solid transparent; border-radius:999px; padding:6px 13px; transition:background .15s,color .15s,border-color .15s; white-space:nowrap; }
+  nav.toc a:hover { color:var(--ink); background:var(--card); border-color:var(--line-soft); }
+  nav.toc a[aria-current="true"] { color:#fff; background:var(--sea); border-color:var(--sea); }
+
+  section { scroll-margin-top:60px; }
+  .sechead { display:flex; align-items:flex-end; gap:14px; margin:58px 0 4px; }
+  .sechead .idx { font-family:Georgia,serif; font-size:15px; color:var(--coral); font-weight:700; line-height:1; padding-bottom:5px; font-variant-numeric:tabular-nums; }
+  h2.sec { font-family:Georgia,serif; font-size:clamp(23px,3.8vw,34px); margin:0; letter-spacing:-.02em; }
+  .secsub { color:var(--muted); font-size:14.5px; margin:8px 0 22px; max-width:66ch; }
+
+  .mapwrap { display:grid; grid-template-columns:minmax(0,1.25fr) minmax(0,1fr); gap:22px; align-items:start; }
+  @media(max-width:840px){ .mapwrap{ grid-template-columns:minmax(0,1fr); } }
+  .mapcard { border:1px solid var(--line); border-radius:16px; overflow:hidden; box-shadow:0 18px 44px -26px rgba(13,59,69,.6); background:#e9dfc8; }
+  svg.map { display:block; width:100%; height:auto; }
+  .mt { paint-order:stroke; stroke:var(--paper); stroke-width:3px; stroke-linejoin:round; }
+  .mt-sea { paint-order:stroke; stroke:#0c3540; stroke-width:2.6px; stroke-linejoin:round; }
+  .maplegend { display:flex; flex-wrap:wrap; gap:9px 16px; align-items:center; padding:13px 16px; background:var(--paper); border-top:1px solid var(--line); font-size:12px; color:var(--muted); }
+  .maplegend .grp { display:flex; align-items:center; gap:6px; }
+  .dotc { width:20px; height:20px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; color:#fff; font-family:Georgia,serif; font-weight:700; font-size:11px; }
+  .dotc.bih{background:var(--bih)}
+  .ap { display:inline-block; width:16px; height:16px; border-radius:50%; }
+  .ap.g{background:var(--green)} .ap.c{background:var(--coral)}
+  .sw { width:20px; height:0; display:inline-block; } .sw.bus{border-top:3px solid #b34d2c} .sw.train{border-top:3px dashed var(--sea)} .sw.bord{border-top:2px dashed #8a7a52}
+
+  .keyline { display:flex; gap:11px; padding:11px 0; border-bottom:1px solid var(--line-soft); font-size:13.5px; align-items:center; }
+  .keyline:last-child{border-bottom:0}
+  .keyline .kb { flex:0 0 auto; width:26px; height:26px; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; font-family:Georgia,serif; font-weight:700; font-size:13px; }
+  .kb.srb{background:var(--srb)} .kb.bih{background:var(--bih)} .kb.mne{background:var(--mne)}
+  .keyline .kt b{ font-weight:700; } .keyline .kt span{ color:var(--muted); }
+
+  .tl { position:relative; margin:22px 0 0; max-width:840px; }
+  .stop { position:relative; padding:0 0 6px 58px; }
+  .stop::before { content:""; position:absolute; left:21px; top:8px; bottom:-6px; width:2px; background:var(--line-soft); }
+  .stop:last-child::before{display:none}
+  .num { position:absolute; left:4px; top:2px; width:34px; height:34px; border-radius:50%; color:#fff; font-family:Georgia,serif; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center; box-shadow:0 3px 8px -3px rgba(0,0,0,.4); }
+  .stop.mne .num{background:var(--mne)} .stop.bih .num{background:var(--bih)} .stop.srb .num{background:var(--srb)}
+  .stopcard { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 17px; margin-bottom:6px; }
+  .stophead { display:flex; flex-wrap:wrap; align-items:baseline; gap:8px 12px; margin-bottom:6px; }
+  .stophead .city { font-family:Georgia,serif; font-size:19px; font-weight:700; }
+  .stophead .days { font-size:12px; font-weight:700; color:#fff; border-radius:6px; padding:2px 9px; font-variant-numeric:tabular-nums; }
+  .stop.mne .days{background:var(--mne)} .stop.bih .days{background:var(--bih)} .stop.srb .days{background:var(--srb)}
+  .stophead .flag{font-size:13px}
+  .stopcard p{margin:0;font-size:14px}
+  .stopcard .do{color:var(--muted);font-size:13.5px;margin-top:5px}
+  .stopcard .do b{color:var(--ink)}
+  .leg{padding:7px 0 7px 58px;position:relative;font-size:12.5px;color:var(--muted)}
+  .leg::before{content:"";position:absolute;left:21px;top:0;bottom:0;width:2px;background:var(--line-soft)}
+  .leg .mode{font-weight:700;color:var(--ink)} .leg .mode.train{color:var(--sea)} .leg.long .mode{color:var(--coral)}
+
+  details { background:var(--card); border:1px solid var(--line); border-radius:12px; margin-bottom:10px; overflow:hidden; }
+  details[open] { box-shadow:0 8px 24px -16px rgba(13,59,69,.45); }
+  summary { cursor:pointer; padding:15px 18px; font-weight:600; font-size:15px; list-style:none; display:flex; align-items:center; gap:11px; }
+  summary::-webkit-details-marker{display:none}
+  summary .chev { margin-left:auto; color:var(--muted); transition:transform .22s; flex:0 0 auto; }
+  details[open] summary .chev{ transform:rotate(90deg); }
+  .acc-body { padding:2px 18px 16px; font-size:14px; }
+  .acc-body p{margin:0 0 9px} .acc-body p:last-child{margin:0}
+  summary .fl { font-size:12.5px; color:var(--muted); font-weight:500; }
+
+  .panel { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:20px 22px; }
+  .panel.flights { border-left:4px solid var(--coral); }
+  .two { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+  @media(max-width:560px){ .two{grid-template-columns:1fr} }
+  .fbox { background:var(--paper); border:1px solid var(--line); border-radius:10px; padding:13px 15px; }
+  .fbox .t{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700}
+  .fbox .apn{font-family:Georgia,serif;font-size:18px;font-weight:700;margin:3px 0}
+  .fbox .pr{font-weight:700;color:var(--coral);font-variant-numeric:tabular-nums}
+  .fbox .dt{font-size:12.5px;color:var(--muted);margin-top:4px}
+
+  .tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;max-width:640px}
+  table{border-collapse:collapse;width:100%;min-width:440px;font-size:14px;background:var(--card)}
+  th,td{text-align:left;padding:11px 15px;border-bottom:1px solid var(--line-soft)}
+  th{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700;background:var(--paper)}
+  tr:last-child td{border-bottom:none}
+  td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+  tr.total td{font-weight:700;background:var(--paper);border-top:2px solid var(--line)}
+  .total .n{color:var(--coral)}
+
+  .acctools{ display:flex; gap:8px; margin:0 0 14px; }
+  .btn{ font-size:12.5px; font-weight:600; color:var(--ink); background:var(--card); border:1px solid var(--line); border-radius:8px; padding:7px 13px; cursor:pointer; transition:.15s; }
+  .btn:hover{ border-color:var(--coral); color:var(--coral); }
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:14px}
+  .cty{background:var(--paper);border:1px solid var(--line);border-radius:11px;padding:14px 16px;display:flex;flex-direction:column}
+  .ctyh{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-bottom:6px}
+  .ctyh .nm{font-family:Georgia,serif;font-size:18px;font-weight:700}
+  .ctyh .dur{font-size:11.5px;color:var(--muted);margin-left:auto;white-space:nowrap}
+  .vb{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:5px;margin-bottom:10px;align-self:flex-start}
+  .vb.must{background:var(--coral);color:#fff}.vb.nice{background:#f6ecd4;color:#8a5e12;border:1px solid #e6d3a3}.vb.meh{background:var(--paper-2);color:#5d7176;border:1px solid var(--line)}
+  .cty ul{margin:0 0 10px;padding-left:17px;font-size:13px}.cty li{margin-bottom:3px}
+  .cty .meta{margin-top:auto;font-size:12px;color:var(--muted);border-top:1px solid var(--line-soft);padding-top:9px;display:grid;gap:3px}
+  .cty .meta b{color:var(--ink);font-weight:600}
+  .tagl{font-style:italic;color:var(--muted);font-size:12.5px;margin:0 0 9px}
+
+  .note{border-radius:10px;padding:13px 16px;font-size:13.5px;margin-bottom:16px}
+  .note.myth{background:#e5f0e6;border:1px solid #b6d6bd}.note.myth b{color:#2f6b3c}
+  .note.warn{background:#fbe9e0;border:1px solid #ecc3ae}.note.warn b{color:#a8451f}
+
+  .foodgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  @media(max-width:560px){.foodgrid{grid-template-columns:1fr}}
+  .fcol{border-radius:10px;padding:13px 15px;font-size:13px}
+  .fcol.yes{background:#e5f0e6;border:1px solid #b6d6bd}.fcol.no{background:#fbe9e0;border:1px solid #ecc3ae}
+  .fcol h4{margin:0 0 7px;font-size:13.5px}.fcol.yes h4{color:#2f6b3c}.fcol.no h4{color:#a8451f}
+  .fcol ul{margin:0;padding-left:17px}.fcol li{margin-bottom:3px}
+
+  .links{display:flex;flex-wrap:wrap;gap:9px;margin-top:6px}
+  .lnk{font-size:13px;font-weight:600;text-decoration:none;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:8px;padding:8px 13px;transition:.15s}
+  .lnk:hover{border-color:var(--coral);color:var(--coral)}
+  .foot{margin-top:50px;font-size:12px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px}
+
+  #top{ position:fixed; right:20px; bottom:20px; z-index:40; width:44px; height:44px; border-radius:50%; background:var(--sea); color:#fff; border:none; font-size:18px; cursor:pointer; box-shadow:0 8px 20px -6px rgba(13,59,69,.6); opacity:0; pointer-events:none; transition:opacity .25s, transform .25s; transform:translateY(8px); }
+  #top.show{ opacity:1; pointer-events:auto; transform:translateY(0); }
+
+  @media(max-width:560px){
+    .eyebrow{ letter-spacing:.1em; font-size:10.5px; }
+    .mapwrap{ gap:14px; }
+    .maplegend{ font-size:11px; gap:7px 12px; }
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    *,*::before,*::after{ transition:none !important; animation:none !important; }
+  }
+</style>
+
+<a href="#carte" class="skip">Aller au contenu</a>
+
+<div class="wrap">
+  <header>
+    <p class="eyebrow">30 juillet → 14 août 2026 · Reims · solo · sans voiture</p>
+    <h1>Carnet Balkans</h1>
+    <p class="lede">Serbie, Bosnie et Monténégro en <b>16 jours</b> — du nord jusqu'à la côte adriatique, tout en bus et train. Où atterrir, quoi voir, quoi manger, réunis en une page.</p>
+    <div class="chips">
+      <span class="chip">🇷🇸🇧🇦🇲🇪 <b>3 pays</b></span>
+      <span class="chip"><b>16 j</b> · 7 étapes</span>
+      <span class="chip">🚌 <b>sans voiture</b></span>
+      <span class="chip">✈️ open-jaw <b>Belgrade → Tivat</b></span>
+      <span class="chip">💶 <b>~1 300–2 000 €</b></span>
+    </div>
+  </header>
+
+  <nav class="toc" aria-label="Sommaire">
+    <a href="#carte">Carte</a>
+    <a href="#itineraire">Itinéraire</a>
+    <a href="#aeroports">Aéroports</a>
+    <a href="#budget">Budget</a>
+    <a href="#activites">Activités</a>
+    <a href="#bouffe">Bouffe</a>
+    <a href="#pratique">Pratique</a>
+  </nav>
+
+  <!-- ============ CARTE ============ -->
+  <section id="carte">
+    <div class="sechead"><span class="idx">01</span><h2 class="sec">La carte</h2></div>
+    <p class="secsub">Carte réelle (projetée) : <b>frontières</b> pays (Drina au nord, crêtes au sud), <b>villes principales</b>, <b>capitales ★</b>, et le trajet nord → sud. Les <b>pastilles ✈</b> = aéroports (vert = moins cher, corail = plus cher).</p>
+    <div class="mapwrap">
+      <div class="mapcard">
+        <svg class="map" viewBox="0 0 740 850" role="img" aria-label="Carte de la Serbie, Bosnie-Herzégovine et Monténégro avec frontières, villes principales et le trajet du voyage">
+          <defs>
+            <linearGradient id="seaG" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#0b323b"/><stop offset="1" stop-color="#1c6672"/></linearGradient>
+            <filter id="blur"><feGaussianBlur stdDeviation="34"/></filter>
+          </defs>
+          <rect x="0" y="0" width="740" height="850" fill="#eadfc6"/>
+
+          <!-- country tint blobs -->
+          <g filter="url(#blur)" opacity=".22">
+            <ellipse cx="625" cy="200" rx="150" ry="185" fill="#c88a2e"/>
+            <ellipse cx="255" cy="290" rx="175" ry="200" fill="#17606d"/>
+            <ellipse cx="452" cy="650" rx="140" ry="150" fill="#cf5f38"/>
+          </g>
+
+          <!-- sea -->
+          <path d="M0,410 L39,424 L305,617 L376,661 L414,678 L425,698 L465,742 L483,779 L400,850 L0,850 Z" fill="url(#seaG)"/>
+          <g stroke="#5aa0aa" stroke-width="1.2" fill="none" opacity=".33" stroke-linecap="round">
+            <path d="M70,610 q20,-9 40,0 t40,0"/><path d="M120,700 q20,-9 40,0 t40,0"/><path d="M40,520 q20,-9 40,0 t40,0"/>
+          </g>
+          <path d="M0,410 L39,424 L305,617 L376,661 L414,678 L425,698 L465,742 L483,779 L400,850" fill="none" stroke="#fff" stroke-width="1.6" opacity=".5"/>
+          <text class="mt-sea" x="95" y="640" fill="#cfeaec" font-family="Georgia,serif" font-style="italic" font-size="18" letter-spacing="2" opacity=".9" transform="rotate(-40 95 640)">Adriatique</text>
+
+          <!-- borders (dashed) -->
+          <g fill="none" stroke="#7d6d45" stroke-width="2.2" stroke-dasharray="7 5" opacity=".8" stroke-linejoin="round">
+            <path d="M578,0 L560,120 L545,255 L505,363 L495,431"/>
+            <path d="M495,431 L452,505 L408,578 L372,645 L360,672"/>
+            <path d="M495,431 L548,520 L575,640 L595,850"/>
+          </g>
+          <circle cx="495" cy="431" r="3" fill="#7d6d45"/>
+
+          <!-- country labels -->
+          <text class="mt" x="600" y="320" font-family="Georgia,serif" font-size="15" font-weight="700" fill="#9c7b3a" letter-spacing="2">SERBIE</text>
+          <text class="mt" x="150" y="250" font-family="Georgia,serif" font-size="15" font-weight="700" fill="#2b6a75" letter-spacing="2">BOSNIE</text>
+          <text class="mt" x="505" y="590" font-family="Georgia,serif" font-size="15" font-weight="700" fill="#b0502e" letter-spacing="2">MONTÉNÉGRO</text>
+
+          <!-- route -->
+          <polyline points="685,132 497,363 356,346 259,461 345,603 414,667 425,698" fill="none" stroke="#b34d2c" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+          <line x1="356" y1="346" x2="259" y2="461" stroke="#17606d" stroke-width="4" stroke-dasharray="2 7" stroke-linecap="round"/>
+
+          <!-- secondary cities (dot + label) -->
+          <g fill="#3a4a4c">
+            <circle cx="584" cy="30" r="3.5"/><text class="mt" x="596" y="34" font-size="12" fill="#3a4a4c">Novi Sad</text>
+            <circle cx="159" cy="141" r="3.5"/><text class="mt" x="171" y="145" font-size="12" fill="#3a4a4c">Banja Luka</text>
+            <circle cx="442" cy="589" r="3.5"/><text class="mt" x="452" y="586" font-size="12" fill="#3a4a4c">Nikšić</text>
+            <circle cx="470" cy="504" r="3.5"/><text class="mt" x="480" y="508" font-size="12" fill="#3a4a4c">Žabljak</text>
+            <circle cx="465" cy="742" r="3.5"/><text class="mt" x="475" y="746" font-size="12" fill="#3a4a4c">Bar</text>
+            <circle cx="483" cy="779" r="3.5"/><text class="mt" x="493" y="783" font-size="12" fill="#3a4a4c">Ulcinj</text>
+            <circle cx="376" cy="661" r="3.5"/><line x1="376" y1="661" x2="352" y2="642" stroke="#3a4a4c" stroke-width="1" opacity=".5"/><text class="mt" x="349" y="640" font-size="11.5" text-anchor="end" fill="#3a4a4c">H. Novi</text>
+            <circle cx="39" cy="424" r="3.5"/><text class="mt" x="51" y="428" font-size="12" fill="#3a4a4c">Split</text>
+          </g>
+
+          <!-- airports (leader + marker + label). tier color -->
+          <!-- TZL green -->
+          <circle cx="398" cy="193" r="6.5" fill="#4f8a5b" stroke="#fff" stroke-width="2"/>
+          <text class="mt" x="410" y="190" font-size="11.5" font-weight="700" fill="#2f6b3c">✈ TZL · 120–250€</text>
+          <!-- DBV amber (Dubrovnik) -->
+          <circle cx="305" cy="617" r="6" fill="#c88a2e" stroke="#fff" stroke-width="2"/>
+          <text class="mt" x="298" y="633" font-size="11" font-weight="700" text-anchor="end" fill="#8a5e12">✈ DBV</text>
+          <!-- TIV coral, leader to label lower-left -->
+          <line x1="401" y1="665" x2="300" y2="720" stroke="#cf5f38" stroke-width="1.3" opacity=".7"/>
+          <circle cx="401" cy="665" r="6.5" fill="#cf5f38" stroke="#fff" stroke-width="2"/>
+          <text class="mt" x="296" y="724" font-size="11.5" font-weight="700" text-anchor="end" fill="#b0502e">✈ TIV · 300–450€</text>
+
+          <!-- ROUTE STOPS (numbered) + capitals + their airports -->
+          <!-- 1 Belgrade ★ (BEG coral) -->
+          <circle cx="685" cy="132" r="15" fill="#c88a2e" stroke="#fff" stroke-width="3"/>
+          <text x="685" y="137" text-anchor="middle" fill="#fff" font-family="Georgia,serif" font-weight="700" font-size="15">1</text>
+          <text class="mt" x="667" y="128" text-anchor="end" font-family="Georgia,serif" font-weight="700" font-size="14.5" fill="#182a2c">★ Belgrade</text>
+          <text class="mt" x="667" y="145" text-anchor="end" font-size="11.5" font-weight="700" fill="#b0502e">✈ BEG · 250–400€</text>
+          <!-- 2 Višegrad -->
+          <circle cx="497" cy="363" r="14" fill="#17606d" stroke="#fff" stroke-width="3"/>
+          <text x="497" y="368" text-anchor="middle" fill="#fff" font-family="Georgia,serif" font-weight="700" font-size="14">2</text>
+          <text class="mt" x="515" y="368" text-anchor="start" font-family="Georgia,serif" font-weight="700" font-size="14" fill="#182a2c">Višegrad</text>
+          <!-- 3 Sarajevo ★ (SJJ coral) -->
+          <circle cx="356" cy="346" r="15" fill="#17606d" stroke="#fff" stroke-width="3"/>
+          <text x="356" y="351" text-anchor="middle" fill="#fff" font-family="Georgia,serif" font-weight="700" font-size="15">3</text>
+          <text class="mt" x="356" y="325" text-anchor="middle" font-family="Georgia,serif" font-weight="700" font-size="14.5" fill="#182a2c">★ Sarajevo</text>
+          <text class="mt" x="338" y="360" text-anchor="end" font-size="11" font-weight="700" fill="#b0502e">✈ SJJ</text>
+          <!-- 4 Mostar -->
+          <circle cx="259" cy="461" r="15" fill="#17606d" stroke="#fff" stroke-width="3"/>
+          <text x="259" y="466" text-anchor="middle" fill="#fff" font-family="Georgia,serif" font-weight="700" font-size="15">4</text>
+          <text class="mt" x="241" y="466" text-anchor="end" font-family="Georgia,serif" font-weight="700" font-size="14.5" fill="#182a2c">Mostar</text>
+          <!-- 5 Trebinje -->
+          <circle cx="345" cy="603" r="14" fill="#17606d" stroke="#fff" stroke-width="3"/>
+          <text x="345" y="608" text-anchor="middle" fill="#fff" font-family="Georgia,serif" font-weight="700" font-size="14">5</text>
+          <text class="mt" x="327" y="608" text-anchor="end" font-family="Georgia,serif" font-weight="700" font-size="14" fill="#182a2c">Trebinje</text>
+          <!-- 6 Kotor -->
+          <circle cx="414" cy="667" r="14" fill="#cf5f38" stroke="#fff" stroke-width="3"/>
+          <text x="414" y="672" text-anchor="middle" fill="#fff" font-family="Georgia,serif" font-weight="700" font-size="14">6</text>
+          <text class="mt" x="406" y="655" text-anchor="end" font-family="Georgia,serif" font-weight="700" font-size="13.5" fill="#182a2c">Kotor</text>
+          <!-- 7 Budva -->
+          <circle cx="425" cy="698" r="10" fill="#cf5f38" stroke="#fff" stroke-width="2.5"/>
+          <text x="425" y="702" text-anchor="middle" fill="#fff" font-family="Georgia,serif" font-weight="700" font-size="11">7</text>
+          <text class="mt" x="440" y="710" text-anchor="start" font-family="Georgia,serif" font-weight="700" font-size="13" fill="#182a2c">Budva</text>
+          <!-- Podgorica ★ (TGD green) -->
+          <circle cx="492" cy="666" r="6.5" fill="#4f8a5b" stroke="#fff" stroke-width="2"/>
+          <text class="mt" x="504" y="662" text-anchor="start" font-family="Georgia,serif" font-weight="700" font-size="13" fill="#182a2c">★ Podgorica</text>
+          <text class="mt" x="504" y="678" text-anchor="start" font-size="11.5" font-weight="700" fill="#2f6b3c">✈ TGD · 150–250€</text>
+        </svg>
+        <div class="maplegend">
+          <span class="grp"><span class="dotc bih">3</span> étape (numérotée)</span>
+          <span class="grp">★ capitale</span>
+          <span class="grp"><span class="ap g"></span> aéroport moins cher</span>
+          <span class="grp"><span class="ap c"></span> plus cher</span>
+          <span class="grp"><span class="sw bord"></span> frontière</span>
+          <span class="grp"><span class="sw bus"></span> bus</span>
+          <span class="grp"><span class="sw train"></span> train</span>
+        </div>
+      </div>
+      <aside>
+        <div class="keyline"><span class="kb srb">1</span><span class="kt"><b>Belgrade</b> 🇷🇸 · 3 n<br><span>Entrée · fête, splavovi</span></span></div>
+        <div class="keyline"><span class="kb bih">2</span><span class="kt"><b>Višegrad</b> 🇧🇦 · 1 n<br><span>Pont sur la Drina (UNESCO)</span></span></div>
+        <div class="keyline"><span class="kb bih">3</span><span class="kt"><b>Sarajevo</b> 🇧🇦 · 3 n<br><span>Histoire, Baščaršija</span></span></div>
+        <div class="keyline"><span class="kb bih">4</span><span class="kt"><b>Mostar</b> 🇧🇦 · 2 n<br><span>Stari Most, Blagaj</span></span></div>
+        <div class="keyline"><span class="kb bih">5</span><span class="kt"><b>Trebinje</b> 🇧🇦 · 1 n<br><span>Vieille ville, vins</span></span></div>
+        <div class="keyline"><span class="kb mne">6</span><span class="kt"><b>Kotor</b> 🇲🇪 · 3 n<br><span>Baie UNESCO, base</span></span></div>
+        <div class="keyline"><span class="kb mne">7</span><span class="kt"><b>Budva</b> 🇲🇪 · 2 n<br><span>Plage, nuit · sortie Tivat</span></span></div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============ ITINÉRAIRE ============ -->
+  <section id="itineraire">
+    <div class="sechead"><span class="idx">02</span><h2 class="sec">L'itinéraire, jour par jour</h2></div>
+    <p class="secsub">Les longs trajets sont coupés en étapes — un seul dépasse 3 h.</p>
+    <div class="tl">
+      <div class="stop srb"><div class="num">1</div><div class="stopcard">
+        <div class="stophead"><span class="city">Belgrade</span><span class="flag">🇷🇸</span><span class="days">J1–3</span></div>
+        <p>Arrivée en vol (30 juillet). Capitale électrique, nightlife au top.</p>
+        <p class="do"><b>À faire :</b> Kalemegdan au coucher, Skadarlija, splavovi (clubs flottants), Novi Sad en day-trip (train Soko).</p>
+      </div></div>
+      <div class="leg long">🚌 <span class="mode">Bus Belgrade → Višegrad</span> · ~5 h 30 · ~25 € <em>(coupe le 8 h direct)</em></div>
+      <div class="stop bih"><div class="num">2</div><div class="stopcard">
+        <div class="stophead"><span class="city">Višegrad</span><span class="flag">🇧🇦</span><span class="days">J4</span></div>
+        <p>Étape-coupure : le pont sur la Drina (UNESCO), superbe le soir.</p>
+        <p class="do"><b>À faire :</b> le pont au crépuscule, Andrićgrad (ville-décor de Kusturica).</p>
+      </div></div>
+      <div class="leg">🚌 <span class="mode">Bus Višegrad → Sarajevo</span> · ~2 h 30 · ~6 € <em>(2/j ~08:00 & 13:10 · billet la veille)</em></div>
+      <div class="stop bih"><div class="num">3</div><div class="stopcard">
+        <div class="stophead"><span class="city">Sarajevo</span><span class="flag">🇧🇦</span><span class="days">J5–7</span></div>
+        <p>Là où l'Orient rencontre l'Occident. Histoire dense, nuit animée.</p>
+        <p class="do"><b>À faire :</b> Baščaršija, tunnel de l'espoir, Žuta Tabija, téléphérique Trebević, war/walking tour.</p>
+      </div></div>
+      <div class="leg">🚆 <span class="mode train">Train panoramique Sarajevo → Mostar</span> · 07:15, ~2 h · ~8 € · vallée de la Neretva <em>(circule 26/06→30/08)</em></div>
+      <div class="stop bih"><div class="num">4</div><div class="stopcard">
+        <div class="stophead"><span class="city">Mostar</span><span class="flag">🇧🇦</span><span class="days">J8–9</span></div>
+        <p>Le pont ottoman sur l'émeraude de la Neretva.</p>
+        <p class="do"><b>À faire :</b> Stari Most + plongeurs, minaret Koski, day-trips Blagaj / Počitelj / Kravice.</p>
+      </div></div>
+      <div class="leg">🚌 <span class="mode">Bus Mostar → Trebinje</span> · ~3 h · ~15 € <em>(2/j ~07:30 / 17:30)</em></div>
+      <div class="stop bih"><div class="num">5</div><div class="stopcard">
+        <div class="stophead"><span class="city">Trebinje</span><span class="flag">🇧🇦</span><span class="days">J10</span></div>
+        <p>Petite ville ottomane sans foule, région viticole d'Herzégovine.</p>
+        <p class="do"><b>À faire :</b> vieille ville, pont Arslanagić, monastère Gračanica, route des vins (Tvrdoš).</p>
+      </div></div>
+      <div class="leg">🚌 <span class="mode">Bus Trebinje → Herceg Novi → Kotor</span> · ~2 h 15 · ~15 € <em>(via Herceg Novi ; frontière : ~1 h de marge)</em></div>
+      <div class="stop mne"><div class="num">6</div><div class="stopcard">
+        <div class="stophead"><span class="city">Kotor</span><span class="flag">🇲🇪</span><span class="days">J11–13</span></div>
+        <p>Baie type fjord classée UNESCO. Base parfaite pour rayonner.</p>
+        <p class="do"><b>À faire :</b> forteresse San Giovanni, vieille ville, Perast en day-trip (bus 2 €), kayak.</p>
+      </div></div>
+      <div class="leg">🚌 <span class="mode">Bus Kotor → Budva</span> · 40 min · ~4 €</div>
+      <div class="stop mne"><div class="num">7</div><div class="stopcard">
+        <div class="stophead"><span class="city">Budva</span><span class="flag">🇲🇪</span><span class="days">J14–15</span></div>
+        <p>Plages + vie nocturne pour finir. Vol retour depuis Tivat (8 km) le 14 août.</p>
+        <p class="do"><b>À faire :</b> vieille ville, Mogren Beach, Sveti Stefan, sorties.</p>
+      </div></div>
+    </div>
+    <div class="note myth" style="margin-top:18px;max-width:840px">🏔️ <b>Variante nature :</b> remplacer les 2 nuits de Budva par 2 nuits à <b>Žabljak (Durmitor)</b> après Kotor — canyon de la Tara, rafting, lac Noir. Sortie alors par <b>Podgorica</b> plutôt que Tivat. Tu gagnes la montagne, tu perds la fin plage.</div>
+  </section>
+
+  <!-- ============ AÉROPORTS ============ -->
+  <section id="aeroports">
+    <div class="sechead"><span class="idx">03</span><h2 class="sec">Les aéroports</h2></div>
+    <p class="secsub">Billet <b>open-jaw</b> : entrer par un bout, sortir par l'autre. Prix A/R indicatifs août — déplie chaque aéroport pour le détail.</p>
+    <div class="panel flights" style="margin-bottom:18px;max-width:760px">
+      <div class="two">
+        <div class="fbox"><div class="t">🛬 Entrée · 30 juil</div><div class="apn">Paris → Belgrade</div><div class="pr">~250–400 €</div><div class="dt">Air Serbia (CDG, dès ~343 €) ou Wizz (Beauvais), directs.</div></div>
+        <div class="fbox"><div class="t">🛫 Sortie · 14 août</div><div class="apn">Tivat → Paris</div><div class="pr">~150–250 €</div><div class="dt">Transavia (Orly), direct saisonnier, 8 km de Kotor/Budva.</div></div>
+      </div>
+      <div class="links" style="margin-top:14px">
+        <a class="lnk" href="https://www.google.com/travel/explore" target="_blank" rel="noopener">Google Flights — Explore ↗</a>
+        <a class="lnk" href="https://www.skyscanner.fr/" target="_blank" rel="noopener">Skyscanner — multi-villes ↗</a>
+      </div>
+    </div>
+
+    <details><summary><span class="ap g" style="width:11px;height:11px;border-radius:50%"></span> Podgorica (TGD) 🇲🇪 · 150–250 € <span class="fl">— le moins cher</span><span class="chev">▸</span></summary>
+      <div class="acc-body"><p><b>Wizz Air depuis Beauvais</b> (direct, 2h35, <b>Lun/Mer/Ven</b>, base Wizz dès 30/03/2026) ou Air Montenegro depuis CDG (1 vol/sem). Vol le moins cher vers le Monténégro.</p><p><b>Accès côte :</b> ~1h30 de Kotor (train jusqu'à Podgorica ville à 100 m, puis bus). Bagage soute Wizz +40–80 €. À privilégier comme <b>sortie</b> si variante Durmitor.</p></div>
+    </details>
+    <details><summary><span class="ap g" style="width:11px;height:11px;border-radius:50%"></span> Tuzla (TZL) 🇧🇦 · 120–250 € <span class="fl">— ultra low-cost</span><span class="chev">▸</span></summary>
+      <div class="acc-body"><p><b>Wizz Air depuis Beauvais.</b> Le billet le moins cher, mais Tuzla est au nord-est → ~2h30 de bus jusqu'à Sarajevo. Pertinent seulement en <b>entrée</b> si tu abandonnes la Serbie.</p></div>
+    </details>
+    <details><summary><span class="ap c" style="width:11px;height:11px;border-radius:50%"></span> Belgrade (BEG) 🇷🇸 · 250–400 € <span class="fl">— entrée recommandée</span><span class="chev">▸</span></summary>
+      <div class="acc-body"><p><b>Air Serbia (CDG, direct ~2h25, dès ~343 €) ou Wizz Air (Beauvais, moins cher)</b>. Entrée nord du corridor : capitale festive puis descente vers la côte.</p></div>
+    </details>
+    <details><summary><span class="ap c" style="width:11px;height:11px;border-radius:50%"></span> Sarajevo (SJJ) 🇧🇦 · 250–400 € <span class="fl">— surtout escale</span><span class="chev">▸</span></summary>
+      <div class="acc-body"><p>Peu de directs depuis Paris (surtout escale → plus long/cher). Bon comme <b>étape terrestre</b>, mauvais comme point de vol.</p></div>
+    </details>
+    <details><summary><span class="ap c" style="width:11px;height:11px;border-radius:50%"></span> Tivat (TIV) 🇲🇪 · 300–450 € <span class="fl">— sortie recommandée (confort)</span><span class="chev">▸</span></summary>
+      <div class="acc-body"><p><b>Transavia depuis Orly</b>, direct 2h30, saisonnier (jusqu'au 31/10/2026), 3 vols/sem. Plus cher mais <b>te pose sur la côte</b> : 8 km de Kotor, taxi ~15 €. Orly plus accessible que Beauvais.</p></div>
+    </details>
+    <details><summary><span class="ap" style="width:11px;height:11px;border-radius:50%;background:var(--amber)"></span> Dubrovnik (DBV) 🇭🇷 · 180–320 € <span class="fl">— porte bonus (hors 3 pays)</span><span class="chev">▸</span></summary>
+      <div class="acc-body"><p>Pas dans les 3 pays cibles, mais utile : vol direct pas cher (Transavia/easyJet Orly, Ryanair Beauvais), <b>super hub</b> — bus ~2h vers Mostar/Trebinje, ferry/bus vers Kotor. Alternative d'entrée par le sud.</p></div>
+    </details>
+  </section>
+
+  <!-- ============ BUDGET ============ -->
+  <section id="budget">
+    <div class="sechead"><span class="idx">04</span><h2 class="sec">Le budget</h2></div>
+    <p class="secsub">16 jours, profil confortable (auberges sociales + quelques privés et excursions). Estimations.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Poste</th><th class="n">Estimation</th></tr></thead>
+        <tbody>
+          <tr><td>Vols open-jaw (Belgrade + Tivat)</td><td class="n">350–550 €</td></tr>
+          <tr><td>Transferts France (Reims↔Paris + aéroport)</td><td class="n">50–90 €</td></tr>
+          <tr><td>Auberges (15 nuits, ~18–25 €)</td><td class="n">270–450 €</td></tr>
+          <tr><td>Repas &amp; boissons (~20–32 €/j)</td><td class="n">320–510 €</td></tr>
+          <tr><td>Bus + trains intercités</td><td class="n">90–130 €</td></tr>
+          <tr><td>Activités &amp; excursions</td><td class="n">200–300 €</td></tr>
+          <tr class="total"><td>Total</td><td class="n">~1 300–2 000 €</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ============ ACTIVITÉS ============ -->
+  <section id="activites">
+    <div class="sechead"><span class="idx">05</span><h2 class="sec">Les activités</h2></div>
+    <p class="secsub">Verdict par ville — <b class="vb must" style="margin:0;font-size:9px;vertical-align:middle">Incontournable</b> · <b class="vb nice" style="margin:0;font-size:9px;vertical-align:middle">Sympa</b> · <b class="vb meh" style="margin:0;font-size:9px;vertical-align:middle">Dispensable</b>. Déplie chaque pays.</p>
+    <div class="acctools"><button class="btn" data-acc="all-open" type="button">Tout déplier</button><button class="btn" data-acc="all-close" type="button">Tout replier</button></div>
+
+    <details open class="acc-act"><summary>🇷🇸 Serbie <span class="fl">— Belgrade au cœur</span><span class="chev">▸</span></summary>
+      <div class="acc-body">
+        <div class="note myth"><b>Sans voiture, c'est bon :</b> les villes ne sont pas loin (train rapide Soko Belgrade–Novi Sad–Subotica, Niš en bus/train, Zlatibor ~3-4h). Seuls les sites nature isolés (Uvac, Đavolja Varoš, Đerdap complet, Fruška Gora) demandent un tour organisé.</div>
+        <div class="grid">
+          <div class="cty"><div class="ctyh"><span class="nm">Belgrade</span><span class="dur">3–4 nuits</span></div><span class="vb must">Incontournable</span>
+            <p class="tagl">Capitale brute et électrique, nightlife d'Europe.</p>
+            <ul><li>Kalemegdan au coucher (gratuit)</li><li>Skadarlija, Temple Saint-Sava</li><li>Splavovi (clubs flottants, pic en août)</li><li>Zemun/Gardoš, Ada Ciganlija (baignade)</li></ul>
+            <div class="meta"><span>🛏️ El Diablo, Up Hostel, Hostelche</span><span>🚍 Transports publics gratuits (2025-26)</span></div>
+          </div>
+          <div class="cty"><div class="ctyh"><span class="nm">Novi Sad</span><span class="dur">day-trip</span></div><span class="vb nice">Sympa</span>
+            <p class="tagl">Élégante, posée, austro-hongroise.</p>
+            <ul><li>Forteresse de Petrovaradin</li><li>Centre piéton, quais du Danube</li></ul>
+            <div class="meta"><span>🚆 Train Soko ~36 min</span><span>⚠️ EXIT déplacé (→ Ulcinj MNE) en 2026</span></div>
+          </div>
+          <div class="cty"><div class="ctyh"><span class="nm">Ouest (Zlatibor)</span><span class="dur">2-3j / tour</span></div><span class="vb meh">Dispensable*</span>
+            <p class="tagl">Nature, train Šargan Eight, village Kusturica.</p>
+            <ul><li>Šargan Eight (1500 RSD, réserver)</li><li>Drvengrad, canyon d'Uvac</li></ul>
+            <div class="meta"><span>*Seulement si +2-3j nature via tours</span></div>
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <details class="acc-act"><summary>🇧🇦 Bosnie-Herzégovine <span class="fl">— 2 gros incontournables</span><span class="chev">▸</span></summary>
+      <div class="acc-body">
+        <div class="note warn"><b>À savoir :</b> statut du Franz Ferdinand Hostel (Sarajevo) <b>incertain</b> — vérifier avant de réserver. Sarajevo a 2 gares routières (principale vs Lukavica/Est) — ne pas se tromper.</div>
+        <div class="grid">
+          <div class="cty"><div class="ctyh"><span class="nm">Sarajevo</span><span class="dur">3–4 j</span></div><span class="vb must">Incontournable</span>
+            <p class="tagl">Orient rencontre Occident. Histoire, nuit animée.</p>
+            <ul><li>Baščaršija (bazar ottoman)</li><li>Tunnel de l'espoir (~10 €)</li><li>Žuta Tabija (coucher soleil)</li><li>Téléphérique + piste bobsleigh 1984</li></ul>
+            <div class="meta"><span>🛏️ Balkan Han (social), War Hostel</span><span>🎬 Film Festival 14–21 août 2026</span></div>
+          </div>
+          <div class="cty"><div class="ctyh"><span class="nm">Mostar</span><span class="dur">2–3 j</span></div><span class="vb must">Incontournable</span>
+            <p class="tagl">Le pont ottoman sur la Neretva.</p>
+            <ul><li>Stari Most + plongeurs (dès ~30 €)</li><li>Minaret Koski (vue sur le pont)</li><li>Blagaj (bus n°10/12, ~1 €)</li><li>Počitelj + Kravice (tour ~50 €)</li></ul>
+            <div class="meta"><span>🛏️ Majda's, Nina, Miran</span><span>☀️ 35 °C+ → clim, visites tôt</span></div>
+          </div>
+          <div class="cty"><div class="ctyh"><span class="nm">Trebinje</span><span class="dur">1–2 j</span></div><span class="vb nice">Sympa</span>
+            <p class="tagl">La plus jolie ville de RS, sans foule, vin.</p>
+            <ul><li>Vieille ville, pont Arslanagić</li><li>Monastère Gračanica (vue)</li><li>Route des vins (Tvrdoš)</li></ul>
+            <div class="meta"><span>🛏️ Red Door, Polako (relax)</span></div>
+          </div>
+          <div class="cty"><div class="ctyh"><span class="nm">Višegrad</span><span class="dur">½–1 j</span></div><span class="vb nice">Sympa*</span>
+            <p class="tagl">Machine à remonter le temps (Andrić).</p>
+            <ul><li>Pont Mehmed Paša (UNESCO)</li><li>Andrićgrad (Kusturica)</li></ul>
+            <div class="meta"><span>*Logique en transit Sarajevo↔Serbie</span></div>
+          </div>
+          <div class="cty"><div class="ctyh"><span class="nm">Alternatives</span><span class="dur">bonus</span></div><span class="vb nice">Selon route</span>
+            <ul><li><b>Jajce</b> — cascade en centre-ville, lacs Pliva (axe nord)</li><li><b>Blagaj/Počitelj/Kravice</b> — excursions Mostar</li><li><b>Lac Boračko</b> — baignade (galère sans voiture)</li></ul>
+          </div>
+        </div>
+      </div>
+    </details>
+
+    <details class="acc-act"><summary>🇲🇪 Monténégro <span class="fl">— le plus riche (7 spots)</span><span class="chev">▸</span></summary>
+      <div class="acc-body">
+        <div class="note warn"><b>Août sur la côte :</b> Kotor/Budva saturées 10h-15h (paquebots), prix +30-50 %. Forteresse au lever, baignade à midi, ville le soir — et équilibrer avec la montagne (Durmitor, frais).</div>
+        <div class="grid">
+          <div class="cty"><div class="ctyh"><span class="nm">Kotor</span><span class="dur">2–3 n (base)</span></div><span class="vb must">Incontournable</span>
+            <p class="tagl">Cité de pierre dans une baie type fjord.</p>
+            <ul><li>Forteresse San Giovanni (15 € en été, gratuit tôt)</li><li>Vieille ville UNESCO</li><li>Kayak (~20 €), tour bateau (~25 €)</li></ul>
+            <div class="meta"><span>🛏️ Old Town Hostel (18-40 ans), Montenegro Hostel 4U</span><span>🚌 Hub bus + bateau</span></div>
+          </div>
+          <div class="cty"><div class="ctyh"><span class="nm">Perast</span><span class="dur">½ journée</span></div><span class="vb must">Incontournable</span>
+            <p class="tagl">Village baroque minuscule dans la baie.</p>
+            <ul><li>Notre-Dame-du-Rocher (bateau ~5 €)</li><li>Clocher, baignade jetées</li></ul>
+            <div class="meta"><span>🚌 Blue Line Kotor ~2 €/35 min</span></div>
+          </div>
+          <div class="cty"><div class="ctyh"><span class="nm">Budva</span><span class="dur">2–4 n</span></div><span class="vb must">Incontournable</span>
+            <p class="tagl">Le « Miami monténégrin » : plage + clubbing.</p>
+            <ul><li>Vieille ville + Citadela</li><li>Mogren Beach</li><li>Top Hill (méga-club, ~10-20 €)</li></ul>
+            <div class="meta"><span>🛏️ Freedom (n°1 solo/fête)</span></div>
+          </div>
+          <div class="cty"><div class="ctyh"><span class="nm">Durmitor / Žabljak</span><span class="dur">2–3 n</span></div><span class="vb must">Incontournable</span>
+            <p class="tagl">Montagne, air frais, contrepoint à la côte.</p>
+            <ul><li>Lac Noir (~30 min à pied), canyon de la Tara</li><li>Rafting (~60-70 €), parc 5 €/j</li></ul>
+            <div class="meta"><span>🛏️ Hikers Den (partenaires rando)</span><span>🚌 Via Podgorica ~3h</span></div>
+          </div>
+          <div class="cty"><div class="ctyh"><span class="nm">Lovćen + Cetinje</span><span class="dur">1 journée</span></div><span class="vb must">Incontournable*</span>
+            <p class="tagl">Ancienne capitale + haute montagne.</p>
+            <ul><li>Mausolée de Njegoš (461 marches)</li><li>Cetinje, village Njeguši (pršut)</li></ul>
+            <div class="meta"><span>🚐 *Mausolée = tour organisé (dès ~79 € Kotor) ou taxi</span></div>
+          </div>
+          <div class="cty"><div class="ctyh"><span class="nm">Lac de Skadar</span><span class="dur">day-trip</span></div><span class="vb must">Incontournable</span>
+            <p class="tagl">Nature paisible, contraste avec la côte.</p>
+            <ul><li>Croisière nénuphars (~15-20 €, + parc 5 €)</li><li>Vin de Crmnica (Vranac), kayak</li></ul>
+            <div class="meta"><span>🚆 Arrêt train Bar-Podgorica (Virpazar)</span></div>
+          </div>
+          <div class="cty"><div class="ctyh"><span class="nm">Herceg Novi</span><span class="dur">1 jour</span></div><span class="vb nice">Sympa</span>
+            <p class="tagl">Forteresses, sur la route de Trebinje.</p>
+            <ul><li>Forte Mare, Kanli Kula (vues)</li><li>Bateau Grotte Bleue + Mamula</li></ul>
+            <div class="meta"><span>🚌 Bus Kotor excellent. Base à Kotor</span></div>
+          </div>
+          <div class="cty"><div class="ctyh"><span class="nm">Ulcinj</span><span class="dur">2–3 j</span></div><span class="vb nice">Sympa →+</span>
+            <p class="tagl">Dépaysant (~70 % albanais), bazar ottoman.</p>
+            <ul><li>Château Kalaja sur la mer</li><li>Velika Plaža (12-14 km, kitesurf)</li></ul>
+            <div class="meta"><span>🛏️ Pirate Backpackers (hub social)</span><span>🎉 EXIT festival y déménage en 2026</span></div>
+          </div>
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <!-- ============ BOUFFE ============ -->
+  <section id="bouffe">
+    <div class="sechead"><span class="idx">06</span><h2 class="sec">La bouffe</h2></div>
+    <p class="secsub">Calibré pour toi : bœuf/poulet ✓, poisson peu, abats ✗. Ces cuisines = grillade + pain + fromage → taillé pour ton profil. Seul piège : la côte monténégrine (poisson).</p>
+    <details open class="acc-food"><summary>🇷🇸 Serbie <span class="fl">— royaume de la grillade</span><span class="chev">▸</span></summary>
+      <div class="acc-body"><div class="foodgrid">
+        <div class="fcol yes"><h4>✓ Commande</h4><ul><li><b>Ćevapi</b> — saucisses de viande hachée grillées</li><li><b>Pljeskavica</b> — galette de viande géante</li><li><b>Karađorđeva šnicla</b> — escalope roulée farcie, panée</li><li><b>Ražnjići</b> (brochettes), <b>leskovački voz</b> (plateau)</li><li>Kajmak, ajvar, gibanica</li></ul></div>
+        <div class="fcol no"><h4>✗ Évite (abats)</h4><ul><li><b>Škembići</b> (tripes), <b>pihtije</b>/<b>švargla</b> (tête)</li><li>Menus : <b>jetra</b> (foie), <b>bubrezi</b> (rognons), <b>mozak</b> (cervelle)</li></ul></div>
+      </div></div>
+    </details>
+    <details class="acc-food"><summary>🇧🇦 Bosnie <span class="fl">— héritage ottoman</span><span class="chev">▸</span></summary>
+      <div class="acc-body"><div class="foodgrid">
+        <div class="fcol yes"><h4>✓ Commande</h4><ul><li><b>Ćevapi de Sarajevo</b> (les meilleurs, pain somun)</li><li><b>Burek</b>/sirnica/zeljanica (feuilletés)</li><li><b>Begova čorba</b> — soupe de poulet</li><li><b>Klepe</b>, <b>sogan-dolma</b>, <b>ispod sača</b></li><li>Tufahije, baklava</li></ul></div>
+        <div class="fcol no"><h4>✗ Évite</h4><ul><li><b>Škembići</b> (tripes), <b>jetra</b> (foie)</li><li>Poisson peu présent → pas un risque</li><li>Ćevapi souvent bœuf/agneau</li></ul></div>
+      </div></div>
+    </details>
+    <details class="acc-food"><summary>🇲🇪 Monténégro <span class="fl">— montagne vs côte</span><span class="chev">▸</span></summary>
+      <div class="acc-body"><div class="foodgrid">
+        <div class="fcol yes"><h4>✓ Commande (montagne/Njeguši)</h4><ul><li><b>Njeguški stek</b> — escalope veau farcie pršut+fromage</li><li><b>Njeguški pršut</b> (jambon cru fumé)</li><li><b>Podgorički popeci</b> (escalopes farcies)</li><li><b>Ispod sača</b>, kačamak, cicvara</li></ul></div>
+        <div class="fcol no"><h4>✗ Évite (côte)</h4><ul><li><b>Buzara</b> (moules), <b>crni rižot</b> (encre seiche)</li><li><b>Riblja čorba</b> (soupe poisson)</li><li>Abats : škembići, jetra</li><li>👉 Sur la côte, vise les grillades</li></ul></div>
+      </div></div>
+    </details>
+    <div class="note myth" style="margin-top:4px">🥃 <b>Boissons &amp; sucré :</b> rakija (šljivovica de prune, loza de raisin), café bosnien en džezva, bières (Jelen/Lav, Sarajevsko/Nektar, Nikšićko), vins (Žilavka/Blatina d'Herzégovine, Vranac monténégrin), desserts (baklava, tufahije, palačinke). <b>Où :</b> kafana, ćevabdžinica, aščinica (midi), pekara (~2-3 €), konoba. Repas assis ~8-13 €.</div>
+  </section>
+
+  <!-- ============ PRATIQUE ============ -->
+  <section id="pratique">
+    <div class="sechead"><span class="idx">07</span><h2 class="sec">Pratique</h2></div>
+    <p class="secsub">Trajets, frontières, argent — les infos annexes, dépliables.</p>
+    <details class="acc-prat"><summary>🚌 Trajets &amp; réservation<span class="chev">▸</span></summary>
+      <div class="acc-body">
+        <p><b>Bus = colonne vertébrale.</b> Réserver en ligne sur GetByBus, BalkanViator, FlixBus, Busticket4.me. Petites lignes (Višegrad→Sarajevo, Mostar→Trebinje, étapes MNE) : <b>billet au guichet la veille</b>, arriver 30-45 min avant en août. Bagage soute ~1 €/pièce cash.</p>
+        <p><b>Trains :</b> Sarajevo→Mostar (07:15, panoramique, <b>saisonnier 26/06→30/08</b>, billet en gare). Le train Belgrade-Bar est spectaculaire mais off-corridor (non réservable en ligne).</p>
+        <div class="links">
+          <a class="lnk" href="https://getbybus.com" target="_blank" rel="noopener">GetByBus ↗</a>
+          <a class="lnk" href="https://balkanviator.com/en/" target="_blank" rel="noopener">BalkanViator ↗</a>
+          <a class="lnk" href="https://global.flixbus.com" target="_blank" rel="noopener">FlixBus ↗</a>
+          <a class="lnk" href="https://www.blueline-mne.com" target="_blank" rel="noopener">Blue Line ↗</a>
+        </div>
+      </div>
+    </details>
+    <details class="acc-prat"><summary>🛂 Frontières<span class="chev">▸</span></summary>
+      <div class="acc-body">
+        <p><b>Bosnie → Monténégro (Hum/Šćepan Polje)</b> = un des postes les plus calmes des Balkans, mais reste un contrôle : <b>budgéter ~1 h de marge</b> en été (route de montagne lente). Nettement mieux que <b>Serbie → Monténégro en bus</b> (1-3 h d'attente aux gros postes l'été) — d'où le sens par la Bosnie.</p>
+        <p>⚠️ Éviter les bus côtiers routés par la Croatie (frontière Schengen + attentes). Passeport/CI à portée dans le bus.</p>
+      </div>
+    </details>
+    <details class="acc-prat"><summary>💶 Argent<span class="chev">▸</span></summary>
+      <div class="acc-body"><p>Serbie = <b>dinar (RSD)</b> · Bosnie = <b>mark convertible (BAM)</b> · Monténégro = <b>euro €</b>. TPE rares sur les lignes locales et petits sites → retirer du cash à chaque frontière.</p></div>
+    </details>
+    <details class="acc-prat"><summary>📅 À reconfirmer avant le départ<span class="chev">▸</span></summary>
+      <div class="acc-body"><p>Prix vols réels sur tes dates · statut du Franz Ferdinand Hostel · horaires bus/train (saisonniers, publiés tard) · positions des splavovi (berges réaménagées) · <b>point de jonction avec ton amie</b> (peut inverser le sens du voyage).</p></div>
+    </details>
+  </section>
+
+  <p class="foot">Faits vérifiés/consolidés (recherches croisées 2025-2026, sites officiels transport). Prix, horaires et ouvertures saisonniers → à reconfirmer la semaine du départ. Carte projetée (projection équirectangulaire, positions réelles) mais schématique : tracés de frontières et côte simplifiés. Branche ouest de la Serbie (Zlatibor/Mokra Gora vers la Bosnie) écartée : connexions trop fragiles.</p>
+</div>
+
+<button id="top" aria-label="Retour en haut" title="Retour en haut">↑</button>
+
+<script>
+(function(){
+  var secs = Array.prototype.slice.call(document.querySelectorAll('section[id]'));
+  var links = {};
+  document.querySelectorAll('nav.toc a').forEach(function(a){ links[a.getAttribute('href').slice(1)] = a; });
+  function spy(){
+    var y = window.scrollY + 130, cur = secs[0];
+    secs.forEach(function(s){ if(s.offsetTop <= y) cur = s; });
+    Object.keys(links).forEach(function(k){ links[k].removeAttribute('aria-current'); });
+    if(cur && links[cur.id]) links[cur.id].setAttribute('aria-current','true');
+  }
+  window.addEventListener('scroll', spy, { passive:true });
+  window.addEventListener('resize', spy);
+  spy();
+
+  var top = document.getElementById('top');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 600) top.classList.add('show'); else top.classList.remove('show');
+  }, { passive:true });
+  top.addEventListener('click', function(){ window.scrollTo({ top:0, behavior:'smooth' }); });
+
+  document.querySelectorAll('[data-acc]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var open = btn.getAttribute('data-acc') === 'all-open';
+      document.querySelectorAll('details.acc-act').forEach(function(d){ d.open = open; });
+    });
+  });
+})();
+</script>
+
+</body></html>
