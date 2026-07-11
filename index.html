@@ -1,4 +1,6 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}</style></head><body>
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}</style>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+</head><body>
 <title>Carnet Balkans — Bosnie · Serbie · Hongrie</title>
 <style>
   :root {
@@ -42,9 +44,6 @@
   .mapwrap { display:grid; grid-template-columns:minmax(0,1.25fr) minmax(0,1fr); gap:22px; align-items:start; }
   @media(max-width:840px){ .mapwrap{ grid-template-columns:minmax(0,1fr); } }
   .mapcard { border:1px solid var(--line); border-radius:16px; overflow:hidden; box-shadow:0 18px 44px -26px rgba(13,59,69,.6); background:#e9dfc8; }
-  svg.map { display:block; width:100%; height:auto; }
-  .mt { paint-order:stroke; stroke:var(--paper); stroke-width:3px; stroke-linejoin:round; }
-  .mt-sea { paint-order:stroke; stroke:#0c3540; stroke-width:2.6px; stroke-linejoin:round; }
   .maplegend { display:flex; flex-wrap:wrap; gap:9px 16px; align-items:center; padding:13px 16px; background:var(--paper); border-top:1px solid var(--line); font-size:12px; color:var(--muted); }
   .maplegend .grp { display:flex; align-items:center; gap:6px; }
   .dotc { width:20px; height:20px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; color:#fff; font-family:Georgia,serif; font-weight:700; font-size:11px; }
@@ -52,6 +51,18 @@
   .ap { display:inline-block; width:16px; height:16px; border-radius:50%; }
   .ap.g{background:var(--green)} .ap.c{background:var(--coral)}
   .sw { width:20px; height:0; display:inline-block; } .sw.bus{border-top:3px solid #b34d2c} .sw.train{border-top:3px dashed var(--sea)} .sw.bord{border-top:2px dashed #8a7a52}
+
+  #map { height:460px; width:100%; background:#e9dfc8; }
+  .leaflet-container { font:inherit; background:#e9dfc8; }
+  .pin-num { border-radius:50%; border:3px solid #fff; box-shadow:0 3px 8px -2px rgba(0,0,0,.5); display:flex; align-items:center; justify-content:center; font-family:Georgia,serif; font-weight:700; font-size:15px; color:#fff; }
+  .pin-num.bih{background:var(--bih)} .pin-num.srb{background:var(--srb)} .pin-num.hun{background:var(--coral)}
+  .pin-entry { border-radius:50%; border:2.5px solid #fff; background:var(--green); box-shadow:0 2px 6px -1px rgba(0,0,0,.5); display:flex; align-items:center; justify-content:center; font-size:12px; }
+  .pin-dot { border-radius:50%; border:2px solid #fff; background:var(--muted); box-shadow:0 1px 4px rgba(0,0,0,.4); }
+  .leaflet-popup-content-wrapper { border-radius:12px; }
+  .leaflet-popup-content { margin:11px 14px; font-size:13.5px; line-height:1.45; }
+  .leaflet-popup-content .pc { font-family:Georgia,serif; font-size:15px; font-weight:700; color:var(--ink); }
+  .leaflet-popup-content .ps { font-size:12px; color:var(--muted); }
+  .leaflet-popup-content .pl { font-weight:600; color:var(--coral); text-decoration:none; }
 
   .keyline { display:flex; gap:11px; padding:11px 0; border-bottom:1px solid var(--line-soft); font-size:13.5px; align-items:center; }
   .keyline:last-child{border-bottom:0}
@@ -173,84 +184,21 @@
   <!-- ============ CARTE ============ -->
   <section id="carte">
     <div class="sechead"><span class="idx">01</span><h2 class="sec">La carte</h2></div>
-    <p class="secsub">Le <b>fil du voyage, sud → nord</b> : de Mostar (solo) à Budapest, en remontant par Sarajevo et Belgrade. Départ le 2 août, sortie par Budapest le 18.</p>
+    <p class="secsub">Le <b>fil du voyage, sud → nord</b> : de Mostar à Budapest, en remontant par Sarajevo et Belgrade. Départ le 2 août, sortie par Budapest le 18.</p>
     <div class="mapwrap">
       <div class="mapcard">
-        <svg class="map" viewBox="0 0 620 780" role="img" aria-label="Carte schématique du voyage : Mostar, Sarajevo (Bosnie), Belgrade (Serbie), Budapest (Hongrie), du sud au nord">
-          <defs>
-            <linearGradient id="seaG" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#0b323b"/><stop offset="1" stop-color="#1c6672"/></linearGradient>
-            <filter id="blur"><feGaussianBlur stdDeviation="30"/></filter>
-          </defs>
-          <rect x="0" y="0" width="620" height="780" fill="#eadfc6"/>
-
-          <!-- country tint blobs -->
-          <g filter="url(#blur)" opacity=".2">
-            <ellipse cx="350" cy="120" rx="205" ry="120" fill="#c88a2e"/>
-            <ellipse cx="455" cy="330" rx="150" ry="175" fill="#c8951f"/>
-            <ellipse cx="195" cy="480" rx="175" ry="190" fill="#17606d"/>
-          </g>
-
-          <!-- sea (Adriatique) -->
-          <path d="M0,540 L110,585 L250,675 L300,720 L300,780 L0,780 Z" fill="url(#seaG)"/>
-          <path d="M0,540 L110,585 L250,675 L300,720" fill="none" stroke="#fff" stroke-width="1.6" opacity=".5"/>
-          <text class="mt-sea" x="88" y="695" fill="#cfeaec" font-family="Georgia,serif" font-style="italic" font-size="17" letter-spacing="2" opacity=".9" transform="rotate(-42 88 695)">Adriatique</text>
-
-          <!-- borders (dashed) -->
-          <g fill="none" stroke="#7d6d45" stroke-width="2.2" stroke-dasharray="7 5" opacity=".75" stroke-linejoin="round">
-            <path d="M95,200 Q305,176 520,206"/>
-            <path d="M322,188 L320,300 L300,432 L233,560"/>
-          </g>
-
-          <!-- country labels -->
-          <text class="mt" x="282" y="72" font-family="Georgia,serif" font-size="15" font-weight="700" fill="#9c7b3a" letter-spacing="2">HONGRIE</text>
-          <text class="mt" x="470" y="235" font-family="Georgia,serif" font-size="15" font-weight="700" fill="#9c7b3a" letter-spacing="2">SERBIE</text>
-          <text class="mt" x="66" y="400" font-family="Georgia,serif" font-size="15" font-weight="700" fill="#2b6a75" letter-spacing="2">BOSNIE</text>
-          <text class="mt" x="150" y="632" font-family="Georgia,serif" font-size="11" font-weight="600" fill="#8a7a52" letter-spacing="1">Croatie · transit</text>
-
-          <!-- route : bus (coral) + train (teal dashed) -->
-          <g fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="250" y1="675" x2="210" y2="580" stroke="#b34d2c"/>
-            <line x1="210" y1="580" x2="262" y2="470" stroke="#17606d" stroke-dasharray="2 8"/>
-            <line x1="262" y1="470" x2="400" y2="300" stroke="#b34d2c"/>
-            <line x1="400" y1="300" x2="355" y2="105" stroke="#17606d" stroke-dasharray="2 8"/>
-          </g>
-
-          <!-- entrée : Dubrovnik -->
-          <circle cx="250" cy="675" r="6.5" fill="#4f8a5b" stroke="#fff" stroke-width="2"/>
-          <text class="mt" x="263" y="679" font-size="11.5" font-weight="700" fill="#2f6b3c">✈ Dubrovnik (entrée)</text>
-
-          <!-- Novi Sad (day-trip) -->
-          <circle cx="392" cy="256" r="3.5" fill="#3a4a4c"/><text class="mt" x="401" y="253" font-size="11.5" fill="#3a4a4c">Novi Sad</text>
-
-          <!-- 1 Mostar -->
-          <circle cx="210" cy="580" r="15" fill="#17606d" stroke="#fff" stroke-width="3"/>
-          <text x="210" y="585" text-anchor="middle" fill="#fff" font-family="Georgia,serif" font-weight="700" font-size="15">1</text>
-          <text class="mt" x="192" y="585" text-anchor="end" font-family="Georgia,serif" font-weight="700" font-size="14.5" fill="#182a2c">Mostar</text>
-          <!-- 2 Sarajevo ★ -->
-          <circle cx="262" cy="470" r="15" fill="#17606d" stroke="#fff" stroke-width="3"/>
-          <text x="262" y="475" text-anchor="middle" fill="#fff" font-family="Georgia,serif" font-weight="700" font-size="15">2</text>
-          <text class="mt" x="244" y="466" text-anchor="end" font-family="Georgia,serif" font-weight="700" font-size="14.5" fill="#182a2c">★ Sarajevo</text>
-          <!-- 3 Belgrade ★ -->
-          <circle cx="400" cy="300" r="15" fill="#c8951f" stroke="#fff" stroke-width="3"/>
-          <text x="400" y="305" text-anchor="middle" fill="#fff" font-family="Georgia,serif" font-weight="700" font-size="15">3</text>
-          <text class="mt" x="418" y="305" text-anchor="start" font-family="Georgia,serif" font-weight="700" font-size="14.5" fill="#182a2c">★ Belgrade</text>
-          <!-- 4 Budapest ★ -->
-          <circle cx="355" cy="105" r="15" fill="#cf5f38" stroke="#fff" stroke-width="3"/>
-          <text x="355" y="110" text-anchor="middle" fill="#fff" font-family="Georgia,serif" font-weight="700" font-size="15">4</text>
-          <text class="mt" x="373" y="110" text-anchor="start" font-family="Georgia,serif" font-weight="700" font-size="14.5" fill="#182a2c">★ Budapest</text>
-        </svg>
+        <div id="map" role="img" aria-label="Carte interactive du voyage : Mostar, Sarajevo, Belgrade, Budapest, du sud au nord, avec étapes et day-trips"></div>
         <div class="maplegend">
-          <span class="grp"><span class="dotc bih">1</span> étape (numérotée)</span>
-          <span class="grp">★ capitale</span>
-          <span class="grp"><span class="ap g"></span> ✈ entrée</span>
+          <span class="grp"><span class="dotc bih">1</span> étape (cliquable)</span>
+          <span class="grp"><span class="ap g"></span> ✈ entrée (Dubrovnik)</span>
+          <span class="grp"><span class="pin-dot" style="width:12px;height:12px"></span> day-trip / arrêt</span>
           <span class="grp"><span class="sw bus"></span> bus</span>
           <span class="grp"><span class="sw train"></span> train</span>
-          <span class="grp"><span class="sw bord"></span> frontière</span>
         </div>
       </div>
       <aside>
-        <div class="keyline"><span class="kb bih">1</span><span class="kt"><b>Mostar</b> 🇧🇦 · solo · 2 n<br><span>Vol Dubrovnik + bus 3 h · Stari Most, Herzégovine</span></span></div>
-        <div class="keyline"><span class="kb bih">2</span><span class="kt"><b>Sarajevo</b> 🇧🇦 · 3 n<br><span>Retrouvailles le 4 · histoire, Baščaršija, nuit</span></span></div>
+        <div class="keyline"><span class="kb bih">1</span><span class="kt"><b>Mostar</b> 🇧🇦 · 2 n<br><span>Vol Dubrovnik + bus 3 h · Stari Most, Herzégovine</span></span></div>
+        <div class="keyline"><span class="kb bih">2</span><span class="kt"><b>Sarajevo</b> 🇧🇦 · 3 n<br><span>Histoire, Baščaršija, nuit animée</span></span></div>
         <div class="keyline"><span class="kb srb">3</span><span class="kt"><b>Belgrade</b> 🇷🇸 · 3 n<br><span>Capitale festive, splavovi</span></span></div>
         <div class="keyline"><span class="kb mne">4</span><span class="kt"><b>Budapest + Sziget</b> 🇭🇺 · ~7-8 n<br><span>Base ville + festival (11-15) + day-trips</span></span></div>
         <div class="note myth" style="margin-top:14px">🚆 <b>Enchaînements :</b> Mostar→Sarajevo (train panoramique 07:15, 2 h, saisonnier 26/06→30/08). Sarajevo→Belgrade (bus ~6-7 h, journée de transit). Belgrade→Budapest (SOKO ~3h17 <em>si en service, à vérifier</em>, sinon FlixBus ~6 h).</div>
@@ -511,6 +459,71 @@
       document.querySelectorAll('details.acc-act').forEach(function(d){ d.open = open; });
     });
   });
+})();
+</script>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script>
+(function(){
+  if(!window.L || !document.getElementById('map')) return;
+
+  // étapes numérotées (sud → nord), day-trips et arrêts
+  var stops = [
+    {n:1, c:'bih', name:'Mostar',   sub:'🇧🇦 · 2 nuits · Stari Most, Herzégovine', lat:43.3438, lng:17.8078},
+    {n:2, c:'bih', name:'Sarajevo', sub:'🇧🇦 · 3 nuits · Baščaršija, histoire, nuit', lat:43.8563, lng:18.4131},
+    {n:3, c:'srb', name:'Belgrade', sub:'🇷🇸 · 3 nuits · Kalemegdan, splavovi', lat:44.7866, lng:20.4489},
+    {n:4, c:'hun', name:'Budapest', sub:'🇭🇺 · ~7-8 nuits · thermes, ruin bars, Sziget', lat:47.4979, lng:19.0402}
+  ];
+  var entry = {name:'Dubrovnik', sub:'✈ Aéroport d\'entrée + bus ~3 h → Mostar', lat:42.6507, lng:18.0944};
+  var spots = [
+    {name:'Višegrad', sub:'Arrêt possible sur le bus Sarajevo → Belgrade (pont sur la Drina)', lat:43.7825, lng:19.2897},
+    {name:'Novi Sad', sub:'Day-trip depuis Belgrade · train Soko ~36 min', lat:45.2671, lng:19.8335},
+    {name:'Sziget', sub:'Festival sur l\'île d\'Óbuda · 11-15 août', lat:47.5548, lng:19.0553},
+    {name:'Szentendre', sub:'Day-trip depuis Budapest · HÉV ~40 min', lat:47.6694, lng:19.0759},
+    {name:'Eger', sub:'Day-trip / 1 n · vin + baroque · train ~1h50', lat:47.9026, lng:20.3772},
+    {name:'Lac Balaton', sub:'Escale possible · ~1h40 en train (Siófok)', lat:46.9047, lng:18.0577}
+  ];
+  // segments du trajet : bus (coral) ou train (teal pointillé)
+  var legs = [
+    {mode:'bus',   a:entry,    b:stops[0]},
+    {mode:'train', a:stops[0], b:stops[1]},
+    {mode:'bus',   a:stops[1], b:stops[2]},
+    {mode:'train', a:stops[2], b:stops[3]}
+  ];
+
+  var map = L.map('map', {scrollWheelZoom:false}).setView([44.8, 18.9], 6);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+    maxZoom:19,
+    attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>'
+  }).addTo(map);
+
+  legs.forEach(function(l){
+    var opt = l.mode === 'train'
+      ? {color:'#17606d', weight:4, dashArray:'2 9', lineCap:'round'}
+      : {color:'#b34d2c', weight:4, lineCap:'round'};
+    L.polyline([[l.a.lat, l.a.lng], [l.b.lat, l.b.lng]], opt).addTo(map);
+  });
+
+  function popup(title, sub, url){
+    var h = '<span class="pc">'+title+'</span><br><span class="ps">'+sub+'</span>';
+    if(url) h += '<br><a class="pl" href="'+url+'" target="_blank" rel="noopener">Ouvrir ↗</a>';
+    return h;
+  }
+
+  var group = [];
+  stops.forEach(function(s){
+    var ic = L.divIcon({className:'', html:'<div class="pin-num '+s.c+'" style="width:32px;height:32px">'+s.n+'</div>', iconSize:[32,32], iconAnchor:[16,16]});
+    var m = L.marker([s.lat, s.lng], {icon:ic, title:s.name}).addTo(map).bindPopup(popup(s.name, s.sub));
+    group.push(m);
+  });
+  var eic = L.divIcon({className:'', html:'<div class="pin-entry" style="width:22px;height:22px">✈</div>', iconSize:[22,22], iconAnchor:[11,11]});
+  group.push(L.marker([entry.lat, entry.lng], {icon:eic, title:entry.name}).addTo(map).bindPopup(popup(entry.name, entry.sub)));
+  spots.forEach(function(s){
+    var ic = L.divIcon({className:'', html:'<div class="pin-dot" style="width:15px;height:15px"></div>', iconSize:[15,15], iconAnchor:[7.5,7.5]});
+    group.push(L.marker([s.lat, s.lng], {icon:ic, title:s.name}).addTo(map).bindPopup(popup(s.name, s.sub)));
+  });
+
+  map.fitBounds(L.featureGroup(group).getBounds().pad(0.14));
 })();
 </script>
 
