@@ -1,6 +1,6 @@
 # Carnet Balkans
 
-Carnet de voyage web (page unique) — **Bosnie → Serbie → Hongrie**, 2 → 18 août 2026, sans voiture.
+Carnet de voyage web (page unique) — **Bosnie → Serbie → Hongrie**, 1 → 18 août 2026, sans voiture.
 
 Site live : https://lou-theo.github.io/carnet-balkans/
 
@@ -8,12 +8,12 @@ Site statique : un seul fichier `index.html` (HTML + CSS + JS inline). Seule dé
 
 ## Plan (2 → 18 août 2026)
 
-Axe sud → nord, 16 nuits :
+Axe sud → nord, 17 nuits :
 
-- **Mostar** 🇧🇦 (solo, 2 n) — entrée par vol Dubrovnik + bus ~3 h.
-- **Sarajevo** 🇧🇦 (3 n) — retrouvailles avec une amie le 4 août.
+- **Mostar** 🇧🇦 (3 n) — entrée par vol direct Paris (Beauvais) → Sarajevo + train/bus ~2 h.
+- **Sarajevo** 🇧🇦 (3 n).
 - **Belgrade** 🇷🇸 (3 n).
-- **Budapest + Hongrie** 🇭🇺 (~7-8 n) — base Budapest + festival **Sziget** (2 jours) + day-trips à décider sur place (Eger, Szentendre, Balaton).
+- **Budapest + Hongrie** 🇭🇺 (8 n) — base Budapest + festival **Sziget** (11-15 août) + day-trips à décider sur place (Eger, Szentendre, Balaton).
 - Sortie par Budapest le 18.
 
 Zones à distinguer : **Croatie (transit) · Hongrie = UE + Schengen** (CNI seule, roaming FR, CEAM valable) ; **Bosnie · Serbie = hors UE** (passeport conseillé, eSIM, assurance dédiée).
@@ -26,19 +26,19 @@ Pistes explorées puis écartées (Monténégro, Pologne/Cracovie, Tatras…) : 
 
 Éditer `index.html`, commit, push. GitHub Pages redéploie automatiquement.
 
-## Budget (16 nuits, profil routard/auberges — estimations, à réviser)
+## Budget (17 nuits, profil routard/auberges — estimations, à réviser)
 
 Auberges sociales + quelques privés et excursions.
 
 | Poste | Estimation |
 |---|---|
-| Vols (Paris→Dubrovnik + Budapest→Paris) | 150–350 € |
-| Transferts terrestres (bus Dubrovnik→Mostar, trains/bus Sarajevo→Belgrade→Budapest) | 100–180 € |
-| Auberges (~16 nuits, ~15–30 €) | 250–480 € |
+| Vols (Paris→Sarajevo + Budapest→Paris, direct A/R) | 320–490 € |
+| Transferts terrestres (train/bus Sarajevo→Mostar→Sarajevo→Belgrade→Budapest) | 80–150 € |
+| Auberges (~17 nuits, ~15–30 €) | 260–510 € |
 | Repas & boissons | 320–500 € |
 | Activités (thermes, Sziget 2 j, excursions) | 150–300 € |
 | eSIM Balkans + assurance Heymondo (~40 €) | 60–90 € |
-| **Total** | **~1 050–1 900 €** |
+| **Total** | **~1 200–2 050 €** |
 
 ## Publier (GitHub Pages)
 
