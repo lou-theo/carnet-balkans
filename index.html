@@ -43,7 +43,13 @@
 
   .mapwrap { display:grid; grid-template-columns:minmax(0,1.25fr) minmax(0,1fr); gap:22px; align-items:start; }
   @media(max-width:840px){ .mapwrap{ grid-template-columns:minmax(0,1fr); } }
-  .mapcard { border:1px solid var(--line); border-radius:16px; overflow:hidden; box-shadow:0 18px 44px -26px rgba(13,59,69,.6); background:#e9dfc8; }
+  .mapcard { position:relative; border:1px solid var(--line); border-radius:16px; overflow:hidden; box-shadow:0 18px 44px -26px rgba(13,59,69,.6); background:#e9dfc8; }
+  .mapfs { position:absolute; top:10px; right:10px; z-index:500; background:var(--card); border:1px solid var(--line); border-radius:8px; padding:6px 11px; font-size:12px; font-weight:600; color:var(--ink); cursor:pointer; box-shadow:0 2px 8px -2px rgba(0,0,0,.3); }
+  .mapfs:hover { border-color:var(--coral); color:var(--coral); }
+  body.map-fs { overflow:hidden; }
+  body.map-fs .mapcard { position:fixed; inset:0; z-index:9999; border:0; border-radius:0; }
+  body.map-fs #map { height:100%; }
+  body.map-fs .maplegend { display:none; }
   .maplegend { display:flex; flex-wrap:wrap; gap:9px 16px; align-items:center; padding:13px 16px; background:var(--paper); border-top:1px solid var(--line); font-size:12px; color:var(--muted); }
   .maplegend .grp { display:flex; align-items:center; gap:6px; }
   .dotc { width:20px; height:20px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; color:#fff; font-family:Georgia,serif; font-weight:700; font-size:11px; }
@@ -168,7 +174,7 @@
 
 <div class="wrap">
   <header>
-    <p class="eyebrow">2 → 18 août 2026 · Reims · sans voiture</p>
+    <p class="eyebrow">1 → 18 août 2026 · Reims · sans voiture</p>
     <h1>Carnet Balkans</h1>
     <p class="lede"><b>Bosnie → Serbie → Hongrie</b>, du sud vers le nord : Mostar, Sarajevo, Belgrade, et final <b>Budapest + festival Sziget</b> — tout en bus et train. Où aller, quoi voir, quoi manger, réunis en une page.</p>
   </header>
@@ -184,24 +190,25 @@
   <!-- ============ CARTE ============ -->
   <section id="carte">
     <div class="sechead"><span class="idx">01</span><h2 class="sec">La carte</h2></div>
-    <p class="secsub">Le <b>fil du voyage, sud → nord</b> : de Mostar à Budapest, en remontant par Sarajevo et Belgrade. Départ le 2 août, sortie par Budapest le 18.</p>
+    <p class="secsub">Le <b>fil du voyage, sud → nord</b> : arrivée à Sarajevo, on descend d'abord à Mostar, puis on remonte Sarajevo → Belgrade → Budapest. Départ le 1er août (vol direct Paris → Sarajevo), sortie par Budapest le 18.</p>
     <div class="mapwrap">
       <div class="mapcard">
+        <button class="mapfs" type="button" aria-pressed="false">⛶ Plein écran</button>
         <div id="map" role="img" aria-label="Carte interactive du voyage : Mostar, Sarajevo, Belgrade, Budapest, du sud au nord, avec étapes et day-trips"></div>
         <div class="maplegend">
           <span class="grp"><span class="dotc bih">1</span> étape (cliquable)</span>
-          <span class="grp"><span class="ap g"></span> ✈ entrée (Dubrovnik)</span>
+          <span class="grp"><span class="ap g"></span> ✈ entrée (Sarajevo)</span>
           <span class="grp"><span class="pin-dot" style="width:12px;height:12px"></span> day-trip / arrêt</span>
           <span class="grp"><span class="sw bus"></span> bus</span>
           <span class="grp"><span class="sw train"></span> train</span>
         </div>
       </div>
       <aside>
-        <div class="keyline"><span class="kb bih">1</span><span class="kt"><b>Mostar</b> 🇧🇦 · 2 n<br><span>Vol Dubrovnik + bus 3 h · Stari Most, Herzégovine</span></span></div>
+        <div class="keyline"><span class="kb bih">1</span><span class="kt"><b>Mostar</b> 🇧🇦 · 3 n<br><span>Vol direct Sarajevo + train/bus ~2 h · Stari Most, Herzégovine</span></span></div>
         <div class="keyline"><span class="kb bih">2</span><span class="kt"><b>Sarajevo</b> 🇧🇦 · 3 n<br><span>Histoire, Baščaršija, nuit animée</span></span></div>
         <div class="keyline"><span class="kb srb">3</span><span class="kt"><b>Belgrade</b> 🇷🇸 · 3 n<br><span>Capitale festive, splavovi</span></span></div>
-        <div class="keyline"><span class="kb mne">4</span><span class="kt"><b>Budapest + Sziget</b> 🇭🇺 · ~7-8 n<br><span>Base ville + festival (11-15) + day-trips</span></span></div>
-        <div class="note myth" style="margin-top:14px">🚆 <b>Enchaînements :</b> Mostar→Sarajevo (train panoramique 07:15, 2 h, saisonnier 26/06→30/08). Sarajevo→Belgrade (bus ~6-7 h, journée de transit). Belgrade→Budapest (SOKO ~3h17 <em>si en service, à vérifier</em>, sinon FlixBus ~6 h).</div>
+        <div class="keyline"><span class="kb mne">4</span><span class="kt"><b>Budapest + Sziget</b> 🇭🇺 · 8 n<br><span>Base ville + festival (11-15) + day-trips</span></span></div>
+        <div class="note myth" style="margin-top:14px">🚆 <b>Enchaînements :</b> arrivée <b>vol direct Paris → Sarajevo</b>, puis descente Sarajevo→Mostar (train/bus ~2 h). Mostar→Sarajevo (train panoramique 07:15, 2 h, saisonnier 26/06→30/08). Sarajevo→Belgrade (bus ~6-7 h, journée de transit). Belgrade→Budapest (SOKO ~3h17 <em>si en service, à vérifier</em>, sinon FlixBus ~6 h).</div>
       </aside>
     </div>
   </section>
@@ -209,11 +216,11 @@
   <!-- ============ ITINÉRAIRE ============ -->
   <section id="itineraire">
     <div class="sechead"><span class="idx">02</span><h2 class="sec">L'itinéraire, jour par jour</h2></div>
-    <p class="secsub"><b>2 → 18 août, sud → nord.</b> Un seul trajet long (Sarajevo→Belgrade). Rythme détendu : 3 nuits par grande ville-nuit pour dormir tard et rattraper.</p>
+    <p class="secsub"><b>1 → 18 août, sud → nord.</b> Un seul trajet long (Sarajevo→Belgrade). Rythme détendu : 3 nuits par grande ville-étape pour dormir tard et rattraper.</p>
     <div class="tl">
       <div class="stop bih"><div class="num">1</div><div class="stopcard">
-        <div class="stophead"><span class="city">Mostar</span><span class="flag">🇧🇦</span><span class="days">2-3 août</span></div>
-        <p>Arrivée <b>vol Paris → Dubrovnik + bus ~3 h</b>. Première étape, mise en jambes en Herzégovine.</p>
+        <div class="stophead"><span class="city">Mostar</span><span class="flag">🇧🇦</span><span class="days">1-3 août</span></div>
+        <p>Arrivée <b>vol direct Paris (Beauvais) → Sarajevo</b>, puis <b>train/bus ~2 h</b> jusqu'à Mostar. Première étape, mise en jambes en Herzégovine.</p>
         <p class="do"><b>À faire :</b> Stari Most + plongeurs, minaret Koski, Blagaj, cascades de Kravice. Détail dans « Activités ».</p>
       </div></div>
       <div class="leg">🚆 <span class="mode train">Train panoramique Mostar → Sarajevo</span> · 07:15, ~2 h · vallée de la Neretva <em>(saisonnier 26/06→30/08)</em></div>
@@ -235,7 +242,7 @@
         <p class="do"><b>À faire :</b> thermes, ruin bars, croisière Danube <b>+ day-trips à décider</b> (Eger, Szentendre, coude du Danube). Détail dans « Activités ».</p>
       </div></div>
     </div>
-    <div class="note myth" style="margin-top:18px;max-width:840px">🇭🇺 <b>Hongrie flexible :</b> ~7-8 nuits = base Budapest + festival + day-trips/escapade choisis sur place (voir « Activités »).</div>
+    <div class="note myth" style="margin-top:18px;max-width:840px">🇭🇺 <b>Hongrie flexible :</b> 8 nuits = base Budapest + festival + day-trips/escapade choisis sur place (voir « Activités »).</div>
   </section>
 
   <!-- ============ ACTIVITÉS ============ -->
@@ -248,25 +255,55 @@
       <div class="acc-body">
         <div class="note warn"><b>À savoir :</b> Sarajevo a 2 gares routières (principale vs Lukavica/Est) — ne pas se tromper. Vérifie le statut de ton auberge avant de réserver.</div>
         <div class="grid">
-          <div class="cty"><div class="ctyh"><span class="nm">Mostar</span><span class="dur">2 n</span></div><span class="vb must">Incontournable</span>
+          <div class="cty"><div class="ctyh"><span class="nm">Mostar</span><span class="dur">3 n · base</span></div><span class="vb must">Incontournable</span>
             <p class="tagl">Le pont ottoman sur la Neretva.</p>
-            <ul><li>Stari Most + plongeurs (dès ~30 €)</li><li>Minaret Koski (vue sur le pont)</li><li>Blagaj (source + monastère derviche, bus ~1 €)</li><li>Počitelj + cascades de Kravice (tour ~50 €)</li></ul>
+            <ul><li>Stari Most + plongeurs (dès ~30 €)</li><li>Minaret Koski (vue sur le pont)</li><li>Vieille ville, bazar, cafés au bord de l'eau</li></ul>
             <div class="meta"><span>🛏️ Majda's, Nina, Miran</span><span>☀️ 35 °C+ → clim, visites tôt</span></div>
           </div>
-          <div class="cty"><div class="ctyh"><span class="nm">Sarajevo</span><span class="dur">3 n</span></div><span class="vb must">Incontournable</span>
+          <div class="cty"><div class="ctyh"><span class="nm">Blagaj</span><span class="dur">½ j</span></div><span class="vb must">Incontournable</span>
+            <p class="tagl">Monastère derviche à la source de la Buna.</p>
+            <ul><li>Tekija du XVIᵉ encastrée dans la falaise</li><li>Résurgence turquoise de la Buna</li></ul>
+            <div class="meta"><span>🚌 Bus local ~30 min · taxi · ou tour</span><span>📍 Day-trip Mostar</span></div>
+          </div>
+          <div class="cty"><div class="ctyh"><span class="nm">Cascades de Kravice</span><span class="dur">½–1 j</span></div><span class="vb must">Incontournable</span>
+            <p class="tagl">Amphithéâtre de cascades, baignade.</p>
+            <ul><li>Chutes de ~25 m sur la Trebižat</li><li>Baignade — top vu la canicule d'août</li></ul>
+            <div class="meta"><span>🚐 Tour ~30-50 € (pas de bus direct)</span><span>📍 Day-trip Mostar</span></div>
+          </div>
+          <div class="cty"><div class="ctyh"><span class="nm">Počitelj</span><span class="dur">½ j</span></div><span class="vb nice">Sympa</span>
+            <p class="tagl">Village-forteresse ottoman sur la Neretva.</p>
+            <ul><li>Mosquée, tour Kula, montée courte + vue</li><li>Souvent combiné avec Blagaj + Kravice en 1 tour</li></ul>
+            <div class="meta"><span>🚌 Bus dir. Čapljina ~5 KM · ou tour</span><span>📍 Day-trip Mostar</span></div>
+          </div>
+          <div class="cty"><div class="ctyh"><span class="nm">Konjic</span><span class="dur">journée</span></div><span class="vb nice">Selon envie</span>
+            <p class="tagl">Rafting dans le canyon de la Neretva.</p>
+            <ul><li>Pont ottoman, bunker secret de Tito</li><li>Rafting ~6 h (départ ~8h45)</li></ul>
+            <div class="meta"><span>🚆 Train ~1 h (ligne scénique Neretva)</span><span>💡 À caser le jour du transfert</span></div>
+          </div>
+          <div class="cty"><div class="ctyh"><span class="nm">Sarajevo</span><span class="dur">3 n · base</span></div><span class="vb must">Incontournable</span>
             <p class="tagl">Orient rencontre Occident, nuit animée.</p>
-            <ul><li>Baščaršija (bazar ottoman)</li><li>Tunnel de l'espoir (~10 €)</li><li>Žuta Tabija (coucher de soleil)</li><li>Téléphérique Trebević + piste bobsleigh 1984</li></ul>
+            <ul><li>Baščaršija (bazar ottoman)</li><li>Tunnel de l'espoir (~10 €)</li><li>Žuta Tabija (coucher de soleil)</li><li>Téléphérique Trebević + bobsleigh 1984</li></ul>
             <div class="meta"><span>🛏️ Balkan Han (social), War Hostel</span><span>🎬 Film Festival 14–21 août 2026</span></div>
           </div>
-          <div class="cty"><div class="ctyh"><span class="nm">Višegrad</span><span class="dur">arrêt transit</span></div><span class="vb nice">Sympa*</span>
-            <p class="tagl">Sur la route Sarajevo → Belgrade.</p>
-            <ul><li>Pont Mehmed Paša (UNESCO, Andrić)</li><li>Andrićgrad (ville-décor de Kusturica)</li></ul>
-            <div class="meta"><span>*Coupe la journée de bus vers la Serbie</span></div>
+          <div class="cty"><div class="ctyh"><span class="nm">Lukomir + Bjelašnica</span><span class="dur">journée</span></div><span class="vb must">Incontournable</span>
+            <p class="tagl">Le plus haut village de Bosnie, rando.</p>
+            <ul><li>Village semi-nomade ~1 500 m, maisons de pierre</li><li>Canyon Rakitnica, montagne olympique</li></ul>
+            <div class="meta"><span>🚐 Tour guidé ~50-70 € (pas de bus)</span><span>📍 Day-trip Sarajevo · la plus marquante</span></div>
           </div>
-          <div class="cty"><div class="ctyh"><span class="nm">Day-trips Sarajevo</span><span class="dur">optionnel</span></div><span class="vb nice">Selon envie</span>
-            <p class="tagl">Sarajevo (3 n) se suffit — sortie seulement si l'envie.</p>
-            <ul><li><b>Lukomir + Bjelašnica</b> — plus haut village nomade, canyon (tour guidé ~65 €, pas de bus) : la plus marquante</li><li><b>Vrelo Bosne</b> — sources + parc, demi-journée calme (taxi ~12 km)</li><li><b>Konjic</b> — bunker de Tito, rafting (bus ~1h20)</li></ul>
-            <div class="meta"><span>⚠️ Sutjeska : pas de transport public (voiture/tour)</span></div>
+          <div class="cty"><div class="ctyh"><span class="nm">Jajce + Travnik</span><span class="dur">journée</span></div><span class="vb nice">Sympa</span>
+            <p class="tagl">Anciennes capitales royales.</p>
+            <ul><li>Jajce : cascade de 17 m en pleine ville, forteresse, moulins de Pliva</li><li>Travnik : forteresse, ville d'Ivo Andrić</li></ul>
+            <div class="meta"><span>🚐 Tour ~70-80 € (bus peu pratique)</span><span>📍 Day-trip Sarajevo</span></div>
+          </div>
+          <div class="cty"><div class="ctyh"><span class="nm">Vrelo Bosne</span><span class="dur">½ j</span></div><span class="vb nice">Selon envie</span>
+            <p class="tagl">Parc aux sources de la Bosna.</p>
+            <ul><li>Sources cristallines, ponts, cygnes</li><li>Allée des platanes (calèche) · combo avec le Tunnel tout proche</li></ul>
+            <div class="meta"><span>🚊 Tram Ilidža puis marche/calèche</span><span>📍 Day-trip Sarajevo</span></div>
+          </div>
+          <div class="cty"><div class="ctyh"><span class="nm">Višegrad</span><span class="dur">journée / transit</span></div><span class="vb nice">Sympa</span>
+            <p class="tagl">Le pont sur la Drina (UNESCO).</p>
+            <ul><li>Pont ottoman du XVIᵉ (roman d'Ivo Andrić)</li><li>Andrićgrad, ville-décor de Kusturica</li></ul>
+            <div class="meta"><span>🚐 Tour ~2 h/sens (journée longue)</span><span>📍 Depuis Sarajevo</span></div>
           </div>
         </div>
       </div>
@@ -309,9 +346,20 @@
             <p class="tagl">Vin + baroque, détente (pas clubbing).</p>
             <ul><li>Train direct ~1h50 (gare Keleti)</li><li>Vallée des Belles Femmes : caves dans la roche, dégustations pas chères (Egri Bikavér)</li><li>Château (résistance ottomane), minaret turc</li></ul>
           </div>
-          <div class="cty"><div class="ctyh"><span class="nm">Szentendre + coude du Danube</span><span class="dur">½–1 j</span></div><span class="vb nice">Sympa</span>
-            <p class="tagl">Escapade calme sur le Danube.</p>
-            <ul><li>Szentendre : village d'artistes, 40 min (HÉV)</li><li>Coude du Danube : Visegrád (citadelle), Esztergom (basilique), en bateau possible</li></ul>
+          <div class="cty"><div class="ctyh"><span class="nm">Szentendre</span><span class="dur">½ j</span></div><span class="vb nice">Sympa</span>
+            <p class="tagl">Village baroque coloré du Danube.</p>
+            <ul><li>Ruelles pavées, galeries d'art, musée du Marzipan</li><li>Le day-trip le plus facile et le moins cher</li></ul>
+            <div class="meta"><span>🚈 HÉV H5 (Batthyány tér) ~40 min</span></div>
+          </div>
+          <div class="cty"><div class="ctyh"><span class="nm">Coude du Danube</span><span class="dur">journée</span></div><span class="vb nice">Sympa</span>
+            <p class="tagl">Visegrád + Esztergom en boucle.</p>
+            <ul><li>Visegrád : citadelle, LE panorama sur le coude</li><li>Esztergom : plus grande basilique de Hongrie</li></ul>
+            <div class="meta"><span>🚆 Train (Nyugati) + bus 880 + bac</span></div>
+          </div>
+          <div class="cty"><div class="ctyh"><span class="nm">Gödöllő</span><span class="dur">½ j</span></div><span class="vb meh">Dispensable</span>
+            <p class="tagl">Château baroque de l'impératrice Sissi.</p>
+            <ul><li>Plus grand château de Hongrie</li><li>⚠️ Restauration 2026 → vérifier les salles ouvertes</li></ul>
+            <div class="meta"><span>🚈 HÉV H8 (Örs vezér tere) ~45 min</span></div>
           </div>
           <div class="cty"><div class="ctyh"><span class="nm">Lac Balaton</span><span class="dur">escale 2 n</span></div><span class="vb nice">Selon envie</span>
             <p class="tagl">« Mer » hongroise, ~1h40 train.</p>
@@ -355,7 +403,7 @@
     <p class="secsub">Trajets, frontières, papiers, argent, internet, assurance, santé — les infos annexes, dépliables.</p>
     <details class="acc-prat"><summary>🚌 Trajets &amp; réservation<span class="chev">▸</span></summary>
       <div class="acc-body">
-        <p><b>Arrivée :</b> vol Paris → Dubrovnik, puis <b>bus ~3 h → Mostar</b> (frontière Croatie/Schengen → Bosnie). Ligne fréquente, réservable en ligne.</p>
+        <p><b>Arrivée :</b> <b>vol direct Paris (Beauvais) → Sarajevo</b> (Ryanair, ~2h10), puis <b>train/bus ~2 h → Mostar</b> pour démarrer par le sud. Retour : vol Budapest → Paris le 18.</p>
         <p><b>Balkans :</b> bus = colonne vertébrale, réserver sur GetByBus/BalkanViator/FlixBus, petites lignes au guichet la veille, bagage soute ~1 € cash. <b>Mostar → Sarajevo</b> : train panoramique 07:15 (~2 h, saisonnier 26/06→30/08) ou bus. <b>Sarajevo → Belgrade</b> : bus ~6-7 h (journée de transit, coupable à Višegrad). <b>Belgrade → Budapest</b> : SOKO ~3h17 (si en service, à vérifier) ou FlixBus ~6 h.</p>
         <div class="links">
           <a class="lnk" href="https://global.flixbus.com" target="_blank" rel="noopener">FlixBus ↗</a>
@@ -365,34 +413,34 @@
         </div>
       </div>
     </details>
-    <details class="acc-prat"><summary>🛂 Frontières<span class="fl">— 2 sorties de Schengen</span><span class="chev">▸</span></summary>
+    <details class="acc-prat"><summary>🛂 Frontières<span class="fl">— hors UE puis retour Schengen</span><span class="chev">▸</span></summary>
       <div class="acc-body">
-        <p>Deux passages de la frontière Schengen : <b>Croatie → Bosnie</b> (Dubrovnik→Mostar, <b>sortie</b> de Schengen) puis <b>Serbie → Hongrie</b> (<b>retour</b> dans Schengen, contrôle passeport, attente possible l'été). Entre les deux, <b>Bosnie → Serbie</b> = contrôle hors UE mais fluide.</p>
+        <p>Entrée <b>en Bosnie directement par avion</b> (hors Schengen → contrôle passeport à l'aéroport de Sarajevo). Ensuite une seule frontière terrestre hors UE, <b>Bosnie → Serbie</b> (fluide), puis <b>Serbie → Hongrie</b> = <b>retour dans Schengen</b> (contrôle passeport, attente possible l'été). Plus de transit par la Croatie.</p>
         <p>Document à portée de main dans le bus/train à ces passages.</p>
       </div>
     </details>
     <details class="acc-prat"><summary>🪪 Papiers &amp; formalités<span class="fl">— UE puis hors UE</span><span class="chev">▸</span></summary>
       <div class="acc-body">
-        <p><b>Croatie (transit) & Hongrie (UE/Schengen) :</b> <b>CNI valide suffit</b>, roaming FR et CEAM valables.</p>
+        <p><b>Hongrie (UE/Schengen) :</b> <b>CNI valide suffit</b>, roaming FR et CEAM valables.</p>
         <p><b>Bosnie & Serbie (hors UE) :</b> sans visa &lt; 90 j, mais <b>passeport fortement recommandé</b> — la Bosnie <b>refuse les CNI « prolongées »</b> (délivrées 2004-2013, validité étendue +5 ans). <b>Enregistrement de séjour obligatoire</b> (24-48 h) : les auberges/hôtels s'en chargent → <b>garder les reçus</b> jusqu'à la sortie du pays.</p>
-        <p>Passeport à portée aux frontières Croatie→Bosnie, Bosnie→Serbie et Serbie→Hongrie. Scan des papiers dans le cloud + photocopie papier séparée.</p>
+        <p>Passeport à portée à l'arrivée à Sarajevo, puis aux frontières Bosnie→Serbie et Serbie→Hongrie. Scan des papiers dans le cloud + photocopie papier séparée.</p>
       </div>
     </details>
-    <details class="acc-prat"><summary>💶 Argent<span class="fl">— 4 monnaies, DCC à refuser</span><span class="chev">▸</span></summary>
+    <details class="acc-prat"><summary>💶 Argent<span class="fl">— 3 monnaies, DCC à refuser</span><span class="chev">▸</span></summary>
       <div class="acc-body">
-        <p>Croatie = <b>euro €</b> (garder quelques pièces € pour le bus Dubrovnik→Mostar) · Bosnie = <b>mark convertible (BAM, taux fixe 1 € = 1,95583)</b> · Serbie = <b>dinar (RSD, ~117/€)</b> · Hongrie = <b>forint (HUF, ~380/€)</b>. Carte acceptée dans les villes ; <b>cash indispensable</b> pour bus locaux, marchés, taxis, petits cafés, auberges familiales, pourboires (~10 %, toujours en liquide). <b>Bosnie = économie très « cash »</b>, prévoir du BAM par défaut.</p>
+        <p>Bosnie = <b>mark convertible (BAM, taux fixe 1 € = 1,95583)</b> · Serbie = <b>dinar (RSD, ~117/€)</b> · Hongrie = <b>forint (HUF, ~380/€)</b>. Carte acceptée dans les villes ; <b>cash indispensable</b> pour bus locaux, marchés, taxis, petits cafés, auberges familiales, pourboires (~10 %, toujours en liquide). <b>Bosnie = économie très « cash »</b>, prévoir du BAM par défaut.</p>
         <p><b>⚠️ BAM à écouler tôt :</b> la Bosnie est en <b>début</b> de trajet et le mark est <b>inéchangeable une fois sorti du pays</b> (pièces perdues nulle part). Retirer <b>petit</b> à Mostar/Sarajevo, viser un <b>solde ≈ 0 avant le bus Sarajevo→Belgrade</b> (dépenser billets, écouler pièces).</p>
         <p><b>Distributeurs :</b> viser les vraies banques, <b>éviter les Euronet</b> (bleu/jaune, aéroports/zones touristiques : gros frais fixes + poussent le DCC). DAB <b>sans frais opérateur</b> repérés : <b>Halkbank / Mobi Banka</b> (Serbie), <b>MF Banka / BPS</b> (Bosnie), <b>OTP / K&amp;H / Erste</b> (Hongrie). <b>Toujours refuser le DCC</b> : payer/retirer en <b>monnaie locale</b> (BAM/RSD/HUF), jamais « en EUR » — au DAB <b>comme</b> au terminal — sinon taux dégradé de 5-10 %.</p>
-        <p><b>Carte :</b> le trajet est <b>100 % hors zone euro</b> (Croatie mise à part) <b>et très cash</b> → le point qui coûte, c'est le <b>retrait DAB</b>. Or Revolut/Wise <b>plafonnent le retrait gratuit à ~200 €/mois</b> (puis 2 %) — vite dépassé ici. <b>Meilleur choix : une néobanque française 0-frais avec retraits illimités gratuits — Fortuneo (Gold si tu passes la condition revenu 2 200 €/mois, sinon Fosfo) ou BoursoBank Ultim.</b> 0 % de change partout, retraits cash gratuits sans plafond. Garder un <b>Revolut/Wise en secours</b> (carte virtuelle immédiate, filet si une carte est avalée). Ouvrir + recharger (virement SEPA) <b>avant le départ</b> ; ne jamais partir avec une seule carte.</p>
+        <p><b>Carte :</b> le trajet est <b>100 % hors zone euro et très cash</b> → le point qui coûte, c'est le <b>retrait DAB</b>. Or Revolut/Wise <b>plafonnent le retrait gratuit à ~200 €/mois</b> (puis 2 %) — vite dépassé ici. <b>Meilleur choix : une néobanque française 0-frais avec retraits illimités gratuits — Fortuneo (Gold si tu passes la condition revenu 2 200 €/mois, sinon Fosfo) ou BoursoBank Ultim.</b> 0 % de change partout, retraits cash gratuits sans plafond. Garder un <b>Revolut/Wise en secours</b> (carte virtuelle immédiate, filet si une carte est avalée). Ouvrir + recharger (virement SEPA) <b>avant le départ</b> ; ne jamais partir avec une seule carte.</p>
         <p><b>Sziget = cashless (système Festipay) :</b> achats sur site 100 % au <b>bracelet RFID</b>, jamais en liquide. <b>700 HUF (~1,80 €) de frais à chaque recharge ET au remboursement.</b> Recharger <b>en ligne via l'app / Festival Account par carte</b> (pas sur les bornes) : c'est le <b>seul canal à remboursement AUTOMATIQUE</b> du solde restant (reversé sur la carte sous ~30 j, aucune file, aucun oubli). Les recharges faites <b>sur place</b> (cash/carte aux bornes) doivent être réclamées <b>en personne avant ~12h00 le lendemain de la fin</b> (≈ 16 août 2026), sinon <b>perdues</b>. Recharger en <b>HUF</b> (refuser le DCC), viser un <b>solde final proche de 0</b> (reliquat &lt; 700 HUF non remboursé), <b>enregistrer le bracelet</b> dès réception (anti-perte) et utiliser une <b>carte valide ≥ 60 j après</b>. Chiffres 2025 (édition 2026 stable) → reconfirmer sur szigetfestival.com.</p>
       </div>
     </details>
     <details class="acc-prat"><summary>📱 Internet mobile<span class="fl">— eSIM avant le départ</span><span class="chev">▸</span></summary>
       <div class="acc-body">
-        <p><b>Croatie & Hongrie (UE) :</b> ton <b>forfait français marche comme en France</b> (roaming inclus) — aucune eSIM nécessaire. L'eSIM ne sert que pour la partie <b>Bosnie/Serbie (hors UE)</b>. La plupart des eSIM « Europe » excluent les Balkans → options vérifiées couvrant ces 2 pays (data seule, garder la ligne FR active pour les SMS bancaires) :</p>
+        <p><b>Hongrie (UE) :</b> ton <b>forfait français marche comme en France</b> (roaming inclus) — aucune eSIM nécessaire. L'eSIM ne sert que pour la partie <b>Bosnie/Serbie (hors UE)</b>. La plupart des eSIM « Europe » excluent les Balkans → options vérifiées couvrant ces 2 pays (data seule, garder la ligne FR active pour les SMS bancaires) :</p>
         <div class="tablewrap" style="margin-bottom:9px"><table>
           <tr><th>eSIM</th><th>Data · validité</th><th>Prix</th><th>Réputation</th></tr>
-          <tr><td><b>Airalo Eurolink</b></td><td>10 Go · 30 j</td><td>~25 € (20 Go ~34,50 €)</td><td>couvre <b>tout le trajet</b> (Croatie+Bosnie+Serbie+Hongrie) · Trustpilot ~3,9/5, apps 4,6-4,7/5</td></tr>
+          <tr><td><b>Airalo Eurolink</b></td><td>10 Go · 30 j</td><td>~25 € (20 Go ~34,50 €)</td><td>couvre <b>tout le trajet</b> (Bosnie+Serbie+Hongrie) · Trustpilot ~3,9/5, apps 4,6-4,7/5</td></tr>
           <tr><td><b>Yesim Balkans</b></td><td>10-20 Go · 30 j</td><td>~15-27 € (code ESIMDB20)</td><td>Bosnie+Serbie · Trustpilot 4,4/5 · le moins cher au Go</td></tr>
           <tr><td><b>Holafly Balkans</b></td><td>Illimité</td><td>dès ~8,90 €/j (~60 € les 7 j)</td><td>Trustpilot 4,6/5 · hotspot bridé 1 Go/j</td></tr>
         </table></div>
@@ -402,7 +450,7 @@
     </details>
     <details class="acc-prat"><summary>🛡️ Assurance<span class="fl">— indispensable hors UE</span><span class="chev">▸</span></summary>
       <div class="acc-body">
-        <p><b>En UE (Croatie/Hongrie), la CEAM couvre</b> les soins de base (✅ commandée) — mais elle ne rembourse ni le privé ni le rapatriement, et <b>ne couvre pas la Bosnie/Serbie</b> (hors UE). Il faut donc une couverture hors-UE, par l'un des deux moyens ci-dessous.</p>
+        <p><b>En UE (Hongrie), la CEAM couvre</b> les soins de base (✅ commandée) — mais elle ne rembourse ni le privé ni le rapatriement, et <b>ne couvre pas la Bosnie/Serbie</b> (hors UE). Il faut donc une couverture hors-UE, par l'un des deux moyens ci-dessous.</p>
         <p><b>Piste 1 — carte premium (souvent suffisante ici) :</b> une <b>Mastercard Gold / Visa Premier</b> (ex. Fortuneo Gold, BoursoBank Ultim) inclut une <b>assistance médicale + rapatriement acquise dès la détention de la carte</b> (pas besoin d'avoir payé le voyage avec), <b>valable monde entier hors zones rouges</b> → Bosnie/Serbie (zone verte) couvertes. Frais médicaux plafonnés ~<b>155 000 €</b>, rapatriement illimité, jusqu'à 90 j. <b>Trajet devenu 100 % urbain (Tatras abandonnés)</b> → le gros trou des cartes, le <b>secours en montagne</b>, ne concerne plus ce voyage.</p>
         <p><b>Piste 2 — assurance dédiée (tranquillité) :</b> <b>Heymondo Tranquillité ≈ 40 € (~16 j)</b> — frais médicaux 2 M€+, <b>prise en charge directe sans avance</b>, app + chat 24/7, aucune condition de paiement. Reste le choix sûr si tu veux un plafond élevé, zéro avance de frais, <b>ou si tu tentes du rafting/canyon</b> (Neretva/Una) — les <b>sports à risque sont exclus des cartes</b> et sont LE trou classique des contrats : à vérifier ligne à ligne.</p>
         <p><b>Verdict :</b> pour un trajet <b>urbain sans sport d'eau</b>, l'assistance d'une carte Gold/Premier suffit (+ CEAM en UE). Si tu prévois rafting/canyon ou veux la marge maximale → Heymondo. <b>Réflexe vital dans tous les cas :</b> appeler le numéro d'assistance <b>avant</b> tout frais (consultation, hôpital) — numéros (dos de la carte + assureur) enregistrés dans le téléphone.</p>
@@ -416,18 +464,18 @@
     </details>
     <details class="acc-prat"><summary>📅 À faire / reconfirmer avant le départ<span class="chev">▸</span></summary>
       <div class="acc-body">
-        <p><b>À réserver vite (se remplit) :</b> ⚡ <b>billets Sziget</b> (jour ou pass) · logement <b>Budapest</b> (semaine du festival) · <b>vols</b> Dubrovnik (aller) + Budapest (retour, le 18).</p>
+        <p><b>À réserver vite (se remplit) :</b> ⚡ <b>billets Sziget</b> (jour ou pass) · logement <b>Budapest</b> (semaine du festival) · <b>vols</b> Sarajevo (aller, 1er août) + Budapest (retour, le 18).</p>
         <p><b>✅ Fait :</b> <b>CEAM</b> commandée (ameli.fr, gratuit — arrive sous ~15 j, à glisser dans le portefeuille avant le départ) · <b>vaccins</b> à jour (DTP-polio + hépatite A).</p>
         <p><b>À faire :</b> trancher assurance (carte Gold/Premier vs Heymondo, selon rafting oui/non) · installer l'<b>eSIM</b> Balkans · vérifier passeport (Bosnie/Serbie) · <b>ouvrir + recharger la carte 0-frais</b> (Fortuneo/Bourso) + Revolut secours · cartes offline · scanner les papiers (liste ci-dessous).</p>
         <p><b>Papiers à scanner</b> — 1 copie cloud (Drive/mail perso) + 1 offline sur tel + 1 papier dans un autre sac que les originaux : <b>passeport</b> (page photo) · <b>CNI</b> · <b>CEAM</b> recto/verso · <b>attestation assurance</b> + n° d'assistance 24/7 · <b>billets</b> (vols, Sziget, bus/trains) · <b>résas logement</b> · <b>cartes bancaires</b> recto/verso + n° d'opposition · <b>carnet de vaccination</b> · 2-3 <b>photos d'identité</b> papier (si un doc est à refaire).</p>
         <p><b>À décider sur place / plus tard :</b> détail des jours hongrois (Eger, Szentendre, Balaton…) · Sziget 2 jours (dates dans la fenêtre 11-15).</p>
         <p><b>À reconfirmer :</b> prix vols réels · train SOKO Belgrade→Budapest (lancement repoussé) · horaires bus/train saisonniers · prix eSIM et thermes (fluctuent).</p>
-        <p style="font-size:12.5px;color:var(--muted)">Prises : type C/F 230 V partout (Croatie, Bosnie, Serbie, Hongrie) — aucun adaptateur. Aucun permis nécessaire (sans voiture).</p>
+        <p style="font-size:12.5px;color:var(--muted)">Prises : type C/F 230 V partout (Bosnie, Serbie, Hongrie) — aucun adaptateur. Aucun permis nécessaire (sans voiture).</p>
       </div>
     </details>
   </section>
 
-  <p class="foot">Plan calé (2 → 18 août 2026) : Mostar · Sarajevo · Belgrade · Budapest + Sziget. Faits vérifiés/consolidés (recherches croisées, sites officiels : szechenyibath.hu, Institut Pasteur, France Diplomatie, opérateurs transport). Prix, horaires et ouvertures saisonniers → à reconfirmer la semaine du départ. Détail hongrois (Eger, Szentendre, Balaton) laissé ouvert, à décider sur place.</p>
+  <p class="foot">Plan calé (1 → 18 août 2026) : Mostar · Sarajevo · Belgrade · Budapest + Sziget. Faits vérifiés/consolidés (recherches croisées, sites officiels : szechenyibath.hu, Institut Pasteur, France Diplomatie, opérateurs transport). Prix, horaires et ouvertures saisonniers → à reconfirmer la semaine du départ. Détail hongrois (Eger, Szentendre, Balaton) laissé ouvert, à décider sur place.</p>
 </div>
 
 <button id="top" aria-label="Retour en haut" title="Retour en haut">↑</button>
@@ -469,19 +517,32 @@
 
   // étapes numérotées (sud → nord), day-trips et arrêts
   var stops = [
-    {n:1, c:'bih', name:'Mostar',   sub:'🇧🇦 · 2 nuits · Stari Most, Herzégovine', lat:43.3438, lng:17.8078},
+    {n:1, c:'bih', name:'Mostar',   sub:'🇧🇦 · 3 nuits · Stari Most, Herzégovine', lat:43.3438, lng:17.8078},
     {n:2, c:'bih', name:'Sarajevo', sub:'🇧🇦 · 3 nuits · Baščaršija, histoire, nuit', lat:43.8563, lng:18.4131},
     {n:3, c:'srb', name:'Belgrade', sub:'🇷🇸 · 3 nuits · Kalemegdan, splavovi', lat:44.7866, lng:20.4489},
-    {n:4, c:'hun', name:'Budapest', sub:'🇭🇺 · ~7-8 nuits · thermes, ruin bars, Sziget', lat:47.4979, lng:19.0402}
+    {n:4, c:'hun', name:'Budapest', sub:'🇭🇺 · 8 nuits · thermes, ruin bars, Sziget', lat:47.4979, lng:19.0402}
   ];
-  var entry = {name:'Dubrovnik', sub:'✈ Aéroport d\'entrée + bus ~3 h → Mostar', lat:42.6507, lng:18.0944};
+  var entry = {name:'Sarajevo (aéroport)', sub:'✈ Vol direct Paris (Beauvais), 1er août · train/bus ~2 h → Mostar', lat:43.8246, lng:18.3315};
   var spots = [
-    {name:'Višegrad', sub:'Arrêt possible sur le bus Sarajevo → Belgrade (pont sur la Drina)', lat:43.7825, lng:19.2897},
+    // day-trips depuis Mostar
+    {name:'Blagaj', sub:'Day-trip Mostar · tekija derviche + source Buna · bus/tour', lat:43.2570, lng:17.8975},
+    {name:'Cascades de Kravice', sub:'Day-trip Mostar · cascades + baignade · tour ~30-50 €', lat:43.1561, lng:17.6583},
+    {name:'Počitelj', sub:'Day-trip Mostar · village-forteresse ottoman · bus/tour', lat:43.1320, lng:17.7346},
+    // day-trips depuis Sarajevo
+    {name:'Lukomir + Bjelašnica', sub:'Day-trip Sarajevo · plus haut village + canyon · tour ~50-70 €', lat:43.6408, lng:18.1783},
+    {name:'Konjic', sub:'Sur la ligne Neretva · rafting, bunker de Tito · train ~1 h', lat:43.6519, lng:17.9614},
+    {name:'Jajce', sub:'Day-trip Sarajevo · cascade en ville + forteresse · tour', lat:44.3406, lng:17.2706},
+    {name:'Višegrad', sub:'Arrêt possible sur la route Sarajevo → Belgrade · pont sur la Drina (UNESCO)', lat:43.7833, lng:19.2886},
+    // Serbie
     {name:'Novi Sad', sub:'Day-trip depuis Belgrade · train Soko ~36 min', lat:45.2671, lng:19.8335},
-    {name:'Sziget', sub:'Festival sur l\'île d\'Óbuda · 11-15 août', lat:47.5548, lng:19.0553},
-    {name:'Szentendre', sub:'Day-trip depuis Budapest · HÉV ~40 min', lat:47.6694, lng:19.0759},
-    {name:'Eger', sub:'Day-trip / 1 n · vin + baroque · train ~1h50', lat:47.9026, lng:20.3772},
-    {name:'Lac Balaton', sub:'Escale possible · ~1h40 en train (Siófok)', lat:46.9047, lng:18.0577}
+    // day-trips depuis Budapest
+    {name:'Szentendre', sub:'Day-trip Budapest · village baroque du Danube · HÉV H5 ~40 min', lat:47.6690, lng:19.0745},
+    {name:'Visegrád', sub:'Coude du Danube · citadelle + panorama · train + bac', lat:47.7899, lng:18.9814},
+    {name:'Esztergom', sub:'Coude du Danube · plus grande basilique de Hongrie · train ~1h20', lat:47.7997, lng:18.7361},
+    {name:'Eger', sub:'Day-trip / 1 n · vin (Bikavér) + baroque · train direct ~1h50', lat:47.9026, lng:20.3772},
+    {name:'Gödöllő', sub:'Château de Sissi · HÉV H8 ~45 min', lat:47.5977, lng:19.3599},
+    {name:'Lac Balaton', sub:'Escale possible · Balatonfüred/Tihany · train ~2 h', lat:46.9600, lng:17.8878},
+    {name:'Sziget', sub:'Festival sur l\'île d\'Óbuda · 11-15 août · HÉV H5', lat:47.5548, lng:19.0553}
   ];
   // segments du trajet : bus (coral) ou train (teal pointillé)
   var legs = [
@@ -491,7 +552,7 @@
     {mode:'train', a:stops[2], b:stops[3]}
   ];
 
-  var map = L.map('map', {scrollWheelZoom:false}).setView([44.8, 18.9], 6);
+  var map = L.map('map', {scrollWheelZoom:true}).setView([44.8, 18.9], 6);
   L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
     maxZoom:19,
     attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>'
@@ -524,6 +585,19 @@
   });
 
   map.fitBounds(L.featureGroup(group).getBounds().pad(0.14));
+
+  var fsBtn = document.querySelector('.mapfs');
+  if(fsBtn){
+    fsBtn.addEventListener('click', function(){
+      var on = document.body.classList.toggle('map-fs');
+      fsBtn.textContent = on ? '✕ Fermer' : '⛶ Plein écran';
+      fsBtn.setAttribute('aria-pressed', on ? 'true' : 'false');
+      setTimeout(function(){ map.invalidateSize(); }, 60);
+    });
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape' && document.body.classList.contains('map-fs')) fsBtn.click();
+    });
+  }
 })();
 </script>
 
