@@ -156,12 +156,21 @@
   .lnk:hover{border-color:var(--coral);color:var(--coral)}
   .foot{margin-top:50px;font-size:12px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px}
 
-  #hebergement .cty .reco{background:#e5f0e6;border:1px solid #b6d6bd;border-radius:7px;padding:6px 10px;margin:0 0 9px;font-size:12px;color:#2f6b3c}
-  #hebergement .cty .reco b{color:#265a30}
-  #hebergement .cty li{margin-bottom:5px}
-  #hebergement a.h{color:var(--coral);font-weight:600;text-decoration:none;white-space:nowrap}
-  #hebergement a.h:hover{text-decoration:underline}
-  #hebergement .lock{font-weight:600}
+  #hebergement .lodge{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px 14px;margin-bottom:14px;max-width:880px}
+  #hebergement .lodgehead{display:flex;align-items:baseline;gap:8px 12px;flex-wrap:wrap;margin-bottom:11px;border-bottom:1px solid var(--line-soft);padding-bottom:9px}
+  #hebergement .lodgehead .city{font-family:Georgia,serif;font-size:20px;font-weight:700}
+  #hebergement .lodgehead .flag{font-size:14px}
+  #hebergement .lodgehead .dates{font-size:13px;color:var(--muted);font-weight:600;margin-left:auto}
+  #hebergement .pick{background:#e5f0e6;border:1px solid #b6d6bd;border-radius:9px;padding:12px 15px;margin-bottom:12px;font-size:14px}
+  #hebergement .pick .tag{display:inline-block;background:var(--green);color:#fff;font-size:11px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;padding:3px 9px;border-radius:5px;margin-right:9px}
+  #hebergement .pick .name{font-family:Georgia,serif;font-size:16px;font-weight:700;color:#265a30}
+  #hebergement .pick p{margin:9px 0 0;line-height:1.6}
+  #hebergement .alt{margin:0 0 6px;font-size:11.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+  #hebergement .lodge ul{margin:0;padding-left:19px;font-size:14px;line-height:1.6}
+  #hebergement .lodge li{margin-bottom:8px}
+  #hebergement .price{margin:11px 0 0;font-size:13px;color:var(--muted)}
+  #hebergement .lodge a.h{color:var(--coral);font-weight:600;text-decoration:none;white-space:nowrap}
+  #hebergement .lodge a.h:hover{text-decoration:underline}
 
   #top{ position:fixed; right:20px; bottom:20px; z-index:40; width:44px; height:44px; border-radius:50%; background:var(--sea); color:#fff; border:none; font-size:18px; cursor:pointer; box-shadow:0 8px 20px -6px rgba(13,59,69,.6); opacity:0; pointer-events:none; transition:opacity .25s, transform .25s; transform:translateY(8px); }
   #top.show{ opacity:1; pointer-events:auto; transform:translateY(0); }
@@ -188,8 +197,8 @@
   <nav class="toc" aria-label="Sommaire">
     <a href="#carte">Carte</a>
     <a href="#itineraire">Itinéraire</a>
-    <a href="#activites">Activités</a>
     <a href="#hebergement">Où dormir</a>
+    <a href="#activites">Activités</a>
     <a href="#bouffe">Bouffe</a>
     <a href="#pratique">Pratique</a>
   </nav>
@@ -272,9 +281,75 @@
     <div class="note myth" style="margin-top:18px;max-width:840px">🇭🇺 <b>La semaine hongroise :</b> base Budapest du 10 au 15 (Sziget + thermes + ruin bars), escapade détente <b>Eger + Egerszalók</b> du 15 au 17, retour Budapest le 17 pour le vol du 18 (voir « Activités »).</div>
   </section>
 
+  <!-- ============ HÉBERGEMENT ============ -->
+  <section id="hebergement">
+    <div class="sechead"><span class="idx">03</span><h2 class="sec">Où dormir</h2></div>
+    <p class="secsub">Une recommandation par étape, suivie des autres options valables — toutes dans l'esprit Wombat's : modernes, propres, centrales et très bien notées. Un casier sécurisé étant un prérequis, chaque adresse précise ce qu'elle propose pour ranger ses affaires (apporter son propre cadenas ne pose aucun problème). Les prix sont des ordres de grandeur en pleine saison d'août, à confirmer au moment de réserver.</p>
+
+    <div class="lodge">
+      <div class="lodgehead"><span class="city">Mostar</span><span class="flag">🇧🇦</span><span class="dates">Du 1ᵉʳ au 4 août · 3 nuits</span></div>
+      <div class="pick"><span class="tag">Recommandé</span><span class="name">Hostel Nina</span> — note 9,5 sur 10.
+        <p>Petite auberge familiale installée en pleine vieille ville, à trois cents mètres du pont Stari Most. C'est la seule des trois adresses à annoncer des casiers de sécurité individuels dans les dortoirs (fermeture à clé ou cadenas personnel : à confirmer sur place). Petit-déjeuner maison inclus, climatisation, salles de bain rénovées. Le meilleur choix pour dormir au cœur du centre historique — à réserver tôt, la capacité est petite. <a class="h" href="https://www.hostelworld.com/hostels/p/190/hostel-nina/" target="_blank" rel="noopener">Voir la fiche</a></p>
+      </div>
+      <p class="alt">Autres options</p>
+      <ul>
+        <li><b>Majdas</b> (note 9,9 sur 10) — l'auberge la plus réputée du pays, réputée pour son accueil, avec des dortoirs sans lits superposés, à sept minutes à pied de la vieille ville. Point de vigilance : pas de grand casier dans les dortoirs, seulement de petits coffres à objets de valeur, le gros sac partant en consigne. <a class="h" href="https://www.hostelworld.com/hostels/p/73679/majdas/" target="_blank" rel="noopener">Voir la fiche</a></li>
+        <li><b>Hostel Miran</b> (note 9,6 sur 10) — auberge familiale proche des gares, donc pratique sans voiture, avec un grand choix de chambres. Les casiers sont plutôt situés dans le hall d'entrée que dans les dortoirs. <a class="h" href="https://www.hostelworld.com/hostels/p/23551/hostel-miran/" target="_blank" rel="noopener">Voir la fiche</a></li>
+      </ul>
+      <p class="price">Ordre de grandeur en dortoir : 15 à 22 euros la nuit.</p>
+    </div>
+
+    <div class="lodge">
+      <div class="lodgehead"><span class="city">Sarajevo</span><span class="flag">🇧🇦</span><span class="dates">Du 4 au 7 août · 3 nuits</span></div>
+      <div class="pick"><span class="tag">Recommandé</span><span class="name">Hostel Vagabond</span> — note 9,4 sur 10.
+        <p>Auberge chaleureuse à cinquante pas de la vieille ville (Baščaršija), proposant à la fois des dortoirs et des chambres privées, des salles de bain refaites à neuf et un personnel très apprécié. Chaque lit dispose d'un grand casier ; il faut apporter son propre cadenas, et mieux vaut vérifier l'état du casier à l'arrivée (quelques voyageurs les ont trouvés fragiles). <a class="h" href="https://www.hostelworld.com/hostels/p/79685/hostel-vagabond-sarajevo/" target="_blank" rel="noopener">Voir la fiche</a></p>
+      </div>
+      <p class="alt">Autres options</p>
+      <ul>
+        <li><b>The Good Place</b> (note 9,8 sur 10) — la mieux notée de la ville, réputée irréprochable côté propreté, avec rideau d'intimité et prises à chaque lit. Seule réserve : uniquement des dortoirs, pas de chambre privée, et seulement deux douches. <a class="h" href="https://www.hostelworld.com/hostels/p/295491/the-good-place-hostel/" target="_blank" rel="noopener">Voir la fiche</a></li>
+        <li><b>Hostel Kucha</b> (note 9,2 sur 10) — auberge au design soigné, avec terrasse et vue panoramique, très calme ; l'auberge prête un cadenas, ce qui en fait la plus rassurante pour le casier. En contrepartie, elle se trouve à dix minutes à pied en montée et la réception n'est pas ouverte en continu. <a class="h" href="https://www.hostelworld.com/hostels/p/280114/hostel-kucha/" target="_blank" rel="noopener">Voir la fiche</a></li>
+      </ul>
+      <p class="price">Ordre de grandeur en dortoir : 18 à 25 euros la nuit.</p>
+    </div>
+
+    <div class="lodge">
+      <div class="lodgehead"><span class="city">Belgrade</span><span class="flag">🇷🇸</span><span class="dates">Du 7 au 10 août · 3 nuits · à deux, chacun son lit</span></div>
+      <div class="pick"><span class="tag">Recommandé</span><span class="name">Balkan Soul</span> — note 9,2 sur 10.
+        <p>L'auberge la plus vivante et la plus sociable de la ville, en pleine vieille ville, avec un accès direct à la vie nocturne. Chaque lit dispose d'un grand casier qui ferme à clé, la clé étant fournie par l'auberge — rien à apporter. Seule réserve : quelques avis récents pointent la propreté des salles de bain. <a class="h" href="https://www.hostelworld.com/hostels/p/278242/balkan-soul-hostel/" target="_blank" rel="noopener">Voir la fiche</a></p>
+      </div>
+      <p class="alt">Autres options</p>
+      <ul>
+        <li><b>Up Hostel</b> (note 9,3 sur 10) — plus calme et posé, dans la rue bohème de Skadarlija, avec salon et jardin. Des casiers de sécurité sont annoncés, mais le mode de fermeture n'est pas précisé, à confirmer avant de réserver. <a class="h" href="https://www.hostelworld.com/hostels/p/314437/up-hostel/" target="_blank" rel="noopener">Voir la fiche</a></li>
+        <li><b>Belgrade Modern</b> — à écarter pour l'instant : aucun casier n'apparaît dans la liste des équipements. À ne retenir que si l'auberge confirme par écrit qu'il y en a.</li>
+      </ul>
+      <p class="price">Ordre de grandeur en dortoir : 16 à 24 euros la nuit.</p>
+    </div>
+
+    <div class="lodge">
+      <div class="lodgehead"><span class="city">Budapest</span><span class="flag">🇭🇺</span><span class="dates">Du 10 au 15 puis du 17 au 18 août</span></div>
+      <div class="pick"><span class="tag">Ton choix</span><span class="name">Wombat's City Hostel</span> — note 9,1 sur 10.
+        <p>Grande auberge de chaîne moderne, au 20 Király utca, à l'entrée du quartier juif : le bar à ruines Szimpla Kert est à cinq minutes, et la ligne de train de banlieue qui mène à l'île du festival Sziget est facilement accessible. Les dortoirs ont leur propre salle de bain. Chaque lit a un casier qui s'ouvre avec la carte de la chambre (aucun cadenas à prévoir) ; il est de petite taille, suffisant pour un sac à dos et les objets de valeur mais pas pour une valise — le gros bagage reste sous le lit ou en consigne. <a class="h" href="https://www.wombats-hostels.com/budapest" target="_blank" rel="noopener">Voir la fiche</a></p>
+      </div>
+      <p class="price">Ordre de grandeur en dortoir : 30 à 58 euros la nuit selon le type de dortoir (semaine du festival).</p>
+    </div>
+
+    <div class="lodge">
+      <div class="lodgehead"><span class="city">Eger</span><span class="flag">🇭🇺</span><span class="dates">Du 15 au 17 août · 2 nuits · étape repos</span></div>
+      <div class="pick"><span class="tag">Recommandé</span><span class="name">Hotel Villa Völgy</span> — hôtel avec spa, quatre étoiles.
+        <p>Eger n'a pas de véritable auberge de jeunesse : comme c'est l'étape détente de fin de voyage, on passe sur un hôtel avec spa. Le Villa Völgy est installé dans la vallée des Belles Femmes, au milieu des caves à vin, avec piscines, saunas et soins sur place, et le centre baroque à un quart d'heure à pied. Les bains thermaux d'Egerszalók (Saliris) se visitent à la journée, en bus (une vingtaine de minutes). À noter : l'hôtel Saliris Resort, situé directement sur les bains, n'est pas disponible aux dates. <a class="h" href="https://www.booking.com/spa/city/hu/eger.html" target="_blank" rel="noopener">Voir les hôtels-spa d'Eger</a></p>
+      </div>
+      <p class="alt">Autres options</p>
+      <ul>
+        <li><b>Hunguest Hotel Flóra</b> (quatre étoiles) — installé sur le parc thermal d'Eger, avec accès au bain municipal inclus ; tout se fait à pied depuis le centre. <a class="h" href="https://www.hunguesthotels.hu/en/hotel/eger/hunguest_hotel_flora/hotel_flora/" target="_blank" rel="noopener">Voir la fiche</a></li>
+        <li><b>Hotel Korona</b> (quatre étoiles) — en plein centre, avec un espace bien-être plus modeste (pas de véritables thermes) mais un emplacement idéal. <a class="h" href="https://korona.eger-hotels.com/en/" target="_blank" rel="noopener">Voir la fiche</a></li>
+      </ul>
+      <p class="price">Ordre de grandeur en hôtel : 95 à 170 euros la nuit.</p>
+    </div>
+  </section>
+
   <!-- ============ ACTIVITÉS ============ -->
   <section id="activites">
-    <div class="sechead"><span class="idx">03</span><h2 class="sec">Les activités</h2></div>
+    <div class="sechead"><span class="idx">04</span><h2 class="sec">Les activités</h2></div>
     <p class="secsub">Verdict par ville — <b class="vb must" style="margin:0;font-size:9px;vertical-align:middle">Incontournable</b> · <b class="vb nice" style="margin:0;font-size:9px;vertical-align:middle">Sympa</b> · <b class="vb meh" style="margin:0;font-size:9px;vertical-align:middle">Dispensable</b>. Déplie chaque pays.</p>
     <div class="acctools"><button class="btn" data-acc="all-open" type="button">Tout déplier</button><button class="btn" data-acc="all-close" type="button">Tout replier</button></div>
 
@@ -398,63 +473,6 @@
       </div>
     </details>
 
-  </section>
-
-  <!-- ============ HÉBERGEMENT ============ -->
-  <section id="hebergement">
-    <div class="sechead"><span class="idx">04</span><h2 class="sec">Où dormir</h2></div>
-    <p class="secsub">Une <b>reco</b> par étape + alternatives, calibrées « type Wombat's » (moderne, propre, central, bien noté). <span class="lock">🔒 = casier</span> (prérequis ; cadenas perso à apporter, ✔ = confirmé, ⚠️ = à vérifier). Prix dortoir indicatifs haute saison, à confirmer en direct.</p>
-    <div class="grid">
-
-      <div class="cty"><div class="ctyh"><span class="nm">Mostar 🇧🇦</span><span class="dur">1→4 · 3 n</span></div>
-        <p class="reco"><b>Reco : Hostel Nina</b> — dans la vieille ville (300 m du pont), casier de sécurité 🔒✔, petit-déj maison.</p>
-        <ul>
-          <li><b>Nina</b> · 9.5 · cœur vieille ville · 🔒✔ — <a class="h" href="https://www.hostelworld.com/hostels/p/190/hostel-nina/" target="_blank" rel="noopener">voir ↗</a></li>
-          <li>Majdas · 9.9 · accueil culte, sans lits superposés · 🔒⚠️ (valeurs seult) — <a class="h" href="https://www.hostelworld.com/hostels/p/73679/majdas/" target="_blank" rel="noopener">voir ↗</a></li>
-          <li>Miran · 9.6 · près des gares · 🔒⚠️ (lobby) — <a class="h" href="https://www.hostelworld.com/hostels/p/23551/hostel-miran/" target="_blank" rel="noopener">voir ↗</a></li>
-        </ul>
-        <div class="meta"><span>💶 dortoir ~15-22 €</span></div>
-      </div>
-
-      <div class="cty"><div class="ctyh"><span class="nm">Sarajevo 🇧🇦</span><span class="dur">4→7 · 3 n</span></div>
-        <p class="reco"><b>Reco : Hostel Vagabond</b> — à 50 pas de Baščaršija, dortoir + privé, SdB neuves.</p>
-        <ul>
-          <li><b>Vagabond</b> · 9.4 · ultra-central · 🔒⚠️ (cadenas perso) — <a class="h" href="https://www.hostelworld.com/hostels/p/79685/hostel-vagabond-sarajevo/" target="_blank" rel="noopener">voir ↗</a></li>
-          <li>The Good Place · 9.8 · le plus propre, dortoir only — <a class="h" href="https://www.hostelworld.com/hostels/p/295491/the-good-place-hostel/" target="_blank" rel="noopener">voir ↗</a></li>
-          <li>Kucha · 9.2 · vue, calme, 🔒✔ cadenas prêté · en montée — <a class="h" href="https://www.hostelworld.com/hostels/p/280114/hostel-kucha/" target="_blank" rel="noopener">voir ↗</a></li>
-        </ul>
-        <div class="meta"><span>💶 dortoir ~18-25 €</span></div>
-      </div>
-
-      <div class="cty"><div class="ctyh"><span class="nm">Belgrade 🇷🇸</span><span class="dur">7→10 · 3 n</span></div>
-        <p class="reco"><b>Reco : Balkan Soul</b> — social + vieille ville, casier fermant à clé fourni 🔒✔.</p>
-        <ul>
-          <li><b>Balkan Soul</b> · 9.2 · social, accès nuit · 🔒✔ (clé fournie) — <a class="h" href="https://www.hostelworld.com/hostels/p/278242/balkan-soul-hostel/" target="_blank" rel="noopener">voir ↗</a></li>
-          <li>Up Hostel · 9.3 · Skadarlija, plus calme · 🔒⚠️ — <a class="h" href="https://www.hostelworld.com/hostels/p/314437/up-hostel/" target="_blank" rel="noopener">voir ↗</a></li>
-          <li>Belgrade Modern · casier non confirmé → écarté sauf vérif</li>
-        </ul>
-        <div class="meta"><span>💶 dortoir ~16-24 €</span></div>
-      </div>
-
-      <div class="cty"><div class="ctyh"><span class="nm">Budapest 🇭🇺</span><span class="dur">10→15 + 17→18</span></div>
-        <p class="reco"><b>Wombat's City Hostel</b> — Király u. 20 (entrée quartier juif), Szimpla à 5 min, HÉV H5 → Sziget.</p>
-        <ul>
-          <li><b>Wombat's</b> · 9.1 · dortoirs SdB privée · 🔒 casier carte-clé (petit : sac à dos + valeurs, pas la valise) — <a class="h" href="https://www.wombats-hostels.com/budapest" target="_blank" rel="noopener">voir ↗</a></li>
-        </ul>
-        <div class="meta"><span>💶 dortoir ~30-58 € (semaine Sziget)</span></div>
-      </div>
-
-      <div class="cty"><div class="ctyh"><span class="nm">Eger 🇭🇺</span><span class="dur">15→17 · 2 n</span></div>
-        <p class="reco"><b>Reco : Hotel Villa Völgy</b> — hôtel-spa dans la vallée des vins, centre à ~15 min. Bains Saliris en excursion journée (bus 20 min). <em>Saliris Resort = hôtel indispo sur les dates.</em></p>
-        <ul>
-          <li><b>Villa Völgy</b> · 4* · spa + caves à vin à pied — <a class="h" href="https://www.booking.com/spa/city/hu/eger.html" target="_blank" rel="noopener">voir ↗</a></li>
-          <li>Hunguest Flóra · 4* · sur le parc thermal, tout à pied — <a class="h" href="https://www.hunguesthotels.hu/en/hotel/eger/hunguest_hotel_flora/hotel_flora/" target="_blank" rel="noopener">voir ↗</a></li>
-          <li>Korona · 4* central · spa léger — <a class="h" href="https://korona.eger-hotels.com/en/" target="_blank" rel="noopener">voir ↗</a></li>
-        </ul>
-        <div class="meta"><span>💶 hôtel ~95-170 €/nuit (étape repos, pas d'auberge à Eger)</span></div>
-      </div>
-
-    </div>
   </section>
 
   <!-- ============ BOUFFE ============ -->
