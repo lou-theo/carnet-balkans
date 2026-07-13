@@ -13,12 +13,12 @@ Axe sud → nord, 17 nuits :
 - **Mostar** 🇧🇦 (3 n) — entrée par vol direct Paris (Beauvais) → Sarajevo + train/bus ~2 h.
 - **Sarajevo** 🇧🇦 (3 n).
 - **Belgrade** 🇷🇸 (3 n).
-- **Budapest + Hongrie** 🇭🇺 (8 n) — base Budapest + festival **Sziget** (11-15 août) + day-trips à décider sur place (Eger, Szentendre, Balaton).
+- **Budapest + Hongrie** 🇭🇺 (8 n) — base Budapest 10-15 (festival **Sziget**, 11-15 août) + escapade détente **Eger + Egerszalók** 15-17 + retour Budapest 17-18.
 - Sortie par Budapest le 18.
 
 Zones à distinguer : **Croatie (transit) · Hongrie = UE + Schengen** (CNI seule, roaming FR, CEAM valable) ; **Bosnie · Serbie = hors UE** (passeport conseillé, eSIM, assurance dédiée).
 
-Le détail des jours hongrois reste **ouvert, à trancher sur place**.
+Escapade hongroise calée : **Eger + thermes d'Egerszalók** (15-17 août). Jours de base Budapest ouverts à des day-trips (Szentendre, coude du Danube).
 
 Pistes explorées puis écartées (Monténégro, Pologne/Cracovie, Tatras…) : archivées dans `PISTES-ABANDONNEES.md`.
 
