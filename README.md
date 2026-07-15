@@ -36,7 +36,7 @@ Auberges sociales + quelques privés et excursions.
 | Transferts terrestres (train/bus Sarajevo→Mostar→Sarajevo→Belgrade→Budapest) | 80–150 € |
 | Auberges (~17 nuits, ~15–30 €) | 260–510 € |
 | Repas & boissons | 320–500 € |
-| Activités (thermes, Sziget 2 j, excursions) | 150–300 € |
+| Activités (thermes, Sziget 1 j, excursions) | 150–300 € |
 | eSIM Balkans + assurance Heymondo (~40 €) | 60–90 € |
 | **Total** | **~1 200–2 050 €** |
 
