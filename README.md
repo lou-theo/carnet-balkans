@@ -6,7 +6,7 @@ Site live : https://lou-theo.github.io/carnet-balkans/
 
 Site statique : un seul fichier `index.html` (HTML + CSS + JS inline). Seule dépendance externe : la carte interactive charge Leaflet + les tuiles CARTO/OpenStreetMap depuis un CDN. Publié via GitHub Pages.
 
-## Plan (2 → 18 août 2026)
+## Plan (1 → 18 août 2026)
 
 Axe sud → nord, 17 nuits :
 

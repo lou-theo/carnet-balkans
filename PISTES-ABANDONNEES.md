@@ -1,7 +1,7 @@
 # Pistes abandonnées
 
 Archive des options explorées puis écartées, gardée **au cas où le plan changerait à nouveau**.
-Le plan retenu est décrit dans le site (`index.html`) et le `README.md` : **Bosnie → Serbie → Hongrie**, 2 → 18 août 2026, sortie Budapest.
+Le plan retenu est décrit dans le site (`index.html`) et le `README.md` : **Bosnie → Serbie → Hongrie**, 1 → 18 août 2026, sortie Budapest.
 
 > Ne rien référencer d'ici depuis le site : ces pistes ne doivent plus y apparaître.
 
@@ -44,7 +44,7 @@ Enchaînement vers Budapest : IC direct Košice→Budapest ~3h30, ou FlixBus Cra
 ## 4. Warm-up côte adriatique en solo (idée écartée)
 
 Pour meubler les jours solo d'un départ précoce : vol Split/Dubrovnik + 2-3 j côte/Kotor avant Mostar.
-Écarté car réintroduit Croatie/Monténégro et les dates (départ 2 août, retrouvailles Sarajevo le ~4) ne laissent plus le créneau.
+Écarté car réintroduit Croatie/Monténégro et les dates (départ 1ᵉʳ août, retrouvailles Sarajevo le ~4) ne laissent plus le créneau.
 Comparatif noté : **Kotor** (meilleure expérience — montagne+mer+forteresse+Budva, mais Kotor→Mostar ~5-6 h) vs **Dubrovnik** (fluide, bus 3 h Mostar, mais cher/bondé/petit) vs **Split** (ville festive + îles, bus Mostar ~4 h).
 
 ## 5. Aéroports envisagés (hors plan retenu)
