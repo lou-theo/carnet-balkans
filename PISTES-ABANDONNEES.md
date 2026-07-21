@@ -50,6 +50,6 @@ Comparatif noté : **Kotor** (meilleure expérience — montagne+mer+forteresse+
 ## 5. Aéroports envisagés (hors plan retenu)
 
 - **Belgrade (BEG)** — Air Serbia CDG ou Wizz Beauvais, directs. Sortie de repli.
-- **Sarajevo (SJJ)** — peu de directs Paris (escales), plus cher. Entrée alternative (Mostar en excursion).
+- **Sarajevo (SJJ)** — d'abord jugé mauvais point d'entrée (peu de directs Paris, plus cher), **finalement retenu** : vol direct Beauvais→Sarajevo du samedi (Ryanair) = entrée du plan actuel (voir `README.md`).
 - **Tuzla (TZL)** — Wizz Beauvais ultra low-cost, mais nord-est (2h30 bus Sarajevo).
-- **Dubrovnik (DBV)** — retenu comme aéroport d'entrée (transit vers Mostar).
+- **Dubrovnik (DBV)** — un temps envisagé comme aéroport d'entrée (bus 3-4 h + poste frontière vers Mostar), écarté avec le passage au vol direct Sarajevo.

@@ -16,7 +16,7 @@ Axe sud → nord, 17 nuits :
 - **Budapest + Hongrie** 🇭🇺 (8 n) — base Budapest 10-15 (festival **Sziget**, 11-15 août) + escapade détente **Eger + Egerszalók** 15-17 + retour Budapest 17-18.
 - Sortie par Budapest le 18.
 
-Zones à distinguer : **Croatie (transit) · Hongrie = UE + Schengen** (CNI seule, roaming FR, CEAM valable) ; **Bosnie · Serbie = hors UE** (passeport conseillé, eSIM, assurance dédiée).
+Zones à distinguer : **Hongrie = UE + Schengen** (CNI seule, roaming FR, CEAM valable) ; **Bosnie · Serbie = hors UE** (passeport conseillé, eSIM, assurance dédiée). Plus de transit par la Croatie : entrée par vol direct Sarajevo.
 
 Escapade hongroise calée : **Eger + thermes d'Egerszalók** (15-17 août). Jours de base Budapest ouverts à des day-trips (Szentendre, coude du Danube).
 
