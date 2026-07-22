@@ -111,6 +111,10 @@
   td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
   tr.total td{font-weight:700;background:var(--paper);border-top:2px solid var(--line)}
   .total .n{color:var(--coral)}
+  tr.reco td{background:#eef6ef}
+  .applink{color:var(--sea);font-weight:700;text-decoration:none;border-bottom:1.5px solid var(--sea-light)}
+  .applink:hover{color:var(--coral);border-bottom-color:var(--coral)}
+  .rc{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#2f6b3c;background:#dbeadd;border:1px solid #b6d6bd;border-radius:999px;padding:1px 7px;margin-left:6px;vertical-align:middle}
 
   .acctools{ display:flex; gap:8px; margin:0 0 14px; }
   .btn{ font-size:12.5px; font-weight:600; color:var(--ink); background:var(--card); border:1px solid var(--line); border-radius:8px; padding:7px 13px; cursor:pointer; transition:.15s; }
@@ -486,6 +490,23 @@
           <a class="lnk" href="https://www.seat61.com/trains-and-routes/budapest-to-belgrade-by-train.htm" target="_blank" rel="noopener">Seat61 Budapest-Belgrade ↗</a>
           <a class="lnk" href="https://getbybus.com" target="_blank" rel="noopener">GetByBus ↗</a>
         </div>
+        <p style="margin-top:16px"><b>📱 Apps utiles (par pays) —</b> installer + créer les comptes <b>avant le départ</b> (wifi maison). <span style="color:var(--green);font-weight:700">Vert = ma reco.</span> Le nom de chaque app est un lien d'installation.</p>
+        <div class="tablewrap" style="max-width:100%"><table>
+          <tr><th>App</th><th>Pays</th><th>Type</th><th>À quoi ça sert</th></tr>
+          <tr class="reco"><td><a class="applink" href="https://www.mojtaxi.ba/" target="_blank" rel="noopener">MojTaxi</a><span class="rc">reco</span></td><td>🇧🇦 Bosnie</td><td>Taxi</td><td>VTC local fiable, couvre <b>Sarajevo + Mostar</b>. Voiture sur carte, plaque + nom du chauffeur, paiement cash ou app. Pas de Bolt/Uber en Bosnie → <b>c'est LA solution</b>, dont <b>aéroport SJJ → gare</b> (court-circuite les taxis-arnaque de l'aéroport).</td></tr>
+          <tr class="reco"><td><a class="applink" href="https://go.yandex/en_rs/" target="_blank" rel="noopener">Yandex Go</a><span class="rc">reco</span></td><td>🇷🇸 Serbie</td><td>Taxi / VTC</td><td>Le plus utilisé à Belgrade, interface anglais, cash ou carte, type Uber. (Bolt/Uber absents en Serbie.)</td></tr>
+          <tr><td><a class="applink" href="https://appcargo.com/en" target="_blank" rel="noopener">CarGo</a></td><td>🇷🇸 Serbie</td><td>VTC</td><td>Alternative locale, cashless, prix transparent. Bon backup de Yandex.</td></tr>
+          <tr class="reco"><td><a class="applink" href="https://bolt.eu/" target="_blank" rel="noopener">Bolt</a><span class="rc">reco</span></td><td>🇭🇺 Hongrie</td><td>VTC</td><td>Marche à <b>Budapest</b> (PAS en Bosnie/Serbie). Prix connu d'avance, comme un Uber classique.</td></tr>
+          <tr><td><a class="applink" href="https://www.uber.com/" target="_blank" rel="noopener">Uber</a></td><td>🇭🇺 Hongrie</td><td>VTC</td><td>De retour à Budapest via Főtaxi : taxi jaune officiel au compteur régulé.</td></tr>
+          <tr><td><a class="applink" href="https://fotaxi.hu/en/" target="_blank" rel="noopener">Főtaxi</a></td><td>🇭🇺 Hongrie</td><td>Taxi</td><td>Compagnie officielle de l'aéroport de Budapest, appli propre. Alternative à Bolt/Uber.</td></tr>
+          <tr class="reco"><td><a class="applink" href="https://bkk.hu/en/tickets-and-passes/budapestgo/" target="_blank" rel="noopener">BudapestGO</a><span class="rc">reco</span></td><td>🇭🇺 Hongrie</td><td>Urbain</td><td>Appli officielle BKK : métro / tram / bus + <b>HÉV H5 vers Sziget</b>. Achat + activation du billet dans l'app (⚠️ activer <b>avant</b> de monter). Indispensable à Budapest.</td></tr>
+          <tr class="reco"><td><a class="applink" href="https://jegy.mav.hu/" target="_blank" rel="noopener">MÁV app</a><span class="rc">reco</span></td><td>🇭🇺 Hongrie</td><td>Train</td><td>Horaires + billets des trains hongrois. Pour <b>Budapest → Eger</b> (viser les directs, ~1h53).</td></tr>
+          <tr class="reco"><td><a class="applink" href="https://getbybus.com/en" target="_blank" rel="noopener">GetByBus</a><span class="rc">reco</span></td><td>🇧🇦 🇷🇸 🇭🇺</td><td>Bus</td><td>Agrégateur bus régional le plus large. Comparer les opérateurs + réserver à l'avance (rebrandé Traveling.com).</td></tr>
+          <tr><td><a class="applink" href="https://global.flixbus.com/" target="_blank" rel="noopener">FlixBus</a></td><td>🇷🇸 🇭🇺</td><td>Bus</td><td>Surtout Serbie ↔ Hongrie. <b>Code promo <code>JAH26GRMDML</code></b> dispo (fourni avec le billet Sziget).</td></tr>
+          <tr><td><a class="applink" href="https://www.blablacar.fr/" target="_blank" rel="noopener">BlaBlaCar</a></td><td>🇷🇸 🇭🇺</td><td>Covoit. / bus</td><td>Serbie + Hongrie, souvent moins cher, bon pour les courtes distances.</td></tr>
+          <tr><td><a class="applink" href="https://www.rome2rio.com/" target="_blank" rel="noopener">Rome2Rio</a></td><td>Tous</td><td>Planif</td><td>Comparer les itinéraires tous modes (planifier — pas pour acheter).</td></tr>
+        </table></div>
+        <p style="margin-top:9px"><b>Trains en Bosnie</b> (Sarajevo ↔ Mostar) : billets <b>au guichet de la gare uniquement</b>, aucune app. <b>Bus locaux</b> (Eger → Egerszalók, petites lignes bosniennes) : ticket à bord / au guichet, en cash.</p>
       </div>
     </details>
     <details class="acc-prat"><summary>🛂 Frontières<span class="fl">— hors UE puis retour Schengen</span><span class="chev">▸</span></summary>
