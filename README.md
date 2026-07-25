@@ -32,7 +32,7 @@ Auberges sociales + quelques privés et excursions.
 
 | Poste | Estimation |
 |---|---|
-| Vols (Paris→Sarajevo + Budapest→Paris, direct A/R) | 320–490 € |
+| Vols (Paris→Sarajevo + Budapest→Paris, direct A/R) | ≈ 311 € (achetés) |
 | Transferts terrestres (train/bus Sarajevo→Mostar→Sarajevo→Belgrade→Budapest) | 80–150 € |
 | Auberges (~17 nuits, ~15–30 €) | 260–510 € |
 | Repas & boissons | 320–500 € |
