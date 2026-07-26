@@ -13,8 +13,10 @@ Axe sud → nord, 17 nuits :
 - **Mostar** 🇧🇦 (3 n) — entrée par vol direct Paris (Beauvais) → Sarajevo + train/bus ~2 h.
 - **Sarajevo** 🇧🇦 (3 n).
 - **Belgrade** 🇷🇸 (3 n).
-- **Budapest + Hongrie** 🇭🇺 (8 n) — base Budapest 10-15 (festival **Sziget**, 11-15 août) + escapade détente **Eger + Egerszalók** 15-17 + retour Budapest 17-18.
+- **Budapest + Hongrie** 🇭🇺 (8 n) — base Budapest 10-15 (**Sziget** : une seule journée, le 11, sur un festival qui court du 11 au 15) + escapade détente **Eger + Egerszalók** 15-17 + retour Budapest 17-18.
 - Sortie par Budapest le 18.
+
+Hébergement : **Mostar, Budapest et Eger réservés** ; **Sarajevo et Belgrade restent à réserver**.
 
 Zones à distinguer : **Hongrie = UE + Schengen** (CNI seule, roaming FR, CEAM valable) ; **Bosnie · Serbie = hors UE** (passeport conseillé, eSIM, assurance dédiée). Plus de transit par la Croatie : entrée par vol direct Sarajevo.
 
@@ -26,19 +28,30 @@ Pistes explorées puis écartées (Monténégro, Pologne/Cracovie, Tatras…) : 
 
 Éditer `index.html`, commit, push. GitHub Pages redéploie automatiquement.
 
-## Budget (17 nuits, profil routard/auberges — estimations, à réviser)
+## Budget (17 nuits, profil routard/auberges)
 
-Auberges sociales + quelques privés et excursions.
+Auberges/dortoirs partout, sauf l'étape repos d'Eger (hôtel-spa en demi-pension).
+
+**Déjà payé — ≈ 930 €**
+
+| Poste | Montant |
+|---|---|
+| Vols A/R directs (Beauvais→Sarajevo, Budapest→Beauvais) | ≈ 311 € |
+| Hébergement réservé : Mostar 3 n, Budapest 5 + 1 n, Eger 2 n | ≈ 468 € |
+| Sziget, billet journée du 11 | 105 € |
+| Assurance voyage Heymondo (~16 j) | ≈ 44 € |
+
+**Reste à prévoir — ≈ 660–1 040 €**
 
 | Poste | Estimation |
 |---|---|
-| Vols (Paris→Sarajevo + Budapest→Paris, direct A/R) | ≈ 311 € (achetés) |
-| Transferts terrestres (train/bus Sarajevo→Mostar→Sarajevo→Belgrade→Budapest) | 80–150 € |
-| Auberges (~17 nuits, ~15–30 €) | 260–510 € |
-| Repas & boissons | 320–500 € |
-| Activités (thermes, Sziget 1 j, excursions) | 150–300 € |
-| eSIM Balkans + assurance Heymondo (~40 €) | 60–90 € |
-| **Total** | **~1 200–2 050 €** |
+| Hébergement Sarajevo + Belgrade (3 n chacun, dortoir) | 100–150 € |
+| Transferts terrestres (train Sarajevo↔Mostar, bus Sarajevo→Belgrade→Budapest) | 55–90 € |
+| Repas & boissons (2 dîners et 2 petits-déjeuners déjà inclus à Eger) | 300–480 € |
+| Activités (tour Herzégovine 50 €, thermes Széchenyi et Egerszalók, tours depuis Sarajevo) | 190–290 € |
+| eSIM Bosnie/Serbie, 10 Go | 15–25 € |
+
+**Total du voyage : ≈ 1 590–1 970 €.** Les estimations restantes sont des ordres de grandeur en pleine saison d'août.
 
 ## Publier (GitHub Pages)
 
