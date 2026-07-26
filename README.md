@@ -32,26 +32,28 @@ Pistes explorées puis écartées (Monténégro, Pologne/Cracovie, Tatras…) : 
 
 Auberges/dortoirs partout, sauf l'étape repos d'Eger (hôtel-spa en demi-pension).
 
-**Déjà payé — ≈ 930 €**
+**Engagé (réservé) — ≈ 1 010 €**, dont une partie se règle en espèces sur place.
 
 | Poste | Montant |
 |---|---|
 | Vols A/R directs (Beauvais→Sarajevo, Budapest→Beauvais) | ≈ 311 € |
-| Hébergement réservé : Mostar 3 n, Budapest 5 + 1 n, Eger 2 n | ≈ 468 € |
+| Hébergement, 14 nuits sur 17 : Mostar 3 n, Sarajevo 3 n, Budapest 5 + 1 n, Eger 2 n | ≈ 549 € |
 | Sziget, billet journée du 11 | 105 € |
 | Assurance voyage Heymondo (~16 j) | ≈ 44 € |
 
-**Reste à prévoir — ≈ 660–1 040 €**
+**Reste à prévoir — ≈ 610–960 €**
 
 | Poste | Estimation |
 |---|---|
-| Hébergement Sarajevo (réservé, réglé en espèces sur place) + Belgrade (3 n, à réserver) | 100–150 € |
-| Transferts terrestres (train Sarajevo↔Mostar, bus Sarajevo→Belgrade→Budapest) | 55–90 € |
+| Hébergement Belgrade (3 n, dortoir, à réserver) | 50–75 € |
+| Transferts terrestres (train Mostar↔Sarajevo, bus Sarajevo→Belgrade→Budapest) | 55–90 € |
 | Repas & boissons (2 dîners et 2 petits-déjeuners déjà inclus à Eger) | 300–480 € |
 | Activités (tour Herzégovine 50 €, thermes Széchenyi et Egerszalók, tours depuis Sarajevo) | 190–290 € |
 | eSIM Bosnie/Serbie, 10 Go | 15–25 € |
 
-**Total du voyage : ≈ 1 590–1 970 €.** Les estimations restantes sont des ordres de grandeur en pleine saison d'août.
+**Total du voyage : ≈ 1 620–1 970 €.** Les estimations restantes sont des ordres de grandeur en pleine saison d'août.
+
+À prévoir en **liquide** : le logement bosnien se paie sur place, soit ≈ 260 marks (solde de Mostar + les trois nuits de Sarajevo, taxe de séjour comprise) — à dimensionner dès le premier retrait.
 
 ## Publier (GitHub Pages)
 
