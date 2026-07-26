@@ -16,7 +16,7 @@ Axe sud → nord, 17 nuits :
 - **Budapest + Hongrie** 🇭🇺 (8 n) — base Budapest 10-15 (**Sziget** : une seule journée, le 11, sur un festival qui court du 11 au 15) + escapade détente **Eger + Egerszalók** 15-17 + retour Budapest 17-18.
 - Sortie par Budapest le 18.
 
-Hébergement : **Mostar, Budapest et Eger réservés** ; **Sarajevo et Belgrade restent à réserver**.
+Hébergement : **Mostar, Sarajevo, Budapest et Eger réservés** ; **seule Belgrade reste à réserver**.
 
 Zones à distinguer : **Hongrie = UE + Schengen** (CNI seule, roaming FR, CEAM valable) ; **Bosnie · Serbie = hors UE** (passeport conseillé, eSIM, assurance dédiée). Plus de transit par la Croatie : entrée par vol direct Sarajevo.
 
@@ -45,7 +45,7 @@ Auberges/dortoirs partout, sauf l'étape repos d'Eger (hôtel-spa en demi-pensio
 
 | Poste | Estimation |
 |---|---|
-| Hébergement Sarajevo + Belgrade (3 n chacun, dortoir) | 100–150 € |
+| Hébergement Sarajevo (réservé, réglé en espèces sur place) + Belgrade (3 n, à réserver) | 100–150 € |
 | Transferts terrestres (train Sarajevo↔Mostar, bus Sarajevo→Belgrade→Budapest) | 55–90 € |
 | Repas & boissons (2 dîners et 2 petits-déjeuners déjà inclus à Eger) | 300–480 € |
 | Activités (tour Herzégovine 50 €, thermes Széchenyi et Egerszalók, tours depuis Sarajevo) | 190–290 € |
