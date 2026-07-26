@@ -1,14 +1,13 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}</style>
+<!doctype html><html lang=fr><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><title>Carnet Balkans — Bosnie · Serbie · Hongrie</title><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}</style>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 </head><body>
-<title>Carnet Balkans — Bosnie · Serbie · Hongrie</title>
 <style>
   :root {
     --sea-deep:#0d3b45; --sea:#17606d; --sea-light:#3b8b96;
     --paper:#f4efe2; --paper-2:#efe7d5; --card:#fffdf7;
     --ink:#182a2c; --muted:#5d7176; --line:#cdc1a6; --line-soft:#e4dcc8;
     --coral:#cf5f38; --green:#4f8a5b; --amber:#c88a2e;
-    --srb:#c88a2e; --bih:#17606d; --mne:#cf5f38;
+    --srb:#c88a2e; --bih:#17606d; --hun:#cf5f38;
     --focus:#cf5f38;
   }
   * { box-sizing:border-box; }
@@ -53,8 +52,8 @@
   .dotc { width:20px; height:20px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; color:#fff; font-family:Georgia,serif; font-weight:700; font-size:11px; }
   .dotc.bih{background:var(--bih)}
   .ap { display:inline-block; width:16px; height:16px; border-radius:50%; }
-  .ap.g{background:var(--green)} .ap.c{background:var(--coral)}
-  .sw { width:20px; height:0; display:inline-block; } .sw.bus{border-top:3px solid #b34d2c} .sw.train{border-top:3px dashed var(--sea)} .sw.bord{border-top:2px dashed #8a7a52}
+  .ap.g{background:var(--green)}
+  .sw { width:20px; height:0; display:inline-block; } .sw.bus{border-top:3px solid #b34d2c} .sw.train{border-top:3px dashed var(--sea)}
 
   #map { height:460px; width:100%; background:#e9dfc8; }
   .leaflet-container { font:inherit; background:#e9dfc8; }
@@ -76,12 +75,12 @@
   .stopcard{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--line-soft);border-radius:12px;padding:13px 16px 14px;margin:0}
   .stop.bih .stopcard{border-left-color:var(--bih)}
   .stop.srb .stopcard{border-left-color:var(--srb)}
-  .stop.mne .stopcard{border-left-color:var(--mne)}
+  .stop.hun .stopcard{border-left-color:var(--hun)}
   .stop.esc .stopcard{border-left-color:var(--green)}
   .stop.air .stopcard{border-left-color:var(--muted);background:var(--paper)}
   .stophead{display:flex;flex-wrap:wrap;align-items:center;gap:7px 11px;margin-bottom:6px}
   .stophead .num{flex:0 0 auto;width:28px;height:28px;border-radius:50%;color:#fff;font-family:Georgia,serif;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center;background:var(--muted)}
-  .stop.bih .num{background:var(--bih)} .stop.srb .num{background:var(--srb)} .stop.mne .num{background:var(--mne)} .stop.esc .num{background:var(--green)} .stop.air .num{font-size:13px}
+  .stop.bih .num{background:var(--bih)} .stop.srb .num{background:var(--srb)} .stop.hun .num{background:var(--hun)} .stop.esc .num{background:var(--green)} .stop.air .num{font-size:13px}
   .stophead .city{font-family:Georgia,serif;font-size:18px;font-weight:700}
   .stophead .flag{font-size:13px}
   .stophead .days{margin-left:auto;font-size:12px;font-weight:700;color:var(--ink);background:var(--paper-2);border:1px solid var(--line);border-radius:999px;padding:3px 11px;font-variant-numeric:tabular-nums}
@@ -237,7 +236,7 @@
         <p class="do"><b>À faire :</b> Kalemegdan au coucher, Skadarlija, clubs flottants sur la rivière, Novi Sad à la journée. Détail dans « Les activités ».</p>
       </div></div>
       <div class="leg">🚌 <span class="mode">Bus Belgrade → Budapest</span> · FlixBus environ 6 h · départ le matin (train direct SOKO pas en service en août 2026)</div>
-      <div class="stop mne"><div class="stopcard">
+      <div class="stop hun"><div class="stopcard">
         <div class="stophead"><span class="num">4</span><span class="city">Budapest</span><span class="flag">🇭🇺</span><span class="days">10 → 15 août · 5 nuits</span></div>
         <p>La base hongroise. Une journée au festival <b>Sziget</b> (le 11).</p>
         <p class="do"><b>À faire :</b> thermes Széchenyi, bars à ruines, croisière sur le Danube. Détail dans « Les activités ».</p>
