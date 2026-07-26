@@ -47,7 +47,20 @@ Pour meubler les jours solo d'un départ précoce : vol Split/Dubrovnik + 2-3 j 
 Écarté car réintroduit Croatie/Monténégro et les dates (départ 1ᵉʳ août, retrouvailles Sarajevo le ~4) ne laissent plus le créneau.
 Comparatif noté : **Kotor** (meilleure expérience — montagne+mer+forteresse+Budva, mais Kotor→Mostar ~5-6 h) vs **Dubrovnik** (fluide, bus 3 h Mostar, mais cher/bondé/petit) vs **Split** (ville festive + îles, bus Mostar ~4 h).
 
-## 5. Aéroports envisagés (hors plan retenu)
+## 5. Escapades hongroises écartées (l'escapade retenue est Eger + Egerszalók, 15-17 août)
+
+Options comparées pour la queue solo détente/thermale, base Budapest, train/bus uniquement.
+
+- **Hévíz** — le meilleur pour du 100 % thermal : plus grand lac thermal naturel baignable au monde (~47 500 m², 30-35 °C l'été, profond de 36 m → bouée conseillée). Journée 7 500 HUF (~19 €), 3 h 4 500 HUF ; forfait journée + massage 15 000 HUF, cure de boue 20 min 10 500 HUF, soins sur rendez-vous. Horaires été 8h30-18h30. Accès sans voiture : **bus direct** Újbuda-központ → Hévíz Ady utca, ~2h10-2h25, 14-17 €, ~5/jour, sans changement ; ou train Budapest-Déli → Keszthely (~2h36-3h, direct) + bus local 6 km. Loger à pied du lac : Ensana Thermal Hévíz, demi-pension ~83-146 €/nuit. Écarté : **minimum 3 nuits imposé en haute saison** (incompatible avec la fenêtre de 2 nuits), **rénovations 2026** (bâtiment central A et terrasse B fermés, baignade extérieure maintenue), et Eger apporte en plus le vin et le baroque pour un trajet deux fois plus court.
+- **Sárvár** — resort-spa premium, soins haut de gamme (massage aux fleurs exotiques, sonore tibétain, pierres de lave, ayurvédique), complexe certifié Royal Spa. Écarté sur la logistique : train Budapest-Déli ~3h29 (2h59 au mieux), seulement ~4 directs/jour.
+- **Balaton rive nord** (Tihany, Balatonfüred, Badacsony) — paysages volcaniques, vin, bateaux BAHART ; train Budapest-Déli 1h45 pour Balatonfüred, Tihany via bus 15-20 min (porte-à-porte réaliste 2h30-3h). **Contre-indiqué mi-août** : pic de saison, foule, prix au sommet (vue lac 75 000+ HUF/nuit), hébergement très limité sur la péninsule de Tihany. L'objectif « repos » tombait.
+- **Bük** (pas de train direct, 3h30-4h) et **Miskolctapolca** (bain en grotte, curiosité mais pas une base pour dormir) — secondaires, jamais sérieusement en lice.
+
+Faits redressés au passage : Hévíz n'est pas à « 32 °C constant » (30-35 °C l'été) ; tous les trains Budapest → Eger ne sont **pas** directs ; Sárvár n'a pas un train horaire.
+
+À Eger même, options d'hébergement écartées avant la réservation de l'hôtel Eger & Park : Villa Baroque (~83 €, charme et cave) et Dáma Apartments (~94 €) — sans spa, donc hors sujet pour une étape détente ; Villa Völgy Wellness, Hunguest Flóra et Korona Wellness — pistes spa non retenues. L'hôtel Saliris sur place à Egerszalók tombait de toute façon : indisponible, et le village se vide le soir.
+
+## 6. Aéroports envisagés (hors plan retenu)
 
 - **Belgrade (BEG)** — Air Serbia CDG ou Wizz Beauvais, directs. Sortie de repli.
 - **Sarajevo (SJJ)** — d'abord jugé mauvais point d'entrée (peu de directs Paris, plus cher), **finalement retenu** : vol direct Beauvais→Sarajevo du samedi (Ryanair) = entrée du plan actuel (voir `README.md`).
