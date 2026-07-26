@@ -20,7 +20,7 @@ Hébergement : **les 17 nuits sont réservées** (Mostar, Sarajevo, Belgrade, Bu
 
 Zones à distinguer : **Hongrie = UE + Schengen** (CNI seule, roaming FR, CEAM valable) ; **Bosnie · Serbie = hors UE** (passeport conseillé, eSIM, assurance dédiée). Plus de transit par la Croatie : entrée par vol direct Sarajevo.
 
-Escapade hongroise calée : **Eger + thermes d'Egerszalók** (15-17 août). Jours de base Budapest ouverts à des day-trips (Szentendre, coude du Danube).
+Les jours de base à Budapest restent ouverts à des day-trips (Szentendre, coude du Danube) — rien à réserver.
 
 Pistes explorées puis écartées (Monténégro, Pologne/Cracovie, Tatras…) : archivées dans `PISTES-ABANDONNEES.md`.
 
@@ -52,7 +52,7 @@ Auberges/dortoirs partout, sauf l'étape repos d'Eger (hôtel-spa en demi-pensio
 
 **Total du voyage : ≈ 1 640–1 960 €.** Les estimations restantes sont des ordres de grandeur en pleine saison d'août.
 
-À prévoir en **liquide** : le logement bosnien se paie sur place, soit ≈ 260 marks (solde de Mostar + les trois nuits de Sarajevo, taxe de séjour comprise) — à dimensionner dès le premier retrait.
+À prévoir en **liquide** : les soldes de logement bosniens se règlent sur place, jusqu'à ≈ 260 marks (57,94 € à Mostar + 75,75 € à Sarajevo, taxe de séjour comprise) — à dimensionner dès le premier retrait. Sarajevo est le cas contraignant, l'auberge n'acceptant **que** les espèces ; Mostar prend probablement la carte.
 
 ## Publier (GitHub Pages)
 
