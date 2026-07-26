@@ -16,7 +16,7 @@ Axe sud → nord, 17 nuits :
 - **Budapest + Hongrie** 🇭🇺 (8 n) — base Budapest 10-15 (**Sziget** : une seule journée, le 11, sur un festival qui court du 11 au 15) + escapade détente **Eger + Egerszalók** 15-17 + retour Budapest 17-18.
 - Sortie par Budapest le 18.
 
-Hébergement : **Mostar, Sarajevo, Budapest et Eger réservés** ; **seule Belgrade reste à réserver**.
+Hébergement : **les 17 nuits sont réservées** (Mostar, Sarajevo, Belgrade, Budapest, Eger).
 
 Zones à distinguer : **Hongrie = UE + Schengen** (CNI seule, roaming FR, CEAM valable) ; **Bosnie · Serbie = hors UE** (passeport conseillé, eSIM, assurance dédiée). Plus de transit par la Croatie : entrée par vol direct Sarajevo.
 
@@ -32,26 +32,25 @@ Pistes explorées puis écartées (Monténégro, Pologne/Cracovie, Tatras…) : 
 
 Auberges/dortoirs partout, sauf l'étape repos d'Eger (hôtel-spa en demi-pension).
 
-**Engagé (réservé) — ≈ 1 010 €**, dont une partie se règle en espèces sur place.
+**Engagé (réservé) — ≈ 1 080 €**, dont une partie se règle en espèces sur place.
 
 | Poste | Montant |
 |---|---|
 | Vols A/R directs (Beauvais→Sarajevo, Budapest→Beauvais) | ≈ 311 € |
-| Hébergement, 14 nuits sur 17 : Mostar 3 n, Sarajevo 3 n, Budapest 5 + 1 n, Eger 2 n | ≈ 549 € |
+| Hébergement, **17 nuits, tout réservé** : Mostar 3 n, Sarajevo 3 n, Belgrade 3 n, Budapest 5 + 1 n, Eger 2 n | ≈ 617 € |
 | Sziget, billet journée du 11 | 105 € |
 | Assurance voyage Heymondo (~16 j) | ≈ 44 € |
 
-**Reste à prévoir — ≈ 610–960 €**
+**Reste à prévoir — ≈ 560–885 €**
 
 | Poste | Estimation |
 |---|---|
-| Hébergement Belgrade (3 n, dortoir, à réserver) | 50–75 € |
 | Transferts terrestres (train Mostar↔Sarajevo, bus Sarajevo→Belgrade→Budapest) | 55–90 € |
 | Repas & boissons (2 dîners et 2 petits-déjeuners déjà inclus à Eger) | 300–480 € |
 | Activités (tour Herzégovine 50 €, thermes Széchenyi et Egerszalók, tours depuis Sarajevo) | 190–290 € |
 | eSIM Bosnie/Serbie, 10 Go | 15–25 € |
 
-**Total du voyage : ≈ 1 620–1 970 €.** Les estimations restantes sont des ordres de grandeur en pleine saison d'août.
+**Total du voyage : ≈ 1 640–1 960 €.** Les estimations restantes sont des ordres de grandeur en pleine saison d'août.
 
 À prévoir en **liquide** : le logement bosnien se paie sur place, soit ≈ 260 marks (solde de Mostar + les trois nuits de Sarajevo, taxe de séjour comprise) — à dimensionner dès le premier retrait.
 
