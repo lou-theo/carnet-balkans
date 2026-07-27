@@ -1,6 +1,6 @@
 # Carnet Balkans
 
-Carnet de voyage web (page unique) — **Bosnie → Serbie → Hongrie**, 1 → 18 août 2026, sans voiture.
+Carnet de voyage web (page unique) : **Bosnie → Serbie → Hongrie**, 1 → 18 août 2026, sans voiture.
 
 Site live : https://lou-theo.github.io/carnet-balkans/
 
@@ -10,17 +10,17 @@ Site statique : un seul fichier `index.html` (HTML + CSS + JS inline). Seule dé
 
 Axe sud → nord, 17 nuits :
 
-- **Mostar** 🇧🇦 (3 n) — entrée par vol direct Paris (Beauvais) → Sarajevo + train/bus ~2 h.
+- **Mostar** 🇧🇦 (3 n), entrée par vol direct Paris (Beauvais) → Sarajevo + train/bus ~2 h.
 - **Sarajevo** 🇧🇦 (3 n).
 - **Belgrade** 🇷🇸 (3 n).
-- **Budapest + Hongrie** 🇭🇺 (8 n) — base Budapest 10-15 (**Sziget** : une seule journée, le 11, sur un festival qui court du 11 au 15) + escapade détente **Eger + Egerszalók** 15-17 + retour Budapest 17-18.
+- **Budapest + Hongrie** 🇭🇺 (8 n), base Budapest 10-15 (**Sziget** : une seule journée, le 11, sur un festival qui court du 11 au 15) + escapade détente **Eger + Egerszalók** 15-17 + retour Budapest 17-18.
 - Sortie par Budapest le 18.
 
 Hébergement : **les 17 nuits sont réservées** (Mostar, Sarajevo, Belgrade, Budapest, Eger).
 
 Zones à distinguer : **Hongrie = UE + Schengen** (CNI seule, roaming FR, CEAM valable) ; **Bosnie · Serbie = hors UE** (passeport conseillé, eSIM, assurance dédiée). Plus de transit par la Croatie : entrée par vol direct Sarajevo.
 
-Les jours de base à Budapest restent ouverts à des day-trips (Szentendre, coude du Danube) — rien à réserver.
+Les jours de base à Budapest restent ouverts à des day-trips (Szentendre, coude du Danube) ; rien à réserver.
 
 Pistes explorées puis écartées (Monténégro, Pologne/Cracovie, Tatras…) : archivées dans `PISTES-ABANDONNEES.md`.
 
@@ -32,7 +32,7 @@ Pistes explorées puis écartées (Monténégro, Pologne/Cracovie, Tatras…) : 
 
 Auberges/dortoirs partout, sauf l'étape repos d'Eger (hôtel-spa en demi-pension).
 
-**Engagé (réservé) — ≈ 1 080 €**, dont une partie se règle en espèces sur place.
+**Engagé (réservé) : ≈ 1 080 €**, dont une partie se règle en espèces sur place.
 
 | Poste | Montant |
 |---|---|
@@ -41,18 +41,18 @@ Auberges/dortoirs partout, sauf l'étape repos d'Eger (hôtel-spa en demi-pensio
 | Sziget, billet journée du 11 | 105 € |
 | Assurance voyage Heymondo (~16 j) | ≈ 44 € |
 
-**Reste à prévoir — ≈ 560–885 €**
+**Reste à prévoir : ≈ 560-885 €**
 
 | Poste | Estimation |
 |---|---|
-| Transferts terrestres (train Mostar↔Sarajevo, bus Sarajevo→Belgrade→Budapest) | 55–90 € |
-| Repas & boissons (2 dîners et 2 petits-déjeuners déjà inclus à Eger) | 300–480 € |
-| Activités (tour Herzégovine 50 €, thermes Széchenyi et Egerszalók, tours depuis Sarajevo) | 190–290 € |
-| eSIM Bosnie/Serbie, 10 Go | 15–25 € |
+| Transferts terrestres (train Mostar↔Sarajevo, bus Sarajevo→Belgrade→Budapest) | 55-90 € |
+| Repas & boissons (2 dîners et 2 petits-déjeuners déjà inclus à Eger) | 300-480 € |
+| Activités (tour Herzégovine 50 €, thermes Széchenyi et Egerszalók, tours depuis Sarajevo) | 190-290 € |
+| eSIM Bosnie/Serbie, 10 Go | 15-25 € |
 
-**Total du voyage : ≈ 1 640–1 960 €.** Les estimations restantes sont des ordres de grandeur en pleine saison d'août.
+**Total du voyage : ≈ 1 640-1 960 €.** Les estimations restantes sont des ordres de grandeur en pleine saison d'août.
 
-À prévoir en **liquide** : les soldes de logement bosniens se règlent sur place, jusqu'à ≈ 260 marks (57,94 € à Mostar + 75,75 € à Sarajevo, taxe de séjour comprise) — à dimensionner dès le premier retrait. Sarajevo est le cas contraignant, l'auberge n'acceptant **que** les espèces ; Mostar prend probablement la carte.
+À prévoir en **liquide** : les soldes de logement bosniens se règlent sur place, jusqu'à ≈ 260 KM (57,94 € à Mostar + 75,75 € à Sarajevo, taxe de séjour comprise) ; à dimensionner dès le premier retrait. Sarajevo est le cas contraignant, l'auberge n'acceptant **que** les espèces ; Mostar prend probablement la carte.
 
 ## Publier (GitHub Pages)
 
