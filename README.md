@@ -18,7 +18,7 @@ Axe sud → nord, 17 nuits :
 
 Hébergement : **les 17 nuits sont réservées** (Mostar, Sarajevo, Belgrade, Budapest, Eger).
 
-Zones à distinguer : **Hongrie = UE + Schengen** (CNI seule, roaming FR, CEAM valable) ; **Bosnie · Serbie = hors UE** (passeport conseillé, eSIM, assurance dédiée). Plus de transit par la Croatie : entrée par vol direct Sarajevo.
+Zones à distinguer : **Hongrie = UE + Schengen** (CNI seule, roaming FR, CEAM valable) ; **Bosnie · Serbie = hors UE** (passeport conseillé, pack téléphone dédié, assurance dédiée). Plus de transit par la Croatie : entrée par vol direct Sarajevo.
 
 Les jours de base à Budapest restent ouverts à des day-trips (Szentendre, coude du Danube) ; rien à réserver.
 
