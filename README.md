@@ -32,7 +32,7 @@ Pistes explorées puis écartées (Monténégro, Pologne/Cracovie, Tatras…) : 
 
 Auberges/dortoirs partout, sauf l'étape repos d'Eger (hôtel-spa en demi-pension).
 
-**Engagé (réservé) : ≈ 1 165 €**, dont une partie se règle en espèces sur place.
+**Engagé (réservé) : ≈ 1 200 €**, dont une partie se règle en espèces sur place.
 
 | Poste | Montant |
 |---|---|
@@ -42,17 +42,20 @@ Auberges/dortoirs partout, sauf l'étape repos d'Eger (hôtel-spa en demi-pensio
 | Assurance voyage Heymondo (~16 j) | ≈ 44 € |
 | Bus Belgrade → Budapest (FlixBus, 10 août, siège compris) | 54,12 € |
 | Car Sarajevo → Belgrade (7 août, siège compris) | 32,91 € |
+| Pack Séjour Europe de l'Est (15 Go + 30 min + 30 SMS, Bosnie et Serbie) | 35 € |
 
-**Reste à prévoir : ≈ 565-880 €**
+**Reste à prévoir : ≈ 555-860 €**
 
 | Poste | Estimation |
 |---|---|
 | Transferts terrestres restants (trains bosniens, bus urbains, taxis, train d'Eger) | 55-80 € |
 | Repas & boissons (2 dîners et 2 petits-déjeuners déjà inclus à Eger) | 300-480 € |
 | Activités (tour Herzégovine 50 €, thermes Széchenyi et Egerszalók, tours depuis Sarajevo) | 190-290 € |
-| eSIM Bosnie/Serbie, 10 Go | 15-25 € |
+| eSIM de secours (Airalo Eurolink, 3 Go) | ≈ 10 € |
 
-**Total du voyage : ≈ 1 725-2 040 €.** Les estimations restantes sont des ordres de grandeur en pleine saison d'août.
+**Total du voyage : ≈ 1 755-2 060 €.** Les estimations restantes sont des ordres de grandeur en pleine saison d'août.
+
+**Téléphone :** la Hongrie est couverte par le forfait (31 Go/mois depuis l'UE). La Bosnie et la Serbie sont en zone « reste du monde » à **18,48 € le Mo**, d'où le Pack Séjour ci-dessus ; détail des règles dans le carnet, section Réflexes.
 
 À prévoir en **liquide** : les soldes de logement bosniens se règlent sur place, ≈ 260 KM (57,94 € à Mostar + 75,75 € à Sarajevo, taxe de séjour comprise) ; à dimensionner dès le premier retrait. Sarajevo est le cas contraignant, l'auberge n'acceptant **que** les espèces, et son solde est à avoir sur soi **avant** d'arriver. À Mostar le solde se règle à l'arrivée, en marks.
 
