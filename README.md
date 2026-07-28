@@ -54,7 +54,7 @@ Auberges/dortoirs partout, sauf l'étape repos d'Eger (hôtel-spa en demi-pensio
 
 **Total du voyage : ≈ 1 725-2 040 €.** Les estimations restantes sont des ordres de grandeur en pleine saison d'août.
 
-À prévoir en **liquide** : les soldes de logement bosniens se règlent sur place, jusqu'à ≈ 260 KM (57,94 € à Mostar + 75,75 € à Sarajevo, taxe de séjour comprise) ; à dimensionner dès le premier retrait. Sarajevo est le cas contraignant, l'auberge n'acceptant **que** les espèces ; Mostar prend probablement la carte.
+À prévoir en **liquide** : les soldes de logement bosniens se règlent sur place, ≈ 260 KM (57,94 € à Mostar + 75,75 € à Sarajevo, taxe de séjour comprise) ; à dimensionner dès le premier retrait. Sarajevo est le cas contraignant, l'auberge n'acceptant **que** les espèces, et son solde est à avoir sur soi **avant** d'arriver. À Mostar le solde se règle à l'arrivée, en marks.
 
 ## Publier (GitHub Pages)
 
