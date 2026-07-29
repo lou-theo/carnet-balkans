@@ -4,6 +4,7 @@ Archive des options explorées puis écartées, gardée **au cas où le plan cha
 Le plan retenu est décrit dans le site (`index.html`) et le `README.md` : **Bosnie → Serbie → Hongrie**, 1 → 18 août 2026, sortie Budapest.
 
 > Ne rien référencer d'ici depuis le site : ces pistes ne doivent plus y apparaître.
+> Ce fichier garde le **détail chiffré** de ce qui a été écarté ; le dossier d'organisation complet (hors dépôt, voir `README.md`) n'en garde que la décision. En cas de désaccord entre les deux, c'est le dossier complet qui tranche.
 
 ---
 
@@ -44,7 +45,7 @@ Enchaînement vers Budapest : IC direct Košice→Budapest ~3h30, ou FlixBus Cra
 ## 4. Warm-up côte adriatique en solo (idée écartée)
 
 Pour meubler les jours solo d'un départ précoce : vol Split/Dubrovnik + 2-3 j côte/Kotor avant Mostar.
-Écarté car réintroduit Croatie/Monténégro et les dates (départ 1ᵉʳ août, retrouvailles Sarajevo le ~4) ne laissent plus le créneau.
+Écarté car réintroduit Croatie/Monténégro, et le départ du 1ᵉʳ août attaque directement par Mostar : plus aucun créneau avant.
 Comparatif noté : **Kotor** (meilleure expérience, montagne+mer+forteresse+Budva, mais Kotor→Mostar ~5-6 h) vs **Dubrovnik** (fluide, bus 3 h Mostar, mais cher/bondé/petit) vs **Split** (ville festive + îles, bus Mostar ~4 h).
 
 ## 5. Escapades hongroises écartées (l'escapade retenue est Eger + Egerszalók, 15-17 août)
@@ -60,7 +61,7 @@ Faits redressés au passage : Hévíz n'est pas à « 32 °C constant » (30-35 
 
 À Eger même, options d'hébergement écartées avant la réservation de l'hôtel Eger & Park : Villa Baroque (~83 €, charme et cave) et Dáma Apartments (~94 €) ; sans spa, donc hors sujet pour une étape détente ; Villa Völgy Wellness, Hunguest Flóra et Korona Wellness ; pistes spa non retenues. L'hôtel Saliris sur place à Egerszalók tombait de toute façon : indisponible, et le village se vide le soir.
 
-## 6. Aéroports envisagés (hors plan retenu)
+## 6. Aéroports comparés (Sarajevo, en bas de liste, a finalement été retenu)
 
 - **Belgrade (BEG)** : Air Serbia CDG ou Wizz Beauvais, directs. Sortie de repli.
 - **Sarajevo (SJJ)** : d'abord jugé mauvais point d'entrée (peu de directs Paris, plus cher), **finalement retenu** : vol direct Beauvais→Sarajevo du samedi (Ryanair) = entrée du plan actuel (voir `README.md`).

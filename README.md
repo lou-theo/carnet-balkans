@@ -6,11 +6,13 @@ Site live : https://lou-theo.github.io/carnet-balkans/
 
 Site statique : un seul fichier `index.html` (HTML + CSS + JS inline). Seule dépendance externe : la carte interactive charge Leaflet + les tuiles CARTO/OpenStreetMap depuis un CDN. Publié via GitHub Pages.
 
-## Deux versions, deux usages
+## Trois niveaux, un seul amont
 
-Ce dépôt ne porte que la **version publique**, faite pour être partagée : l'itinéraire, la carte, ce qu'il y a à voir et ce qu'on y mange. Elle s'arrête volontairement aux grandes lignes.
+- Le **dossier d'organisation complet** (références de réservation, codes, montants, soldes à régler sur place, numéros à appeler, options de repli) est la **source de vérité**. Il est tenu à part, hors du dépôt, et n'est pas publié.
+- Ce dépôt ne porte que la **version publique**, faite pour être partagée : l'itinéraire, la carte, où l'on dort, ce qu'il y a à voir et ce qu'on y mange. Elle s'arrête volontairement aux grandes lignes et **recopie l'amont, jamais l'inverse** : un fait qui change se corrige d'abord dans le dossier complet.
+- Les **notes de préparation** (matériel déjà en stock, relevés de prix, sources) vivent dans `temp/`, hors suivi Git. Elles ne gardent que ce qui n'a pas sa place dans le dossier complet.
 
-Le **dossier d'organisation complet** (références de réservation, codes, montants, soldes à régler sur place, numéros à appeler, options de repli) est tenu à part, hors du dépôt, et n'est pas publié. Toute information de ce type qui apparaîtrait ici serait à retirer.
+Toute référence, tout code et tout montant à régler qui apparaîtrait dans ce dépôt serait à retirer.
 
 ## Plan (1 → 18 août 2026)
 
@@ -28,7 +30,7 @@ Zones à distinguer : **Hongrie = UE + Schengen** (CNI seule, roaming FR, CEAM v
 
 Les jours de base à Budapest restent ouverts à des day-trips (Szentendre, coude du Danube) ; rien à réserver.
 
-Pistes explorées puis écartées (Monténégro, Pologne/Cracovie, Tatras…) : archivées dans `PISTES-ABANDONNEES.md`.
+Pistes explorées puis écartées (Monténégro, Pologne/Cracovie, Tatras…) : `PISTES-ABANDONNEES.md` en garde le détail chiffré, le dossier complet n'en garde que la décision.
 
 ## Modifier
 
