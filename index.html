@@ -48,14 +48,15 @@
   .dotc { width:20px; height:20px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; color:#fff; font-family:Georgia,serif; font-weight:700; font-size:11px; }
   .dotc.bih{background:var(--bih)}
   .ap { display:inline-block; width:16px; height:16px; border-radius:50%; }
-  .ap.g{background:var(--green)}
+  .ap.g{background:var(--green)} .ap.m{background:var(--muted)}
   .sw { width:20px; height:0; display:inline-block; } .sw.bus{border-top:3px solid #b34d2c} .sw.train{border-top:3px dashed var(--sea)}
 
   #map { height:460px; width:100%; background:#e9dfc8; }
   .leaflet-container { font:inherit; background:#e9dfc8; }
   .pin-num { border-radius:50%; border:3px solid #fff; box-shadow:0 3px 8px -2px rgba(0,0,0,.5); display:flex; align-items:center; justify-content:center; font-family:Georgia,serif; font-weight:700; font-size:15px; color:#fff; }
   .pin-num.bih{background:var(--bih)} .pin-num.srb{background:var(--srb)} .pin-num.hun{background:var(--coral)}
-  .pin-entry { border-radius:50%; border:2.5px solid #fff; background:var(--green); box-shadow:0 2px 6px -1px rgba(0,0,0,.5); display:flex; align-items:center; justify-content:center; font-size:12px; }
+  .pin-entry { border-radius:50%; border:2.5px solid #fff; background:var(--muted); box-shadow:0 2px 6px -1px rgba(0,0,0,.5); display:flex; align-items:center; justify-content:center; font-size:12px; }
+  .pin-entry.esc { background:var(--green); }
   .pin-dot { border-radius:50%; border:2px solid #fff; background:var(--muted); box-shadow:0 1px 4px rgba(0,0,0,.4); }
   .leaflet-popup-content-wrapper { border-radius:12px; }
   .leaflet-popup-content { margin:11px 14px; font-size:13.5px; line-height:1.45; }
@@ -174,10 +175,11 @@
       <div class="mapcol">
       <div class="mapcard">
       <button class="mapfs" type="button" aria-pressed="false">⛶ Plein écran</button>
-      <div id="map" role="img" aria-label="Carte interactive du voyage : Mostar, Sarajevo, Belgrade, Budapest, du sud au nord, avec étapes et day-trips"></div>
+      <div id="map" role="img" aria-label="Carte interactive du voyage : Mostar, Sarajevo, Belgrade, Budapest et Eger, du sud au nord, avec étapes et day-trips"></div>
       <div class="maplegend">
         <span class="grp"><span class="dotc bih">1</span> étape (cliquable)</span>
-        <span class="grp"><span class="ap g"></span> ✈ entrée (Sarajevo)</span>
+        <span class="grp"><span class="ap m"></span> ✈ entrée (Sarajevo)</span>
+        <span class="grp"><span class="ap g"></span> ♨ escapade (Eger)</span>
         <span class="grp"><span class="pin-dot" style="width:12px;height:12px"></span> day-trip / arrêt</span>
         <span class="grp"><span class="sw bus"></span> bus</span>
         <span class="grp"><span class="sw train"></span> train</span>
@@ -392,7 +394,6 @@
       <div class="fcol no"><h4>✗ Évite</h4><ul><li><b>Halászlé</b>, la soupe de poisson au paprika</li><li>Abats : foie, <b>hurka</b> (boudin) sur les menus</li></ul></div>
     </div>
     <p style="margin-top:10px;font-size:13.5px;color:var(--muted)">Un peu plus cher qu'à Belgrade ou Sarajevo. Vins de Tokaj et d'Eger, pálinka. À Eger, le dîner est inclus les deux soirs.</p>
-
   </section>
 
   <p class="foot">Plan calé, 1ᵉʳ → 18 août 2026 : Mostar, Sarajevo, Belgrade, Budapest et Sziget, Eger. <b>Les 17 nuits sont réservées.</b> Ce carnet donne les grandes lignes ; les détails d'organisation vivent ailleurs.</p>
@@ -438,6 +439,7 @@
     {n:4, c:'hun', name:'Budapest', sub:'🇭🇺 · base 5 nuits + escapade Eger · Sziget, thermes, ruin bars', lat:47.4979, lng:19.0402}
   ];
   var entry = {name:'Sarajevo (aéroport)', sub:'✈ Vol direct Paris (Beauvais), 1er août · train/bus ~2 h → Mostar', lat:43.8246, lng:18.3315};
+  var esc = {name:'Eger', sub:'♨ Escapade 15 → 17 août · 2 nuits · vin, baroque, thermes d\'Egerszalók', lat:47.9026, lng:20.3772};
   var spots = [
     // day-trips depuis Mostar
     {name:'Blagaj', sub:'Day-trip Mostar · tekija derviche + source Buna', lat:43.2570, lng:17.8975},
@@ -456,7 +458,6 @@
     {name:'Szentendre', sub:'Day-trip Budapest · village baroque du Danube · HÉV H5 ~40 min', lat:47.6690, lng:19.0745},
     {name:'Visegrád', sub:'Coude du Danube · citadelle + panorama', lat:47.7899, lng:18.9814},
     {name:'Esztergom', sub:'Coude du Danube · plus grande basilique de Hongrie', lat:47.7997, lng:18.7361},
-    {name:'Eger', sub:'Escapade 15-17 (2 nuits) · vin + baroque + thermes Egerszalók', lat:47.9026, lng:20.3772},
     {name:'Gödöllő', sub:'Château de Sissi · HÉV H8 ~45 min', lat:47.5977, lng:19.3599},
     {name:'Sziget', sub:'Festival sur l\'île d\'Óbuda · 11-15 août · HÉV H5', lat:47.5548, lng:19.0553}
   ];
@@ -465,7 +466,8 @@
     {mode:'train', a:entry,    b:stops[0]},
     {mode:'train', a:stops[0], b:stops[1]},
     {mode:'bus',   a:stops[1], b:stops[2]},
-    {mode:'bus',   a:stops[2], b:stops[3]}
+    {mode:'bus',   a:stops[2], b:stops[3]},
+    {mode:'train', a:stops[3], b:esc}
   ];
 
   var map = L.map('map', {scrollWheelZoom:true}).setView([44.8, 18.9], 6);
@@ -493,6 +495,8 @@
   });
   var eic = L.divIcon({className:'', html:'<div class="pin-entry" style="width:22px;height:22px">✈</div>', iconSize:[22,22], iconAnchor:[11,11]});
   group.push(L.marker([entry.lat, entry.lng], {icon:eic, title:entry.name}).addTo(map).bindPopup(popup(entry.name, entry.sub)));
+  var sic = L.divIcon({className:'', html:'<div class="pin-entry esc" style="width:24px;height:24px">♨</div>', iconSize:[24,24], iconAnchor:[12,12]});
+  group.push(L.marker([esc.lat, esc.lng], {icon:sic, title:esc.name}).addTo(map).bindPopup(popup(esc.name, esc.sub)));
   spots.forEach(function(s){
     var ic = L.divIcon({className:'', html:'<div class="pin-dot" style="width:15px;height:15px"></div>', iconSize:[15,15], iconAnchor:[7.5,7.5]});
     group.push(L.marker([s.lat, s.lng], {icon:ic, title:s.name}).addTo(map).bindPopup(popup(s.name, s.sub)));
