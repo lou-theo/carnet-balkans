@@ -24,7 +24,7 @@ Aéroports Monténégro : Tivat (TIV, Transavia Orly saisonnier), Podgorica (TGD
 
 Variante nature v1 : remplacer Budva par Žabljak/Durmitor, sortie Podgorica.
 
-## 2. Pologne ; Cracovie (plan « Europe centrale », abandonné)
+## 2. Pologne et Cracovie (plan « Europe centrale », abandonné)
 
 Idée : solo avant Budapest, entrée Beauvais→Cracovie (Ryanair ~2h10, 26-50 €).
 - **Cracovie** (2-3 j), vieille ville, Kazimierz (bars, Plac Nowy), pépites Nowa Huta / tertre de Krakus / baignade Zakrzówek. Auberges Good Bye Lenin, Top Hostel. Budget ~35-55 €/j.
