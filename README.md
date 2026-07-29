@@ -57,7 +57,7 @@ Auberges/dortoirs partout, sauf l'étape repos d'Eger (hôtel-spa en demi-pensio
 
 **Téléphone :** la Hongrie est couverte par le forfait (31 Go/mois depuis l'UE). La Bosnie et la Serbie sont en zone « reste du monde » à **18,48 € le Mo**, d'où le Pack Séjour ci-dessus ; détail des règles dans le carnet, section Réflexes.
 
-À prévoir en **liquide** : les soldes de logement bosniens se règlent sur place, ≈ 260 KM (57,94 € à Mostar + 75,75 € à Sarajevo, taxe de séjour comprise) ; à dimensionner dès le premier retrait. Sarajevo est le cas contraignant, l'auberge n'acceptant **que** les espèces, et son solde est à avoir sur soi **avant** d'arriver. À Mostar le solde se règle à l'arrivée, en marks.
+À prévoir en **liquide** : les soldes de logement bosniens se règlent sur place, ≈ 261 KM (57,94 € à Mostar + 75,75 € à Sarajevo, taxe de séjour comprise) ; à dimensionner dès le premier retrait. Sarajevo est le cas contraignant, l'auberge n'acceptant **que** les espèces, et son solde est à avoir sur soi **avant** d'arriver. À Mostar le solde se règle à l'arrivée, en marks.
 
 ## Publier (GitHub Pages)
 
