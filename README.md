@@ -21,7 +21,7 @@ Axe sud → nord, 17 nuits :
 - **Mostar** 🇧🇦 (3 n), entrée par vol direct Paris (Beauvais) → Sarajevo + train/bus ~2 h.
 - **Sarajevo** 🇧🇦 (3 n).
 - **Belgrade** 🇷🇸 (3 n).
-- **Budapest + Hongrie** 🇭🇺 (8 n), base Budapest 10-15 (**Sziget** : une seule journée, le 11, sur un festival qui court du 11 au 15) + escapade détente **Eger + Egerszalók** 15-17 + retour Budapest 17-18.
+- **Budapest + Hongrie** 🇭🇺 (8 n), base Budapest 10-12, escapade détente **Eger + Egerszalók** 12-14, retour Budapest 14-18 (**Sziget** : une seule journée, le 15, la clôture d'un festival qui court du 11 au 15). L'escapade passe avant le festival pour laisser deux jours calmes après, et pour ne rien mettre sur le jour du vol.
 - Sortie par Budapest le 18.
 
 Hébergement : **les 17 nuits sont réservées** (Mostar, Sarajevo, Belgrade, Budapest, Eger).

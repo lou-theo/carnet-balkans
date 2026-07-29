@@ -48,7 +48,7 @@ Pour meubler les jours solo d'un départ précoce : vol Split/Dubrovnik + 2-3 j 
 Écarté car réintroduit Croatie/Monténégro, et le départ du 1ᵉʳ août attaque directement par Mostar : plus aucun créneau avant.
 Comparatif noté : **Kotor** (meilleure expérience, montagne+mer+forteresse+Budva, mais Kotor→Mostar ~5-6 h) vs **Dubrovnik** (fluide, bus 3 h Mostar, mais cher/bondé/petit) vs **Split** (ville festive + îles, bus Mostar ~4 h).
 
-## 5. Escapades hongroises écartées (l'escapade retenue est Eger + Egerszalók, 15-17 août)
+## 5. Escapades hongroises écartées (l'escapade retenue est Eger + Egerszalók, 12-14 août)
 
 Options comparées pour la queue solo détente/thermale, base Budapest, train/bus uniquement.
 
