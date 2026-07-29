@@ -13,8 +13,8 @@
   * { box-sizing:border-box; }
   html { scroll-behavior:smooth; overflow-x:clip; }
   body { margin:0; background:var(--paper); color:var(--ink); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; line-height:1.55; -webkit-font-smoothing:antialiased; overflow-x:clip; }
-  img, svg, video, table { max-width:100%; }
-  section, header, .mapcard, .chips { min-width:0; }
+  img, svg, video { max-width:100%; }
+  section, header, .mapcard { min-width:0; }
   a { color:inherit; }
   :focus-visible { outline:2.5px solid var(--focus); outline-offset:2px; border-radius:3px; }
   .skip { position:absolute; left:-999px; top:8px; background:var(--ink); color:#fff; padding:8px 14px; border-radius:8px; z-index:100; text-decoration:none; font-weight:600; }
@@ -23,6 +23,7 @@
 
   .eyebrow { font-size:11.5px; letter-spacing:.2em; text-transform:uppercase; color:var(--coral); font-weight:700; margin:0 0 12px; }
   h1 { font-family:Georgia,"Times New Roman",serif; font-weight:700; font-size:clamp(32px,6.5vw,58px); line-height:1; margin:0 0 16px; text-wrap:balance; letter-spacing:-.02em; }
+  .intro { color:var(--muted); font-size:15px; max-width:70ch; margin:0; }
 
   nav.toc { position:sticky; top:0; z-index:1100; margin:30px calc(clamp(18px,3.5vw,56px) * -1) 0; padding:11px clamp(18px,3.5vw,56px); background:rgba(244,239,226,.9); backdrop-filter:blur(10px); border-top:1px solid var(--line); border-bottom:1px solid var(--line); display:flex; gap:8px; overflow-x:auto; scrollbar-width:thin; }
   nav.toc a { flex:0 0 auto; font-size:13px; font-weight:600; text-decoration:none; color:var(--muted); border:1px solid transparent; border-radius:999px; padding:6px 13px; transition:background .15s,color .15s,border-color .15s; white-space:nowrap; }
@@ -60,7 +61,6 @@
   .leaflet-popup-content { margin:11px 14px; font-size:13.5px; line-height:1.45; }
   .leaflet-popup-content .pc { font-family:Georgia,serif; font-size:15px; font-weight:700; color:var(--ink); }
   .leaflet-popup-content .ps { font-size:12px; color:var(--muted); }
-  .leaflet-popup-content .pl { font-weight:600; color:var(--coral); text-decoration:none; }
 
   .voyage{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:26px;align-items:start;margin:22px 0 0}
   .voyage .mapcol{position:sticky;top:64px}
@@ -85,20 +85,6 @@
   .leg{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:6px;margin:8px 0;font-size:12.5px;color:var(--muted);text-align:center}
   .leg .mode{font-weight:700;color:var(--ink)} .leg .mode.train{color:var(--sea)} .leg.long .mode{color:var(--coral)}
 
-
-  .tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;max-width:640px}
-  table{border-collapse:collapse;width:100%;min-width:440px;font-size:14px;background:var(--card)}
-  th,td{text-align:left;padding:11px 15px;border-bottom:1px solid var(--line-soft)}
-  th{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700;background:var(--paper)}
-  tr:last-child td{border-bottom:none}
-  td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
-  tr.total td{font-weight:700;background:var(--paper);border-top:2px solid var(--line)}
-  .total .n{color:var(--coral)}
-  tr.reco td{background:#eef6ef}
-  .applink{color:var(--sea);font-weight:700;text-decoration:none;border-bottom:1.5px solid var(--sea-light)}
-  .applink:hover{color:var(--coral);border-bottom-color:var(--coral)}
-
-
   .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:14px}
   .cty{background:var(--paper);border:1px solid var(--line);border-radius:11px;padding:14px 16px;display:flex;flex-direction:column}
   .ctyh{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin-bottom:6px}
@@ -108,7 +94,7 @@
   .vb.must{background:var(--coral);color:#fff}.vb.nice{background:#f6ecd4;color:#8a5e12;border:1px solid #e6d3a3}.vb.meh{background:var(--paper-2);color:#5d7176;border:1px solid var(--line)}
   .cty ul{margin:0 0 10px;padding-left:17px;font-size:13px}.cty li{margin-bottom:3px}
   .cty .meta{margin-top:auto;font-size:12px;color:var(--muted);border-top:1px solid var(--line-soft);padding-top:9px;display:grid;gap:3px}
-  .cty .meta b{color:var(--ink);font-weight:600}
+  .cty .meta b{color:var(--ink)}
   .tagl{font-style:italic;color:var(--muted);font-size:12.5px;margin:0 0 9px}
 
   .note{border-radius:10px;padding:13px 16px;font-size:13.5px;margin-bottom:16px}
@@ -121,9 +107,6 @@
   .fcol h4{margin:0 0 7px;font-size:13.5px}.fcol.yes h4{color:#2f6b3c}.fcol.no h4{color:#a8451f}
   .fcol ul{margin:0;padding-left:17px}.fcol li{margin-bottom:3px}
 
-  .links{display:flex;flex-wrap:wrap;gap:9px;margin-top:6px}
-  .lnk{font-size:13px;font-weight:600;text-decoration:none;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:8px;padding:8px 13px;transition:.15s}
-  .lnk:hover{border-color:var(--coral);color:var(--coral)}
   .foot{margin-top:50px;font-size:12px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px}
 
   .lodge{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px 14px;margin-bottom:14px;max-width:880px}
@@ -133,22 +116,19 @@
   .lodgehead .dates{font-size:13px;color:var(--muted);font-weight:600;margin-left:auto}
   .bk{display:inline-flex;align-items:center;gap:4px;background:var(--green);color:#fff;font-size:10.5px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;padding:3px 9px;border-radius:5px}
   .lodge.done{border-color:var(--green)}
-  .pick{background:#e5f0e6;border:1px solid #b6d6bd;border-radius:9px;padding:12px 15px;margin-bottom:12px;font-size:14px}
+  .pick{background:#e5f0e6;border:1px solid #b6d6bd;border-radius:9px;padding:12px 15px;font-size:14px}
   .pick .name{font-family:Georgia,serif;font-size:16px;font-weight:700;color:#265a30}
   .pick p{margin:9px 0 0;line-height:1.6}
-  .price{margin:11px 0 0;font-size:13px;color:var(--muted)}
   .lodge a.h{color:var(--coral);font-weight:600;text-decoration:none;white-space:nowrap}
   .lodge a.h:hover{text-decoration:underline}
 
-  #bosnie{ --accent:var(--bih); } #serbie{ --accent:var(--srb); } #hongrie{ --accent:var(--hun); } #general{ --accent:var(--sea); }
+  #bosnie{ --accent:var(--bih); } #serbie{ --accent:var(--srb); } #hongrie{ --accent:var(--hun); }
   section[id] .sechead .idx{ color:var(--accent,var(--coral)); }
   h3.sub{ font-family:Georgia,serif; font-size:19px; font-weight:700; color:var(--sea-deep); margin:34px 0 12px; padding-bottom:6px; border-bottom:2px solid var(--accent,var(--line-soft)); }
   h3.sub:first-of-type{ margin-top:24px; }
   .facts{ display:flex; flex-wrap:wrap; gap:8px; margin:0 0 4px; }
   .facts span{ font-size:12.5px; background:var(--card); border:1px solid var(--line); border-left:3px solid var(--accent,var(--line)); border-radius:7px; padding:6px 11px; }
   .facts b{ color:var(--ink); }
-  table.kv td:first-child{ font-weight:600; white-space:nowrap; width:118px; color:var(--sea-deep); background:var(--paper); }
-  table.kv td{ vertical-align:top; }
   ul.know{ margin:0; padding-left:20px; font-size:14px; line-height:1.6; max-width:78ch; }
   ul.know li{ margin-bottom:9px; }
   a.stoplink{ text-decoration:none; color:inherit; display:block; }
@@ -156,22 +136,6 @@
   a.stoplink:hover .stopcard, a.stoplink:focus-visible .stopcard{ border-color:var(--coral); box-shadow:0 10px 26px -18px rgba(13,59,69,.7); }
   a.stoplink .stophead::after{ content:"↓"; font-size:13px; font-weight:700; color:var(--muted); }
   a.stoplink:hover .stophead::after{ color:var(--coral); }
-  table.legs td:last-child{ font-weight:700; }
-  @media(max-width:620px){
-    .tablewrap:has(table.legs), .tablewrap:has(table.kv){ overflow-x:visible; border:0; border-radius:0; }
-    table.legs, table.kv{ min-width:0; background:transparent; }
-    table.legs thead, table.legs tr:first-child{ display:none; }
-    table.legs tr{ display:block; background:var(--card); border:1px solid var(--line); border-left:3px solid var(--accent); border-radius:10px; margin-bottom:10px; padding:11px 13px; }
-    table.legs td{ display:block; border:0; padding:2px 0; }
-    table.legs td::before{ content:attr(data-l) " "; font-size:10.5px; letter-spacing:.07em; text-transform:uppercase; color:var(--muted); font-weight:700; }
-    table.legs td:last-child{ text-align:left; margin-top:6px; color:var(--coral); }
-    table.kv tr{ display:block; background:var(--card); border:1px solid var(--line); border-left:3px solid var(--accent); border-radius:10px; margin-bottom:8px; padding:9px 12px; }
-    table.kv td{ display:block; border:0; padding:1px 0; }
-    table.kv td:first-child{ width:auto; background:none; font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); }
-  }
-  a.pin{ display:inline-block; font-size:12px; font-weight:700; text-decoration:none; color:var(--sea); background:var(--paper-2); border:1px solid var(--line); border-radius:6px; padding:1px 7px; margin:2px 3px 2px 0; white-space:nowrap; }
-  a.pin:hover{ border-color:var(--coral); color:var(--coral); }
-  .pins{ display:flex; flex-wrap:wrap; gap:4px; margin-top:6px; }
   #top{ position:fixed; right:20px; bottom:20px; z-index:40; width:44px; height:44px; border-radius:50%; background:var(--sea); color:#fff; border:none; font-size:18px; cursor:pointer; box-shadow:0 8px 20px -6px rgba(13,59,69,.6); opacity:0; pointer-events:none; transition:opacity .25s, transform .25s; transform:translateY(8px); }
   #top.show{ opacity:1; pointer-events:auto; transform:translateY(0); }
 
@@ -189,8 +153,9 @@
 
 <div class="wrap">
   <header>
-    <p class="eyebrow">1 → 18 août 2026 · Reims · sans voiture</p>
+    <p class="eyebrow">1ᵉʳ → 18 août 2026 · Reims · sans voiture</p>
     <h1>Carnet Balkans</h1>
+    <p class="intro">Trois semaines du sud au nord, sans voiture : la Bosnie-Herzégovine, la Serbie, la Hongrie. Voici les grandes lignes, ce qu'il y a à voir et ce qu'on y mange.</p>
   </header>
 
   <nav class="toc" aria-label="Sommaire">
@@ -198,13 +163,12 @@
     <a href="#bosnie">🇧🇦 Bosnie</a>
     <a href="#serbie">🇷🇸 Serbie</a>
     <a href="#hongrie">🇭🇺 Hongrie</a>
-    <a href="#general">Réflexes</a>
   </nav>
 
   <!-- ============ LE VOYAGE ============ -->
   <section id="voyage">
     <div class="sechead"><span class="idx">01</span><h2 class="sec">Le voyage</h2></div>
-    <p class="secsub"><b>1ᵉʳ → 18 août, sud → nord.</b> Arrivée en vol direct à Sarajevo, on descend d'abord à Mostar, puis on remonte Sarajevo → Belgrade → Budapest, sortie le 18. Deux journées de transit en bus (Sarajevo → Belgrade, puis Belgrade → Budapest) ; rythme détendu, environ 3 nuits par grande ville-étape. <b>Chaque étape est cliquable</b> et mène au détail de son pays : où dormir, transports, activités, argent.</p>
+    <p class="secsub"><b>1ᵉʳ → 18 août, sud → nord.</b> Arrivée en vol direct à Sarajevo, on descend d'abord à Mostar, puis on remonte Sarajevo → Belgrade → Budapest, sortie le 18. Deux journées de transit en bus ; rythme détendu, environ 3 nuits par grande ville-étape. <b>Chaque étape est cliquable</b> et mène au détail de son pays.</p>
     <div class="voyage">
       <div class="mapcol">
       <div class="mapcard">
@@ -222,40 +186,40 @@
     <div class="tl">
       <div class="stop air"><div class="stopcard">
         <div class="stophead"><span class="num">✈</span><span class="city">Aller</span><span class="days">samedi 1ᵉʳ août</span></div>
-        <p><b>Beauvais → Sarajevo</b> 11:35 → 13:45 (direct, 2h10, Ryanair), puis <b>train ou bus ~2 h</b> jusqu'à Mostar. Billets achetés, bagage en soute ; voiture entre Reims et Beauvais aux deux bouts.</p>
+        <p><b>Beauvais → Sarajevo</b>, vol direct de 2 h 10, puis <b>train ou bus ~2 h</b> jusqu'à Mostar.</p>
       </div></div>
-      <div class="leg">🚆 <span class="mode train">Train Sarajevo → Mostar</span> · <b>16:46 → 18:48</b> (train 721, voie II/3, panoramique Neretva) ou bus du soir</div>
+      <div class="leg">🚆 <span class="mode train">Train Sarajevo → Mostar</span> · 2 h · panoramique, vallée de la Neretva</div>
       <div class="stop bih"><a class="stoplink" href="#bosnie"><div class="stopcard">
         <div class="stophead"><span class="num">1</span><span class="city">Mostar</span><span class="flag">🇧🇦</span><span class="days">1ᵉʳ → 4 août · 3 nuits</span></div>
-        <p>Première étape, mise en jambes en Herzégovine. Trois nuits, mais <b>deux journées pleines</b> : arrivée le 1er au soir, départ du 4 à l'aube.</p>
-        <p class="do"><b>Le 2 :</b> la ville. <b>Le 3 :</b> la journée de tour en Herzégovine, réservée auprès de l'auberge, <b>date à caler à l'arrivée</b>.</p>
+        <p>Première étape, mise en jambes en Herzégovine. Trois nuits, mais <b>deux journées pleines</b> : arrivée le 1ᵉʳ au soir, départ du 4 à l'aube.</p>
+        <p class="do"><b>Un jour</b> pour la ville, <b>un jour</b> de tour en Herzégovine.</p>
       </div></a></div>
-      <div class="leg">🚆 <span class="mode train">Train panoramique Mostar → Sarajevo</span> · <b>06:36 → 08:35</b> retenu (train 720) ou 17:09 → 19:07 (train 722) · vallée de la Neretva</div>
+      <div class="leg">🚆 <span class="mode train">Train panoramique Mostar → Sarajevo</span> · 2 h · vallée de la Neretva</div>
       <div class="stop bih"><a class="stoplink" href="#bosnie"><div class="stopcard">
         <div class="stophead"><span class="num">2</span><span class="city">Sarajevo</span><span class="flag">🇧🇦</span><span class="days">4 → 7 août · 3 nuits</span></div>
         <p>Là où l'Orient rencontre l'Occident, nuit animée.</p>
         <p class="do">Trois journées, grâce au train du matin depuis Mostar.</p>
       </div></a></div>
-      <div class="leg long">🚌 <span class="mode">Bus Sarajevo → Belgrade</span> · <b>09:45 → 17:45</b> (Centrotrans, 8 h, réservé) · départ de Lukavica, arrivée en Bloc 42 (Novi Beograd)</div>
+      <div class="leg long">🚌 <span class="mode">Bus Sarajevo → Belgrade</span> · 8 h · la plus longue journée de transit</div>
       <div class="stop srb"><a class="stoplink" href="#serbie"><div class="stopcard">
         <div class="stophead"><span class="num">3</span><span class="city">Belgrade</span><span class="flag">🇷🇸</span><span class="days">7 → 10 août · 3 nuits</span></div>
-        <p>Capitale électrique, vie nocturne au sommet. Passage hors Union européenne (frontière, carte SIM, assurance).</p>
+        <p>Capitale électrique, vie nocturne au sommet.</p>
         <p class="do">Arrivée en fin d'après-midi le 7, départ tôt le 10 : deux journées pleines.</p>
       </div></a></div>
-      <div class="leg">🚌 <span class="mode">Bus Belgrade → Budapest</span> · FlixBus environ 6 h · départ le matin (train direct SOKO pas en service en août 2026)</div>
+      <div class="leg">🚌 <span class="mode">Bus Belgrade → Budapest</span> · environ 6 h · départ le matin</div>
       <div class="stop hun"><a class="stoplink" href="#hongrie"><div class="stopcard">
         <div class="stophead"><span class="num">4</span><span class="city">Budapest</span><span class="flag">🇭🇺</span><span class="days">10 → 15 août · 5 nuits</span></div>
-        <p>La base hongroise. Une journée au festival <b>Sziget</b> (le 11).</p>
+        <p>La base hongroise. Une journée au festival <b>Sziget</b>, le 11.</p>
       </div></a></div>
       <div class="leg">🚆 <span class="mode train">Budapest → Eger</span> · train direct, environ 1 h 53</div>
       <div class="stop esc"><a class="stoplink" href="#hongrie"><div class="stopcard">
         <div class="stophead"><span class="num">♨</span><span class="city">Eger</span><span class="flag">🇭🇺</span><span class="days">15 → 17 août · 2 nuits</span></div>
         <p>L'escapade détente de fin de voyage : hôtel avec spa, vin et baroque.</p>
       </div></a></div>
-      <div class="leg">🚆 <span class="mode train">Retour Eger → Budapest</span> · train direct, environ 1 h 53 · dernière nuit à Budapest</div>
+      <div class="leg">🚆 <span class="mode train">Retour Eger → Budapest</span> · train direct · dernière nuit à Budapest</div>
       <div class="stop air"><div class="stopcard">
         <div class="stophead"><span class="num">✈</span><span class="city">Retour</span><span class="days">mardi 18 août</span></div>
-        <p><b>Budapest → Beauvais</b> 16:35 → 18:55 (direct, 2h20, Ryanair), puis voiture jusqu'à <b>Reims</b>. Départ de Budapest après une dernière nuit sur place.</p>
+        <p><b>Budapest → Beauvais</b>, vol direct de 2 h 20, puis route jusqu'à <b>Reims</b>.</p>
       </div></div>
     </div>
     </div>
@@ -264,81 +228,62 @@
   <!-- ============ BOSNIE ============ -->
   <section id="bosnie">
     <div class="sechead"><span class="idx">02</span><h2 class="sec">🇧🇦 Bosnie-Herzégovine</h2></div>
-    <div class="facts"><span><b>6 nuits</b> · 1ᵉʳ → 7 août</span><span>Mostar 3 n · Sarajevo 3 n</span><span><b>Hors UE</b> · passeport</span><span>Mark convertible · 1 € = 1,95583</span><span><b>~600-700 KM</b> en liquide</span></div>
+    <div class="facts"><span><b>6 nuits</b> · 1ᵉʳ → 7 août</span><span>Mostar 3 n · Sarajevo 3 n</span><span><b>Hors UE</b> · passeport</span><span>Mark convertible · 1 € = 1,95583</span></div>
     <p class="secsub">La partie la plus « cash » du voyage, et la seule où les horaires se confirment au guichet plutôt qu'en ligne.</p>
 
     <h3 class="sub">Où dormir</h3>
     <div class="lodge done">
       <div class="lodgehead"><span class="city">Mostar</span><span class="bk">✓ Réservé</span><span class="dates">1ᵉʳ → 4 août · 3 nuits</span></div>
       <div class="pick"><span class="name">Hostel Nina</span> · 9,5/10 · dortoir mixte 8 lits
-        <p>En pleine vieille ville, à 300 m du Stari Most. La seule des adresses repérées à annoncer des casiers individuels en dortoir (cadenas perso possible). Petit-déjeuner maison, climatisation. <a class="h" href="https://www.hostelworld.com/hostels/p/190/hostel-nina/" target="_blank" rel="noopener">Fiche</a></p>
+        <p>En pleine vieille ville, à 300 m du Stari Most. Petit-déjeuner maison, climatisation. <a class="h" href="https://www.hostelworld.com/hostels/p/190/hostel-nina/" target="_blank" rel="noopener">Fiche</a></p>
       </div>
-      <p class="price"><b>73,35 €</b> les 3 nuits · 15,41 € payés en ligne · <b>reste ~113 KM à régler sur place, à l'arrivée</b> (le départ du 4 se fait à 06:05, avant la réception). Check-in 11 h-23 h, check-out 10 h. Annulation gratuite jusqu'à la veille. <b>Ćelebića 18</b>, tél <b>+387 61 382 743</b>. <b>À demander en arrivant :</b> comment sortir à 06:00 le 4, alors que la réception n'est pas tenue à cette heure-là.</p>
-      <div class="pins"><a class="pin" href="https://www.google.com/maps/search/?api=1&amp;query=Hostel%20Nina%20Celebica%2018%20Mostar" target="_blank" rel="noopener">📍 Hostel Nina</a></div>
     </div>
     <div class="lodge done">
       <div class="lodgehead"><span class="city">Sarajevo</span><span class="bk">✓ Réservé</span><span class="dates">4 → 7 août · 3 nuits</span></div>
       <div class="pick"><span class="name">The Good Place</span> · 9,7/10 (612 avis) · dortoir mixte 6 lits
-        <p>Rue piétonne, 250 m du centre, meilleur emplacement de la sélection (9,9). Rideau, prise et liseuse par lit. Trois dortoirs seulement, deux douches et deux WC pour tout le monde. <a class="h" href="https://www.hostelworld.com/hostels/p/295491/the-good-place-hostel/" target="_blank" rel="noopener">Fiche</a></p>
+        <p>Rue piétonne, 250 m du centre, le meilleur emplacement de la sélection. Trois dortoirs seulement. <a class="h" href="https://www.hostelworld.com/hostels/p/295491/the-good-place-hostel/" target="_blank" rel="noopener">Fiche</a></p>
       </div>
-      <p class="price"><b>75 € + 6 € de taxe</b> · 11,25 € payés en ligne · <b>reste ~148 KM, en espèces uniquement</b>, à avoir sur soi <b>avant</b> d'arriver. Check-in 12 h-21 h : avec le train de 06:36 on est là vers 9 h, donc <b>dépôt de sac à demander</b>. <b>Cemalusa 7</b>, tél <b>+387 63 784 033</b>.</p>
-      <div class="pins"><a class="pin" href="https://www.google.com/maps/search/?api=1&amp;query=The%20Good%20Place%20Hostel%20Cemalusa%207%20Sarajevo" target="_blank" rel="noopener">📍 The Good Place</a></div>
     </div>
-
-    <h3 class="sub">Transports</h3>
-    <div class="tablewrap" style="max-width:100%"><table class="legs">
-      <tr><th>Quand</th><th>Trajet</th><th>Détail</th><th class="n">Départ</th></tr>
-      <tr><td data-l="Quand">sam 1ᵉʳ</td><td data-l="Trajet">Beauvais → Sarajevo<div class="pins"><a class="pin" href="https://www.google.com/maps/search/?api=1&amp;query=Sarajevo%20International%20Airport%20Kurta%20Schorka%2036" target="_blank" rel="noopener" title="Ouvrir dans Maps">📍 Aéroport SJJ</a></div></td><td data-l="Détail">Ryanair direct, bagage en soute. Voiture Reims ↔ Beauvais aux deux bouts.</td><td class="n" data-l="Départ">11:35 → 13:45</td></tr>
-      <tr class="reco"><td data-l="Quand">sam 1ᵉʳ</td><td data-l="Trajet">Aéroport → gare de Sarajevo<div class="pins"><a class="pin" href="https://www.google.com/maps/search/?api=1&amp;query=Autobuska%20stanica%20Sarajevo%20Put%20zivota%208" target="_blank" rel="noopener" title="Ouvrir dans Maps">📍 Gare routière (arrêt du 200E)</a><a class="pin" href="https://www.google.com/maps/search/?api=1&amp;query=Zeljeznicka%20stanica%20Sarajevo%20Put%20zivota%202" target="_blank" rel="noopener" title="Ouvrir dans Maps">📍 Gare ferroviaire</a></div></td><td data-l="Détail"><b>Bus 200E</b> (Aerodrom → Bentbaša), <b>5 KM</b>, 1ᵉʳ bagage inclus, s'arrête à la gare routière puis <b>900 m à pied</b>. Être à l'arrêt vers 14:25. ⚠️ <b>Certains départs ne roulent qu'en semaine, or le 1ᵉʳ est un samedi</b> : revérifier la grille la veille. S'il est parti, <b>ne pas attendre le 16:15</b> : trolleybus 103/107 (2,20 KM, toutes les 10-15 min) ou taxi 20-30 KM.</td><td class="n" data-l="Départ">14:30</td></tr>
-      <tr><td data-l="Quand">sam 1ᵉʳ</td><td data-l="Trajet">Sarajevo → Mostar<div class="pins"><a class="pin" href="https://www.google.com/maps/search/?api=1&amp;query=Zeljeznicka%20stanica%20Mostar" target="_blank" rel="noopener" title="Ouvrir dans Maps">📍 Gare de Mostar</a><a class="pin" href="https://www.google.com/maps/search/?api=1&amp;query=Hostel%20Nina%20Celebica%2018%20Mostar" target="_blank" rel="noopener" title="Ouvrir dans Maps">📍 Hostel Nina</a></div></td><td data-l="Détail"><b>Train 721</b>, voie II/3, vallée de la Neretva, Konjic vers 18:00. <b>Dernier de la journée</b>, sinon bus du soir. Auberge ~19:15.</td><td class="n" data-l="Départ">16:46 → 18:48</td></tr>
-      <tr class="reco"><td data-l="Quand">mar 4</td><td data-l="Trajet">Mostar → Sarajevo<div class="pins"><a class="pin" href="https://www.google.com/maps/search/?api=1&amp;query=The%20Good%20Place%20Hostel%20Cemalusa%207%20Sarajevo" target="_blank" rel="noopener" title="Ouvrir dans Maps">📍 The Good Place</a></div></td><td data-l="Détail"><b>Train 720</b>, 5 arrêts. Donne une 3ᵉ journée pleine à Sarajevo. Gare à 15 min à pied de l'auberge, se présenter pour 06:25. Puis gare → auberge : 1,5 km, 20 min à pied ou tram 1. Repli : 17:09 → 19:07, <b>supprimé les vendredis, samedis et dimanches de juin à septembre, mais le 4 est un mardi</b> : il roule.</td><td class="n" data-l="Départ">quitter 06:05</td></tr>
-      <tr class="reco"><td data-l="Quand">ven 7</td><td data-l="Trajet">Sarajevo → Belgrade<div class="pins"><a class="pin" href="https://www.google.com/maps/search/?api=1&amp;query=Autobuska%20stanica%20Istocno%20Sarajevo%20Lukavica" target="_blank" rel="noopener" title="Ouvrir dans Maps">📍 ⚠️ Lukavica, gare des cars vers la Serbie</a></div></td><td data-l="Détail"><b>✓ Réservé, 32,91 €, siège 30</b> (28,10 € de billet, annulation flexible comprise). <b>Départ 09:45, arrivée 17:45.</b> Opérateur <b>Centrotrans Istočno Sarajevo</b>, la compagnie de la gare elle-même, route SA-BGD1 via Zvornik, 8 h, arrivée à la gare principale de Belgrade. Départ de <b>Lukavica</b> (Srpskih vladara 2, tél +387 57 317-377), à l'autre bout de l'agglomération : <b>20 à 30 min de taxi</b>, ~25 KM. Les sources vont de 8 à 16 km, d'où la marge. <b>Aucune taxe de quai ici</b>, contrairement à Belgrade.</td><td class="n" data-l="Départ">quitter 08:45</td></tr>
-    </table></div>
-    <div class="note warn"><b>Deux gares routières à Sarajevo,</b> à une demi-heure l'une de l'autre. La principale est collée à la gare ferroviaire ; <b>les cars vers la Serbie partent de Lukavica / Sarajevo-Est</b>, en Republika Srpska, Srpskih vladara 2. Ne pas s'y tromper le 7.<div class="pins"><a class="pin" href="https://www.google.com/maps/search/?api=1&amp;query=Zeljeznicka%20stanica%20Sarajevo%20Put%20zivota%202" target="_blank" rel="noopener" title="Ouvrir dans Maps">📍 Gare principale (trains + bus locaux)</a><a class="pin" href="https://www.google.com/maps/search/?api=1&amp;query=Autobuska%20stanica%20Istocno%20Sarajevo%20Lukavica" target="_blank" rel="noopener" title="Ouvrir dans Maps">📍 ⚠️ Lukavica (cars vers la Serbie)</a></div></div>
-    <p><b>Billets.</b> Les trains s'achètent <b>au guichet, en cash</b> (à partir de 11,90 KM) : la vente en ligne de <a class="applink" href="https://www.zfbh.ba/" target="_blank" rel="noopener">zfbh.ba</a> est désactivée, bandeau à l'appui. Prendre le retour dès le premier passage au guichet. <b>Deux trains par jour et par sens</b>, pas de réservation de place. Le car pour Belgrade, lui, s'achète <b>en ligne</b> sur <a class="applink" href="https://busticket4.me/centrotrans-ad" target="_blank" rel="noopener">busticket4.me/centrotrans-ad</a>, par carte, ce qui le sort du budget liquide. C'est un <b>revendeur, pas la gare</b>, et ses avis sont mitigés (e-billets non reçus) : cette page-là est au moins le portail officiel de la station, qui y met son téléphone. Donc <b>vérifier que l'e-billet arrive dans l'heure</b>, garder une capture, et en cas de problème appeler la gare au <b>+387 57 317-377</b> avant de racheter. Ce n'est de toute façon <b>pas un achat obligatoire</b> : ligne régulière sans réservation, 6 à 7 départs par jour, le pire scénario est un départ moins confortable.</p>
-    <p><b>Se déplacer.</b> Ni Uber ni Bolt en Bosnie. À Sarajevo, appeler le <b>1515</b> ou le <b>1527</b> ; à Mostar, <b>Moj TAXI au 1503</b> (2 KM le kilomètre, société différente malgré le nom), ou l'auberge appelle pour vous. L'appli <a class="applink" href="https://www.mojtaxi.ba/" target="_blank" rel="noopener">mojTaxi</a> existe mais <b>elle est notée 1,8/5</b> et plante : commodité, jamais plan critique.</p>
 
     <h3 class="sub">À voir, à faire</h3>
     <div class="grid">
       <div class="cty"><div class="ctyh"><span class="nm">Mostar</span><span class="dur">2 journées pleines</span></div><span class="vb must">Incontournable</span>
         <p class="tagl">Le pont ottoman sur la Neretva.</p>
-        <ul><li>Stari Most et ses plongeurs (dès ~30 €)</li><li>Minaret Koski, vue sur le pont</li><li>Vieille ville, bazar, quartier bombardé</li></ul>
-        <div class="meta"><span>📅 Le 2 : la ville. Le 3 : le tour.</span><span>☀️ 35 °C+ : visites tôt</span></div>
+        <ul><li>Stari Most et ses plongeurs</li><li>Minaret Koski, vue sur le pont</li><li>Vieille ville, bazar, quartier bombardé</li></ul>
+        <div class="meta"><span>☀️ 35 °C+ : visites tôt</span></div>
       </div>
-      <div class="cty"><div class="ctyh"><span class="nm">Tour Herzégovine</span><span class="dur">journée · viser le 3</span></div><span class="vb must">Réservé, date au check-in</span>
+      <div class="cty"><div class="ctyh"><span class="nm">Tour d'Herzégovine</span><span class="dur">journée</span></div><span class="vb must">Réservé</span>
         <p class="tagl">Blagaj, Počitelj et Kravice en un jour.</p>
-        <ul><li><b>9:30 → 18:00</b>, 5 arrêts dans cet ordre : Blagaj (tekija derviche), Počitelj (village-forteresse), <b>Kravice</b> avec <b>2 h 30 de baignade</b>, un lieu tenu secret où le guide raconte la guerre, puis <b>Fortica</b> et sa passerelle au-dessus de Mostar</li><li>Petit-déjeuner maison inclus, <b>déjeuner à prévoir</b> sur place</li><li>La seule façon d'enchaîner tout ça sans voiture</li></ul>
-        <div class="meta"><span>💵 <b>100 KM en espèces</b> (l'auberge accepte aussi 50 € en billets) · <b>entrée du parc 10 € en plus, par carte</b></span><span>🩱 Maillot et serviette : 2 h 30 dans l'eau</span><span>💡 <b>Le dire en arrivant : le 3, pas le 2.</b> Le 2 est un dimanche, Kravice se remplit de familles locales, or la baignade est le clou. Les deux dates marchent, ça ne bloque rien</span></div>
+        <ul><li><b>9:30 → 18:00</b>, cinq arrêts : Blagaj et sa tekija derviche, Počitelj le village-forteresse, <b>Kravice</b> et ses cascades avec <b>2 h 30 de baignade</b>, un lieu tenu secret où le guide raconte la guerre, puis <b>Fortica</b> et sa passerelle au-dessus de Mostar</li><li>La seule façon d'enchaîner tout ça sans voiture</li></ul>
+        <div class="meta"><span>🩱 Maillot et serviette : 2 h 30 dans l'eau</span></div>
       </div>
       <div class="cty"><div class="ctyh"><span class="nm">Sarajevo</span><span class="dur">3 journées</span></div><span class="vb must">Incontournable</span>
         <p class="tagl">Où l'Orient rencontre l'Occident.</p>
-        <ul><li>Baščaršija, le bazar ottoman</li><li>Tunnel de l'espoir (~10 €)</li><li>Žuta Tabija au coucher du soleil</li><li>Téléphérique de Trebević, bobsleigh de 1984</li></ul>
+        <ul><li>Baščaršija, le bazar ottoman</li><li>Tunnel de l'espoir</li><li>Žuta Tabija au coucher du soleil</li><li>Téléphérique de Trebević, bobsleigh de 1984</li></ul>
         <div class="meta"><span>💧 Eau du robinet excellente</span></div>
       </div>
       <div class="cty"><div class="ctyh"><span class="nm">Lukomir + Bjelašnica</span><span class="dur">journée</span></div><span class="vb must">La plus marquante</span>
         <p class="tagl">Le plus haut village de Bosnie.</p>
         <ul><li>Village semi-nomade à 1 500 m, maisons de pierre</li><li>Canyon de la Rakitnica, montagne olympique</li></ul>
-        <div class="meta"><span>🚐 Tour guidé ~50-70 € (pas de bus)</span><span>🦟 Zone à tiques : répulsif</span></div>
+        <div class="meta"><span>🚐 Tour guidé, pas de bus</span></div>
       </div>
       <div class="cty"><div class="ctyh"><span class="nm">Jajce + Travnik</span><span class="dur">journée</span></div><span class="vb nice">Sympa</span>
         <p class="tagl">Anciennes capitales royales.</p>
         <ul><li>Jajce : cascade de 17 m en pleine ville, forteresse</li><li>Travnik : forteresse, ville d'Ivo Andrić</li></ul>
-        <div class="meta"><span>🚐 Tour ~70-80 €</span></div>
       </div>
       <div class="cty"><div class="ctyh"><span class="nm">Vrelo Bosne</span><span class="dur">demi-journée</span></div><span class="vb nice">Selon envie</span>
         <p class="tagl">Parc aux sources de la Bosna.</p>
         <ul><li>Sources, ponts, allée de platanes en calèche</li><li>À combiner avec le Tunnel, tout proche</li></ul>
         <div class="meta"><span>🚊 Tram jusqu'à Ilidža</span></div>
       </div>
-      <div class="cty"><div class="ctyh"><span class="nm">Konjic</span><span class="dur">journée</span></div><span class="vb meh">Difficile à caser</span>
-        <p class="tagl">Rafting dans le canyon de la Neretva.</p>
-        <ul><li>Pont ottoman, bunker secret de Tito, rafting ~6 h</li></ul>
-        <div class="meta"><span>⚠️ Les 2 journées de Mostar sont prises : il faudrait sacrifier la ville ou le tour</span></div>
-      </div>
       <div class="cty"><div class="ctyh"><span class="nm">Višegrad</span><span class="dur">journée</span></div><span class="vb nice">Sympa</span>
         <p class="tagl">Le pont sur la Drina, UNESCO.</p>
         <ul><li>Pont ottoman du XVIᵉ, roman d'Ivo Andrić</li><li>Andrićgrad, ville-décor de Kusturica</li></ul>
-        <div class="meta"><span>⚠️ Pas un arrêt en route : le car pour Belgrade passe par Zvornik</span></div>
+      </div>
+      <div class="cty"><div class="ctyh"><span class="nm">Konjic</span><span class="dur">journée</span></div><span class="vb meh">Difficile à caser</span>
+        <p class="tagl">Rafting dans le canyon de la Neretva.</p>
+        <ul><li>Pont ottoman, bunker secret de Tito, rafting ~6 h</li></ul>
+        <div class="meta"><span>⚠️ Les deux journées de Mostar sont déjà prises</span></div>
       </div>
     </div>
 
@@ -348,21 +293,6 @@
       <div class="fcol no"><h4>✗ Évite</h4><ul><li><b>Škembići</b> (tripes), <b>jetra</b> (foie)</li><li>Poisson peu présent, donc pas un risque</li><li>Ćevapi souvent bœuf ou agneau</li></ul></div>
     </div>
     <p style="margin-top:10px;font-size:13.5px;color:var(--muted)">Pekara ou ćevabdžinica : 2-3 €. Repas assis : 8-13 €. Vins d'Herzégovine, rakija, bières Sarajevsko.</p>
-
-    <h3 class="sub">Argent</h3>
-    <div class="tablewrap" style="max-width:560px"><table class="kv">
-      <tr><td>Monnaie</td><td><b>Mark convertible</b> · code BAM, écrit <b>KM</b> sur place · <b>1 € = 1,95583</b>, taux fixe</td></tr>
-      <tr><td>À retirer</td><td><b>~600 à 700 KM</b> pour les 6 jours : <b>261 KM de logement</b> (113 à Mostar, 148 à Sarajevo), <b>100 KM pour le tour</b>, les billets de train, les repas et le taxi de Lukavica. Tout se règle en marks, y compris le tour, que l'auberge compte 100 KM pour 50 €</td></tr>
-      <tr><td>Distributeurs</td><td><b>MF Banka, BPS</b>, sans frais d'automate</td></tr>
-      <tr><td>Pièges</td><td><b>The Good Place n'accepte que les espèces.</b> Le mark est <b>inéchangeable</b> hors du pays : viser un solde proche de zéro avant le car du 7</td></tr>
-    </table></div>
-    <p style="margin-top:10px;font-size:13.5px;color:var(--muted)">Fractionner les retraits ne coûte rien (commission en pourcentage pur, sans frais fixe) : un premier à Sarajevo le 1ᵉʳ avant le train, un plus gros à Mostar pour couvrir les 148 KM de Sarajevo.</p>
-
-    <h3 class="sub">À savoir</h3>
-    <ul class="know">
-      <li><b>Garder les reçus d'enregistrement</b> que les auberges remettent, jusqu'à la sortie du pays.</li>
-      <li><b>Faire le sac le 2 au soir.</b> Le 3, le tour rentre à 18:00 et le lever du 4 est à 5 h 45 : ce n'est pas le moment de trier ses affaires.</li>
-    </ul>
   </section>
 
   <!-- ============ SERBIE ============ -->
@@ -375,21 +305,9 @@
     <div class="lodge done">
       <div class="lodgehead"><span class="city">Belgrade</span><span class="bk">✓ Réservé</span><span class="dates">7 → 10 août · 3 nuits</span></div>
       <div class="pick"><span class="name">Up Hostel</span> · 9,3/10 (518 avis) · dortoir mixte 6 lits
-        <p>Au 15 rue Skadarska, <b>en pleine Skadarlija, 190 m du centre</b>, soit le meilleur emplacement de la sélection (98/100). Rideau, prise et liseuse par lit, salon et jardin, <b>casiers gratuits</b>, <b>réception 24 h</b>. Sa note d'ambiance (86) est la plus basse : central sans être une auberge à faire la fête, ce qui était le but. <a class="h" href="https://www.hostelworld.com/hostels/p/314437/up-hostel/" target="_blank" rel="noopener">Fiche</a></p>
+        <p>Au 15 rue Skadarska, <b>en pleine Skadarlija, 190 m du centre</b>. Central sans être une auberge à faire la fête, ce qui était le but. <a class="h" href="https://www.hostelworld.com/hostels/p/314437/up-hostel/" target="_blank" rel="noopener">Fiche</a></p>
       </div>
-      <p class="price"><b>64 € + 3,90 € de taxe</b> (23 € les deux premières nuits, 18 € la troisième) · 14,72 € payés en ligne · <b>reste 57,08 €, environ 6 700 dinars</b>. La carte passe probablement, à confirmer à la réception. Annulation gratuite jusqu'au 5 août. <b>La réception 24 h enlève toute contrainte d'horaire</b>, ce qui tombe bien : le car du 7 dépose vers 17:45. <b>Skadarska 15</b>, tél <b>+381 64 532 5325</b>.</p>
-      <div class="pins"><a class="pin" href="https://www.google.com/maps/search/?api=1&amp;query=Up%20Hostel%20Skadarska%2015%20Beograd" target="_blank" rel="noopener">📍 Up Hostel</a></div>
     </div>
-
-    <h3 class="sub">Transports</h3>
-    <div class="tablewrap" style="max-width:100%"><table class="legs">
-      <tr><th>Quand</th><th>Trajet</th><th>Détail</th><th class="n">Départ</th></tr>
-      <tr><td data-l="Quand">ven 7</td><td data-l="Trajet">Bloc 42 → Up Hostel<div class="pins"><a class="pin" href="https://www.google.com/maps/search/?api=1&amp;query=Antifasisticke%20borbe%2046%20Novi%20Beograd" target="_blank" rel="noopener" title="Ouvrir dans Maps">📍 ⚠️ Gare routière, Bloc 42</a><a class="pin" href="https://www.google.com/maps/search/?api=1&amp;query=Zeleni%20venac%20Beograd" target="_blank" rel="noopener" title="Ouvrir dans Maps">📍 Zeleni venac</a><a class="pin" href="https://www.google.com/maps/search/?api=1&amp;query=Up%20Hostel%20Skadarska%2015%20Beograd" target="_blank" rel="noopener" title="Ouvrir dans Maps">📍 Up Hostel</a></div></td><td data-l="Détail">Bus <b>60 ou 67</b> jusqu'à Zeleni venac puis 15 min à pied, <b>gratuit</b>, 30-45 min. Ou taxi, 20 min. Arrivée du car vers 17:45.</td><td class="n" data-l="Départ">arrivée ~17:45</td></tr>
-      <tr class="reco"><td data-l="Quand">lun 10</td><td data-l="Trajet">Up Hostel → <b>Bloc 42</b><div class="pins"><a class="pin" href="https://www.google.com/maps/search/?api=1&amp;query=Antifasisticke%20borbe%2046%20Novi%20Beograd" target="_blank" rel="noopener" title="Ouvrir dans Maps">📍 ⚠️ Gare routière, Bloc 42</a></div></td><td data-l="Détail"><b>7 km, de l'autre côté de la Save.</b> Taxi 20 min, ~1 000 RSD. Sur place à 07:15 : il faut payer la <b>taxe de quai de 300 RSD en espèces</b> puis trouver le quai. Les transports gratuits imposeraient de partir à 06:15 avec le sac, pour un jour à départ unique.</td><td class="n" data-l="Départ">quitter 06:50</td></tr>
-      <tr><td data-l="Quand">lun 10</td><td data-l="Trajet">Belgrade → Budapest<div class="pins"><a class="pin" href="https://www.google.com/maps/search/?api=1&amp;query=Nepliget%20autobusz-palyaudvar%20Ulloi%20ut%20131%20Budapest" target="_blank" rel="noopener" title="Ouvrir dans Maps">📍 Népliget, arrivée</a></div></td><td data-l="Détail"><b>FlixBus, 6 h, ✓ réservé 54,12 €</b> siège attribué compris, arrivée à Népliget. Seuls deux départs ce jour-là : celui-ci et un 16:30 qui déposerait à 22:30, la veille de Sziget.</td><td class="n" data-l="Départ">08:00 → 14:00</td></tr>
-    </table></div>
-    <div class="note warn"><b>La gare routière a déménagé en septembre 2024.</b> Elle n'est plus à Savamala mais en <b>Bloc 42, Novi Beograd</b> (Antifašističke borbe 46-48), de l'autre côté de la Save. Les vieux plans et les vieux articles induisent en erreur.<div class="pins"><a class="pin" href="https://www.google.com/maps/search/?api=1&amp;query=Antifasisticke%20borbe%2046%20Novi%20Beograd" target="_blank" rel="noopener" title="Ouvrir dans Maps">📍 ⚠️ Bloc 42, la bonne gare</a><a class="pin" href="https://www.google.com/maps/search/?api=1&amp;query=Stara%20autobuska%20stanica%20Savamala%20Beograd" target="_blank" rel="noopener" title="Ouvrir dans Maps">📍 Savamala, l'ancienne</a></div></div>
-    <p><b>Se déplacer.</b> <b>Transports publics gratuits</b> à Belgrade en 2025-26, bus et trams. Ni Uber ni Bolt : <a class="applink" href="https://go.yandex/en_rs/" target="_blank" rel="noopener">Yandex Go</a> est le plus utilisé, <a class="applink" href="https://appcargo.com/en" target="_blank" rel="noopener">CarGo</a> en second. Le <b>train Soko</b> file à Novi Sad en 36 min, mais son prolongement vers Budapest n'est pas en service, d'où le car du 10.</p>
 
     <h3 class="sub">À voir, à faire</h3>
     <div class="grid">
@@ -411,75 +329,44 @@
       <div class="fcol no"><h4>✗ Évite (abats)</h4><ul><li><b>Škembići</b> (tripes), <b>pihtije</b> et <b>švargla</b> (tête)</li><li>Sur les menus : <b>jetra</b> (foie), <b>bubrezi</b> (rognons), <b>mozak</b> (cervelle)</li></ul></div>
     </div>
     <p style="margin-top:10px;font-size:13.5px;color:var(--muted)">Kafana ou ćevabdžinica : 2-3 € sur le pouce, 8-13 € assis. Éviter de dîner tous les soirs dans Skadarlija, c'est la rue la plus chère de la ville. Rakija (šljivovica), bières Jelen et Lav.</p>
-
-    <h3 class="sub">Argent</h3>
-    <div class="tablewrap" style="max-width:560px"><table class="kv">
-      <tr><td>Monnaie</td><td><b>Dinar serbe</b> (RSD) · environ <b>117 par euro</b></td></tr>
-      <tr><td>À retirer</td><td>Le solde de l'auberge (<b>~6 700 RSD</b>) passe probablement en carte. Prévoir surtout <b>~1 300 RSD pour le matin du 10</b> : taxi et taxe de quai</td></tr>
-      <tr><td>Distributeurs</td><td><b>Halkbank, Mobi Banka</b>, sans frais d'automate</td></tr>
-      <tr><td>Pièges</td><td><b>La taxe de quai de 300 RSD à la gare routière ne se paie qu'en espèces.</b> Ne pas vider ses dinars la veille du départ</td></tr>
-    </table></div>
-
-    <h3 class="sub">À savoir</h3>
-    <ul class="know">
-      <li><b>Dernier filet côté data</b>, si le pack et l'eSIM lâchent tous les deux : une SIM touriste Yettel coûte ~8,50 € sur place, 50 Go, roaming bosnien inclus.</li>
-      <li><b>L'arrivée à Budapest peut glisser :</b> le car passe la frontière de Horgoš, contrôle Schengen, avec de l'attente en pleine saison. Ne rien caler avant 15 h le 10.</li>
-    </ul>
   </section>
 
   <!-- ============ HONGRIE ============ -->
   <section id="hongrie">
     <div class="sechead"><span class="idx">04</span><h2 class="sec">🇭🇺 Hongrie</h2></div>
-    <div class="facts"><span><b>8 nuits</b> · 10 → 18 août</span><span>Budapest 6 n · Eger 2 n</span><span><b>UE et Schengen</b> · CNI, 31 Go dans le forfait</span><span>Forint · ~380 / €</span><span>Carte acceptée partout</span></div>
+    <div class="facts"><span><b>8 nuits</b> · 10 → 18 août</span><span>Budapest 6 n · Eger 2 n</span><span><b>UE et Schengen</b></span><span>Forint · ~380 / €</span><span>Carte acceptée partout</span></div>
     <p class="secsub">Sziget le 11, escapade thermale à Eger du 15 au 17, retour à Budapest pour le vol du 18.</p>
 
     <h3 class="sub">Où dormir</h3>
     <div class="lodge done">
       <div class="lodgehead"><span class="city">Budapest</span><span class="bk">✓ Réservé</span><span class="dates">10 → 15 puis 17 → 18 août · 6 nuits</span></div>
       <div class="pick"><span class="name">Wombat's City Hostel</span> · 9,1/10 · dortoir mixte 6 lits
-        <p>Au 20 Király utca, à l'entrée du quartier juif : le bar à ruines Szimpla Kert est à cinq minutes, Deák Ferenc tér à autant. Chaque dortoir a sa salle de bain. Le casier s'ouvre avec la carte de la chambre, sans cadenas, mais il est <b>petit</b> : sac à dos et objets de valeur, pas une valise. <a class="h" href="https://www.wombats-hostels.com/budapest" target="_blank" rel="noopener">Fiche</a></p>
+        <p>Au 20 Király utca, à l'entrée du quartier juif : le bar à ruines Szimpla Kert est à cinq minutes, Deák Ferenc tér à autant. <a class="h" href="https://www.wombats-hostels.com/budapest" target="_blank" rel="noopener">Fiche</a></p>
       </div>
-      <p class="price"><b>168 €</b> au total, tarif flexible et annulable : 149,47 € pour les 5 nuits du 10 au 15, en pleine semaine de festival, et 18,55 € pour la nuit du 17 au 18. L'écart de prix tient au Sziget. <b>Király utca 20</b>.</p>
-      <div class="pins"><a class="pin" href="https://www.google.com/maps/search/?api=1&amp;query=Wombats%20City%20Hostel%20Kiraly%20utca%2020%20Budapest" target="_blank" rel="noopener">📍 Wombat's</a></div>
     </div>
     <div class="lodge done">
       <div class="lodgehead"><span class="city">Eger</span><span class="bk">✓ Réservé</span><span class="dates">15 → 17 août · 2 nuits · étape repos</span></div>
       <div class="pick"><span class="name">Hotel Eger &amp; Park</span> · hôtel spa 4 étoiles
-        <p>Eger n'a pas de véritable auberge, et c'est l'étape détente de fin de voyage : chambre simple en <b>demi-pension avec une entrée au spa par jour</b>, en plein centre, à 500 m de la place Dobó, à côté du théâtre Gárdonyi. Piscines, saunas variés, salle de sel, massages sur place. <a class="h" href="https://www.booking.com/hotel/hu/eger.html" target="_blank" rel="noopener">Fiche</a></p>
+        <p>Eger n'a pas de véritable auberge, et c'est l'étape détente de fin de voyage : chambre en demi-pension avec le spa, en plein centre, à 500 m de la place Dobó. Piscines, saunas variés, salle de sel. <a class="h" href="https://www.booking.com/hotel/hu/eger.html" target="_blank" rel="noopener">Fiche</a></p>
       </div>
-      <p class="price"><b>Environ 227 €</b> les deux nuits, demi-pension et spa compris, taxe de séjour éventuelle en sus. Check-in 15 h-18 h, check-out 7 h-11 h. Annulation gratuite jusqu'au 12 août. <b>Szálloda utca 1-3</b>, à côté du théâtre Gárdonyi. <b>Le dîner étant inclus les deux soirs</b>, les caves de la Vallée des Belles Femmes se font en journée.</p>
-      <div class="pins"><a class="pin" href="https://www.google.com/maps/search/?api=1&amp;query=Hotel%20Eger%20Park%20Szalloda%20utca%201-3%20Eger" target="_blank" rel="noopener">📍 Hotel Eger &amp; Park</a></div>
     </div>
-
-    <h3 class="sub">Transports</h3>
-    <div class="tablewrap" style="max-width:100%"><table class="legs">
-      <tr><th>Quand</th><th>Trajet</th><th>Détail</th><th class="n">Départ</th></tr>
-      <tr><td data-l="Quand">lun 10</td><td data-l="Trajet">Népliget → Wombat's<div class="pins"><a class="pin" href="https://www.google.com/maps/search/?api=1&amp;query=Nepliget%20autobusz-palyaudvar%20Ulloi%20ut%20131%20Budapest" target="_blank" rel="noopener" title="Ouvrir dans Maps">📍 Népliget</a><a class="pin" href="https://www.google.com/maps/search/?api=1&amp;query=Wombats%20City%20Hostel%20Kiraly%20utca%2020%20Budapest" target="_blank" rel="noopener" title="Ouvrir dans Maps">📍 Wombat's</a></div></td><td data-l="Détail"><b>Le plus simple du voyage.</b> La gare routière donne directement sur la station de métro <b>M3 Népliget</b>, direct jusqu'à <b>Deák Ferenc tér en 10 min</b>, puis 400 m dans Király utca. 25 min porte à porte.</td><td class="n" data-l="Départ">arrivée 14:00</td></tr>
-      <tr><td data-l="Quand">mar 11</td><td data-l="Trajet">Wombat's → Sziget<div class="pins"><a class="pin" href="https://www.google.com/maps/search/?api=1&amp;query=Filatorigat%20HEV%20Budapest" target="_blank" rel="noopener" title="Ouvrir dans Maps">📍 Filatorigát (HÉV H5)</a></div></td><td data-l="Détail">Train de banlieue <b>HÉV H5</b>, arrêt <b>Filatorigát</b>, depuis Batthyány tér (M2).</td><td class="n" data-l="Départ">au choix</td></tr>
-      <tr class="reco"><td data-l="Quand">sam 15</td><td data-l="Trajet">Wombat's → Eger<div class="pins"><a class="pin" href="https://www.google.com/maps/search/?api=1&amp;query=Budapest-Keleti%20palyaudvar" target="_blank" rel="noopener" title="Ouvrir dans Maps">📍 Budapest-Keleti</a><a class="pin" href="https://www.google.com/maps/search/?api=1&amp;query=Eger%20vasutallomas" target="_blank" rel="noopener" title="Ouvrir dans Maps">📍 Gare d'Eger</a><a class="pin" href="https://www.google.com/maps/search/?api=1&amp;query=Hotel%20Eger%20Park%20Szalloda%20utca%201-3%20Eger" target="_blank" rel="noopener" title="Ouvrir dans Maps">📍 Hotel Eger & Park</a></div></td><td data-l="Détail"><b>M2 direct Deák → Keleti</b>, 8 min. Les directs pour Eger partent <b>aux heures impaires</b> (1 h 53, 8-14 €) : <b>viser le 13:00, arrivée 14:53</b>, puis <b>20 min à pied</b> par Ady Endre utca et Széchenyi utca, hôtel vers 15:15, pile pour le check-in. Le 11:00 arriverait trop tôt, le 15:00 brûlerait l'après-midi.</td><td class="n" data-l="Départ">quitter 12:15</td></tr>
-      <tr><td data-l="Quand">lun 17</td><td data-l="Trajet">Eger → Wombat's<div class="pins"><a class="pin" href="https://www.google.com/maps/search/?api=1&amp;query=Eger%20vasutallomas" target="_blank" rel="noopener" title="Ouvrir dans Maps">📍 Gare d'Eger</a></div></td><td data-l="Détail">Check-out entre 7 h et 11 h, journée libre et nuit réservée à Budapest : matinée à Eger, train en début d'après-midi. Même trame bihoraire, à confirmer dans l'appli MÁV.</td><td class="n" data-l="Départ">au choix</td></tr>
-      <tr class="reco"><td data-l="Quand">mar 18</td><td data-l="Trajet">Wombat's → <b>aéroport</b><div class="pins"><a class="pin" href="https://www.google.com/maps/search/?api=1&amp;query=Deak%20Ferenc%20ter%20Budapest" target="_blank" rel="noopener" title="Ouvrir dans Maps">📍 Deák Ferenc tér (arrêt du 100E)</a><a class="pin" href="https://www.google.com/maps/search/?api=1&amp;query=Budapest%20Ferenc%20Liszt%20International%20Airport" target="_blank" rel="noopener" title="Ouvrir dans Maps">📍 Aéroport BUD</a></div></td><td data-l="Détail"><b>100E Airport Express</b> depuis Deák Ferenc tér, 40 min, toutes les 6 à 10 min, 24 h sur 24. ⚠️ <b>Billet spécial à 2 500 HUF, que le ticket de métro ordinaire ne couvre pas</b> : l'erreur classique, sanctionnée par une amende. Vol à 16:35 avec bagage en soute, donc à l'aéroport vers 14:15.</td><td class="n" data-l="Départ">quitter 13:00</td></tr>
-      <tr><td data-l="Quand">mar 18</td><td data-l="Trajet">Budapest → Beauvais</td><td data-l="Détail">Ryanair direct, puis voiture jusqu'à Reims.</td><td class="n" data-l="Départ">16:35 → 18:55</td></tr>
-    </table></div>
-    <p><b>Se déplacer.</b> <a class="applink" href="https://bkk.hu/en/tickets-and-passes/budapestgo/" target="_blank" rel="noopener">BudapestGO</a> pour le métro, les trams, les bus et le HÉV : achat dans l'appli et <b>validation avant de monter</b>, le contrôle est systématique. <a class="applink" href="https://jegy.mav.hu/" target="_blank" rel="noopener">MÁV</a> pour les trains, <a class="applink" href="https://bolt.eu/" target="_blank" rel="noopener">Bolt</a> pour les VTC, qui marche ici contrairement aux Balkans.</p>
 
     <h3 class="sub">À voir, à faire</h3>
     <div class="note warn"><b>Gellért fermé</b> jusqu'en 2028 pour rénovation. <b>Rudas</b> n'est mixte que le week-end. Le <b>20 août est la fête nationale</b> : affluence et prix qui montent dès la mi-août.</div>
     <div class="grid">
       <div class="cty"><div class="ctyh"><span class="nm">🎉 Sziget</span><span class="dur">le 11</span></div><span class="vb must">Billet acheté</span>
         <p class="tagl">Le festival, sur l'île d'Óbuda.</p>
-        <ul><li><b>Journée du 11 achetée</b>, 105 €, valable du 11 à 8 h au 12 à 8 h : camping non compris, il faut quitter l'île à l'expiration</li><li>✓ Compte créé et billet téléchargé. Le garder <b>hors connexion</b> avec les autres billets</li><li>Sur place : la boarding pass s'échange contre le bracelet à <b>l'entrée principale, K-Bridge</b>. Un bracelet et une puce par billet journée</li><li>Sur place, tout se paie au <b>bracelet Festipay</b> : recharger <b>en ligne depuis le compte</b>, seul canal remboursé automatiquement (sous 30 jours, moins 700 HUF). Minimum 2 000 HUF, <b>700 HUF de frais par recharge, donc une seule</b>, en forints, en visant un solde final proche de zéro. Compter 15 000 à 25 000 HUF pour la journée</li><li><b>Quand recharger :</b> le préchargement sur le billet n'était pas encore ouvert fin juillet. À défaut, le faire <b>depuis le téléphone une fois le bracelet au poignet</b> : c'est le même canal en ligne, donc le même remboursement, et le forfait français passe en Hongrie</li><li>⚠️ <b>Jamais de recharge aux bornes</b> : le solde se réclame en personne avant le <b>16 août 12:00</b>, alors qu'on quitte l'île le 12 à 8 h</li></ul>
+        <ul><li>Une <b>seule journée</b>, le 11, sur un festival qui court du 11 au 15</li><li>Sur l'île, tout se paie au bracelet : 100 % sans espèces</li></ul>
         <div class="meta"><span>📅 Festival du 11 au 15, Day Zero le 10</span><span>🚈 HÉV H5, arrêt Filatorigát</span></div>
       </div>
-      <div class="cty"><div class="ctyh"><span class="nm">Budapest</span><span class="dur">5 nuits</span></div><span class="vb must">Incontournable</span>
+      <div class="cty"><div class="ctyh"><span class="nm">Budapest</span><span class="dur">6 nuits</span></div><span class="vb must">Incontournable</span>
         <p class="tagl">Thermes, bars à ruines, Danube.</p>
         <ul><li><b>Thermes Széchenyi</b> : ~13 200 Ft en semaine, ~14 800 le week-end, ~10 500 avant 9 h</li><li><b>Bars à ruines</b> du quartier juif, Szimpla Kert en tête</li><li>Croisière sur le Danube au coucher, marché central, château de Buda, bastion des Pêcheurs</li></ul>
         <div class="meta"><span>🧺 Serviette et maillot : la location est quasi nulle</span></div>
       </div>
       <div class="cty"><div class="ctyh"><span class="nm">Eger + Egerszalók</span><span class="dur">15 → 17</span></div><span class="vb must">Escapade retenue</span>
         <p class="tagl">Vin, baroque et thermes.</p>
-        <ul><li>Château d'Eger, basilique, minaret turc</li><li><b>Vallée des Belles Femmes</b> : 40 caves et plus, Egri Bikavér, à pied du centre, <b>en journée</b> puisque le dîner est inclus</li><li><b>Thermes d'Egerszalók</b> (Saliris, le « Pamukkale hongrois ») : bus 3450, 20 min, ~1-2 €, journée ~28 € du lundi au jeudi et <b>~31 € du vendredi au dimanche, dont le 16</b>. Ouvert 10 h-20 h le dimanche, piscines vidées à 19 h 30, donc entrer avant 16 h. <b>Relever le dernier bus retour en arrivant</b>, sinon taxi 15-20 €. <a href="https://www.salirisfurdo.hu/en/bath" target="_blank" rel="noopener" style="color:var(--coral);font-weight:600;text-decoration:none">site officiel ↗</a></li><li>Massages accessibles à la journée sur réservation, mais à prix de resort, 29 à 61 € : pour le cadre, pas pour l'économie</li></ul>
-        <div class="meta"><span>💡 Arrivée le 15 en fin d'après-midi, donc thermes le 16</span></div>
+        <ul><li>Château d'Eger, basilique, minaret turc</li><li><b>Vallée des Belles Femmes</b> : 40 caves et plus, Egri Bikavér, à pied du centre</li><li><b>Thermes d'Egerszalók</b>, le « Pamukkale hongrois » : colline de sel et bassins en terrasses, à 20 min de bus. <a class="h" href="https://www.salirisfurdo.hu/en/bath" target="_blank" rel="noopener">Site officiel</a></li></ul>
       </div>
       <div class="cty"><div class="ctyh"><span class="nm">Szentendre</span><span class="dur">demi-journée</span></div><span class="vb nice">Sympa</span>
         <p class="tagl">Village baroque coloré du Danube.</p>
@@ -505,75 +392,14 @@
     </div>
     <p style="margin-top:10px;font-size:13.5px;color:var(--muted)">Un peu plus cher qu'à Belgrade ou Sarajevo. Vins de Tokaj et d'Eger, pálinka. À Eger, le dîner est inclus les deux soirs.</p>
 
-    <h3 class="sub">Argent</h3>
-    <div class="tablewrap" style="max-width:560px"><table class="kv">
-      <tr><td>Monnaie</td><td><b>Forint</b> (HUF) · environ <b>380 par euro</b></td></tr>
-      <tr><td>À retirer</td><td><b>Presque rien.</b> La carte passe partout et les billets de transport s'achètent dans BudapestGO. Un peu de liquide pour les caves d'Eger et les marchés</td></tr>
-      <tr><td>Distributeurs</td><td><b>OTP, K&amp;H, Erste</b>, sans frais d'automate</td></tr>
-      <tr><td>Pièges</td><td><b>Sziget est 100 % cashless</b> : la marche à suivre pour le bracelet est dans la fiche du festival, plus haut</td></tr>
-    </table></div>
-
     <h3 class="sub">À savoir</h3>
     <ul class="know">
       <li><b>Mi-août est chargé</b> : Sziget du 11 au 15 puis la fête nationale le 20. Prix et affluence au sommet, y compris à Eger.</li>
-      <li><b>Le 18, quitter Wombat's à 13 h.</b> C'est le seul horaire du voyage qui ne se rattrape pas.</li>
-    </ul>
-  </section>
-
-  <!-- ============ GÉNÉRAL ============ -->
-  <section id="general">
-    <div class="sechead"><span class="idx">05</span><h2 class="sec">Réflexes</h2></div>
-    <p class="secsub">Ce qui ne se range pas dans un pays : le téléphone, les réflexes d'argent valables partout, la méthode pour vérifier un horaire, les numéros à avoir sur soi, et les réflexes santé et papiers.</p>
-
-    <h3 class="sub">Téléphone et data</h3>
-    <div class="tablewrap" style="max-width:100%"><table class="kv">
-      <tr><td>Hongrie</td><td><b>Rien à faire, c'est dans le forfait</b> : 31 Go par mois depuis l'UE, appels et SMS compris, et même le hors-forfait y est à ~1,33 € le Go</td></tr>
-      <tr><td>Bosnie · Serbie</td><td><b>Zone « reste du monde » : 18,48 € le Mo</b>, soit ~18 900 € le Go. La data du forfait n'y est jamais utilisable telle quelle</td></tr>
-      <tr><td>La solution</td><td><b>Pack Séjour Europe de l'Est, 35 €</b> : <b>15 Go + 30 min + 30 SMS</b>, 30 jours, Bosnie et Serbie comprises. ✓ Pris. Facturation à la seconde et au ko</td></tr>
-      <tr><td>Garde-fou</td><td>Le blocage des usages internet hors forfait est <b>actif par défaut</b> et coupe à 60 € de dépassement. ⚠️ <b>Ne pas débloquer</b> si le SMS d'alerte arrive : à ce tarif, 60 € valent 3 Mo. Suivi de la consommation dans <b>InfoConso</b>, côté espace client</td></tr>
-      <tr><td>Les 30 min</td><td><b>La ressource fragile.</b> Rien ne bloque la voix au-delà, à 3,96 €/min, et les conditions laissent entendre qu'épuiser une enveloppe peut clore le pack. <b>WhatsApp par défaut</b> ; les minutes pour ce qui n'a pas d'alternative : taxis, réceptions, guichets</td></tr>
-      <tr><td>Secours</td><td>Une <b>eSIM Airalo Eurolink</b> couvre les deux pays. Le profil s'installe à l'avance, <b>ligne éteinte</b> : la validité ne court qu'à la première connexion sur place. Ne jamais supprimer le profil, l'installation est souvent unique</td></tr>
-    </table></div>
-
-    <h3 class="sub">Argent, les règles transverses</h3>
-    <ul class="know">
-      <li><b>Refuser le DCC, toujours.</b> Au distributeur comme au terminal, choisir la <b>monnaie locale</b>, jamais « payer en euros » : le taux se dégrade de 5 à 10 %. C'est l'économie la plus rentable du voyage, et la plus facile à oublier.</li>
-      <li><b>Deux cartes sur soi, jamais une seule.</b> La principale facture un pourcentage pur, sans frais fixe ni plafond ; la seconde est le filet si la première est avalée ou bloquée. Banque prévenue des dates, plafond de retrait au maximum.</li>
-      <li><b>Fractionner les retraits ne coûte rien</b>, puisqu'il n'y a pas de frais fixe : deux retraits de 350 valent un seul de 700. Ce qui coûte, c'est l'automate, d'où le fait de viser une vraie banque et d'éviter les Euronet.</li>
-      <li><b>Pas besoin de Revolut ni de Wise</b> pour ce trajet : leurs retraits gratuits sont plafonnés à ~200 € par mois, vite dépassés ici, pour un gain marginal.</li>
-    </ul>
-
-    <h3 class="sub">Vérifier un horaire</h3>
-    <p><b>Une page de ligne n'est pas l'offre d'une date.</b> La grille de la gare de Lukavica, celle de ŽFBH et la fiche FlixBus annonçaient chacune des horaires absents du jour voulu. Ces pages décrivent le service en général : <b>seul le moteur de réservation dit ce qui part ce jour-là, et à quel prix</b>.</p>
-    <p><b>Dans quel ordre chercher.</b> D'abord l'opérateur, seule autorité sur ses horaires. Ensuite <b>Google Maps, avec la vraie date réglée</b> : il lit les données publiées par les opérateurs, trains ŽFBH compris, arrêt par arrêt, avec le numéro de train et la voie. Il s'est montré plus juste que les guides de voyage, et c'est même la seule source qui donne l'heure de passage à Mostar. Deux signes qu'un résultat est solide : il <b>nomme l'opérateur</b> et <b>affiche un tarif</b>. Deux signes qu'il bricole : un itinéraire « 28 min à pied puis bus », ou un trajet qui change quand on change la date.</p>
-    <p><b>Ce que Maps ne sait pas :</b> les cars privés Sarajevo vers Belgrade et les petites lignes locales, où l'affichage à l'arrêt tranche. <b>Aucun temps réel dans les Balkans</b> : tout est théorique, donc garder de la marge. Sur place, la réception de l'auberge et le guichet priment sur tout. Rome2Rio et GetByBus servent à savoir qu'un trajet existe, jamais à fixer l'heure à laquelle on se présente.</p>
-    <div class="links">
-      <a class="lnk" href="https://sarajevo-airport.ba/Page/Autobus" target="_blank" rel="noopener">Bus aéroport Sarajevo ↗</a>
-      <a class="lnk" href="https://www.zfbh.ba/red-voznje/" target="_blank" rel="noopener">Trains ŽFBH ↗</a>
-      <a class="lnk" href="https://busticket4.me/centrotrans-ad" target="_blank" rel="noopener">Cars Lukavica ↗</a>
-      <a class="lnk" href="https://global.flixbus.com" target="_blank" rel="noopener">FlixBus ↗</a>
-      <a class="lnk" href="https://jegy.mav.hu/" target="_blank" rel="noopener">MÁV ↗</a>
-    </div>
-
-    <h3 class="sub">Les numéros</h3>
-    <p>En forme internationale, la seule utile sur place. À avoir dans le téléphone <b>et</b> sur papier, dans un autre sac : un téléphone volé emporte l'application de la banque avec la carte.</p>
-    <div class="tablewrap" style="max-width:560px"><table class="kv">
-      <tr><td>Urgences</td><td><b>112</b>, en Bosnie et en Serbie comme dans l'Union européenne</td></tr>
-      <tr><td>Assistance voyage</td><td><b>+33 5 49 16 36 68</b>, 24 h/24. Prise en charge directe, sans avance de frais</td></tr>
-      <tr><td>Opposition, carte principale</td><td><b>+33 9 72 72 10 10</b>, 24 h/24. Pas de ligne dédiée : c'est le numéro unique de la banque</td></tr>
-      <tr><td>Opposition, carte de secours</td><td><b>+33 9 69 39 92 91</b>, 24 h/24, à confirmer ensuite par lettre recommandée</td></tr>
-    </table></div>
-    <p style="font-size:13.5px;color:var(--muted)">Le plus rapide reste de <b>bloquer la carte dans l'application</b>, puis d'appeler pour confirmer et relever le <b>numéro d'enregistrement de l'opposition</b>, qu'on demandera pour contester des opérations. Le serveur interbancaire (+33 892 705 705) dépanne si on ne sait plus quoi appeler, mais c'est un numéro surtaxé souvent injoignable depuis un réseau étranger.</p>
-
-    <h3 class="sub">Santé et papiers</h3>
-    <ul class="know">
-      <li><b>Appeler l'assistance avant tout frais médical</b>, consultation comprise. C'est la condition de la prise en charge directe.</li>
-      <li><b>Scans des papiers</b> en trois exemplaires : un dans le cloud, un hors connexion sur le téléphone, un sur papier dans un autre sac que les originaux.</li>
       <li><b>Canicule en août</b>, 35 °C et plus à Mostar, Belgrade et Budapest : eau, visites tôt, et une sieste assumée l'après-midi.</li>
     </ul>
   </section>
 
-  <p class="foot">Plan calé, 1ᵉʳ → 18 août 2026 : Mostar, Sarajevo, Belgrade, Budapest et Sziget, Eger. <b>Les 17 nuits sont réservées.</b> Faits vérifiés sur les sources officielles et les moteurs de réservation eux-mêmes (sarajevo-airport.ba, ŽFBH, busticket4.me, FlixBus, salirisfurdo.hu, BKK, guide de voyage RED, Institut Pasteur). Restent à confirmer sur place, parce que saisonniers ou fluctuants : le passage exact du train à Mostar et les prix des thermes de Budapest.</p>
+  <p class="foot">Plan calé, 1ᵉʳ → 18 août 2026 : Mostar, Sarajevo, Belgrade, Budapest et Sziget, Eger. <b>Les 17 nuits sont réservées.</b> Ce carnet donne les grandes lignes ; les détails d'organisation vivent ailleurs.</p>
 
 </div>
 
@@ -618,23 +444,23 @@
   var entry = {name:'Sarajevo (aéroport)', sub:'✈ Vol direct Paris (Beauvais), 1er août · train/bus ~2 h → Mostar', lat:43.8246, lng:18.3315};
   var spots = [
     // day-trips depuis Mostar
-    {name:'Blagaj', sub:'Day-trip Mostar · tekija derviche + source Buna · bus/tour', lat:43.2570, lng:17.8975},
-    {name:'Cascades de Kravice', sub:'Day-trip Mostar · cascades + baignade · tour ~30-50 €', lat:43.1561, lng:17.6583},
-    {name:'Počitelj', sub:'Day-trip Mostar · village-forteresse ottoman · bus/tour', lat:43.1320, lng:17.7346},
+    {name:'Blagaj', sub:'Day-trip Mostar · tekija derviche + source Buna', lat:43.2570, lng:17.8975},
+    {name:'Cascades de Kravice', sub:'Day-trip Mostar · cascades + baignade', lat:43.1561, lng:17.6583},
+    {name:'Počitelj', sub:'Day-trip Mostar · village-forteresse ottoman', lat:43.1320, lng:17.7346},
     // day-trips depuis Sarajevo
-    {name:'Lukomir + Bjelašnica', sub:'Day-trip Sarajevo · plus haut village + canyon · tour ~50-70 €', lat:43.6408, lng:18.1783},
-    {name:'Konjic', sub:'Sur la ligne Neretva · rafting, bunker de Tito · train ~1 h', lat:43.6519, lng:17.9614},
-    {name:'Vrelo Bosne', sub:'Demi-journée depuis Sarajevo · sources de la Bosna · tram Ilidža', lat:43.8203, lng:18.2686},
-    {name:'Jajce', sub:'Day-trip Sarajevo · cascade en ville + forteresse · tour', lat:44.3406, lng:17.2706},
+    {name:'Lukomir + Bjelašnica', sub:'Day-trip Sarajevo · plus haut village + canyon', lat:43.6408, lng:18.1783},
+    {name:'Konjic', sub:'Sur la ligne Neretva · rafting, bunker de Tito', lat:43.6519, lng:17.9614},
+    {name:'Vrelo Bosne', sub:'Demi-journée depuis Sarajevo · sources de la Bosna', lat:43.8203, lng:18.2686},
+    {name:'Jajce', sub:'Day-trip Sarajevo · cascade en ville + forteresse', lat:44.3406, lng:17.2706},
     {name:'Travnik', sub:'Combiné avec Jajce · forteresse, ville d\'Ivo Andrić', lat:44.2264, lng:17.6653},
-    {name:'Višegrad', sub:'Day-trip depuis Sarajevo · pont sur la Drina (UNESCO) · ~2 h/sens', lat:43.7833, lng:19.2886},
+    {name:'Višegrad', sub:'Day-trip depuis Sarajevo · pont sur la Drina (UNESCO)', lat:43.7833, lng:19.2886},
     // Serbie
     {name:'Novi Sad', sub:'Day-trip depuis Belgrade · train Soko ~36 min', lat:45.2671, lng:19.8335},
     // day-trips depuis Budapest
     {name:'Szentendre', sub:'Day-trip Budapest · village baroque du Danube · HÉV H5 ~40 min', lat:47.6690, lng:19.0745},
-    {name:'Visegrád', sub:'Coude du Danube · citadelle + panorama · train + bac', lat:47.7899, lng:18.9814},
-    {name:'Esztergom', sub:'Coude du Danube · plus grande basilique de Hongrie · train ~1h20', lat:47.7997, lng:18.7361},
-    {name:'Eger', sub:'Escapade 15-17 (2 nuits) · vin + baroque + thermes Egerszalók · train direct ~1h53', lat:47.9026, lng:20.3772},
+    {name:'Visegrád', sub:'Coude du Danube · citadelle + panorama', lat:47.7899, lng:18.9814},
+    {name:'Esztergom', sub:'Coude du Danube · plus grande basilique de Hongrie', lat:47.7997, lng:18.7361},
+    {name:'Eger', sub:'Escapade 15-17 (2 nuits) · vin + baroque + thermes Egerszalók', lat:47.9026, lng:20.3772},
     {name:'Gödöllő', sub:'Château de Sissi · HÉV H8 ~45 min', lat:47.5977, lng:19.3599},
     {name:'Sziget', sub:'Festival sur l\'île d\'Óbuda · 11-15 août · HÉV H5', lat:47.5548, lng:19.0553}
   ];
@@ -659,10 +485,8 @@
     L.polyline([[l.a.lat, l.a.lng], [l.b.lat, l.b.lng]], opt).addTo(map);
   });
 
-  function popup(title, sub, url){
-    var h = '<span class="pc">'+title+'</span><br><span class="ps">'+sub+'</span>';
-    if(url) h += '<br><a class="pl" href="'+url+'" target="_blank" rel="noopener">Ouvrir ↗</a>';
-    return h;
+  function popup(title, sub){
+    return '<span class="pc">'+title+'</span><br><span class="ps">'+sub+'</span>';
   }
 
   var group = [];
