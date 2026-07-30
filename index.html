@@ -140,6 +140,22 @@
   #top{ position:fixed; right:20px; bottom:20px; z-index:40; width:44px; height:44px; border-radius:50%; background:var(--sea); color:#fff; border:none; font-size:18px; cursor:pointer; box-shadow:0 8px 20px -6px rgba(13,59,69,.6); opacity:0; pointer-events:none; transition:opacity .25s, transform .25s; transform:translateY(8px); }
   #top.show{ opacity:1; pointer-events:auto; transform:translateY(0); }
 
+
+  .tw{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+  table.idx{border-collapse:collapse;width:100%;font-size:14px}
+  table.idx th,table.idx td{text-align:left;padding:10px 13px;border-bottom:1px solid var(--line-soft);vertical-align:top}
+  table.idx th{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:700;background:var(--paper);white-space:nowrap}
+  table.idx tr:last-child td{border-bottom:none}
+  table.idx td:first-child{white-space:nowrap;font-variant-numeric:tabular-nums}
+  table.idx tr.mv td:first-child b{color:var(--coral)}
+  table.idx a{font-weight:600;text-decoration:none;white-space:nowrap}
+  @media(max-width:620px){
+    .tw{overflow-x:visible;border:0;border-radius:0;background:none}
+    table.idx thead{display:none}
+    table.idx tr{display:block;background:var(--card);border:1px solid var(--line);border-radius:10px;margin-bottom:9px;padding:10px 13px}
+    table.idx td{display:block;border:0;padding:2px 0}
+    table.idx td::before{content:attr(data-l) " ";font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);font-weight:700}
+  }
   @media(max-width:560px){
     .eyebrow{ letter-spacing:.1em; font-size:10.5px; }
     .maplegend{ font-size:11px; gap:7px 12px; }
@@ -226,6 +242,32 @@
       </div></div>
     </div>
     </div>
+
+    <h3 class="sub">Les dix-huit jours</h3>
+    <div class="tw"><table class="idx">
+      <thead><tr><th>Jour</th><th>Où</th><th>La journée</th></tr></thead>
+      <tbody>
+        <tr class=mv><td data-l="Jour"><b>sam 1<sup>er</sup></b> 🚌</td><td data-l="Où"><a href="#bosnie">🇧🇦 Mostar</a></td><td data-l="La journée">Beauvais → Sarajevo en avion, puis train jusqu'à Mostar</td></tr>
+        <tr><td data-l="Jour"><b>dim 2</b></td><td data-l="Où"><a href="#bosnie">🇧🇦 Mostar</a></td><td data-l="La journée">La ville et le Stari Most</td></tr>
+        <tr><td data-l="Jour"><b>lun 3</b></td><td data-l="Où"><a href="#bosnie">🇧🇦 Mostar</a></td><td data-l="La journée">Tour d'Herzégovine, 9:30 → 18:00</td></tr>
+        <tr class=mv><td data-l="Jour"><b>mar 4</b> 🚌</td><td data-l="Où"><a href="#bosnie">🇧🇦 Mostar → 🇧🇦 Sarajevo</a></td><td data-l="La journée">Train du matin, arrivée à 08:35</td></tr>
+        <tr><td data-l="Jour"><b>mer 5</b></td><td data-l="Où"><a href="#bosnie">🇧🇦 Sarajevo</a></td><td data-l="La journée">La ville et la guerre</td></tr>
+        <tr><td data-l="Jour"><b>jeu 6</b></td><td data-l="Où"><a href="#bosnie">🇧🇦 Sarajevo</a></td><td data-l="La journée">Jour d'excursion, ou la ville au calme</td></tr>
+        <tr class=mv><td data-l="Jour"><b>ven 7</b> 🚌</td><td data-l="Où"><a href="#serbie">🇧🇦 Sarajevo → 🇷🇸 Belgrade</a></td><td data-l="La journée">Bus, 8 h de route, arrivée en fin d'après-midi</td></tr>
+        <tr><td data-l="Jour"><b>sam 8</b></td><td data-l="Où"><a href="#serbie">🇷🇸 Belgrade</a></td><td data-l="La journée">La ville</td></tr>
+        <tr><td data-l="Jour"><b>dim 9</b></td><td data-l="Où"><a href="#serbie">🇷🇸 Belgrade</a></td><td data-l="La journée">La ville, ou Novi Sad</td></tr>
+        <tr class=mv><td data-l="Jour"><b>lun 10</b> 🚌</td><td data-l="Où"><a href="#hongrie">🇷🇸 Belgrade → 🇭🇺 Budapest</a></td><td data-l="La journée">Bus du matin, arrivée à 14:00</td></tr>
+        <tr><td data-l="Jour"><b>mar 11</b></td><td data-l="Où"><a href="#hongrie">🇭🇺 Budapest</a></td><td data-l="La journée">La ville</td></tr>
+        <tr class=mv><td data-l="Jour"><b>mer 12</b> 🚌</td><td data-l="Où"><a href="#hongrie">🇭🇺 Budapest → 🇭🇺 Eger</a></td><td data-l="La journée">Train direct, arrivée à 14:53</td></tr>
+        <tr><td data-l="Jour"><b>jeu 13</b></td><td data-l="Où"><a href="#hongrie">🇭🇺 Eger</a></td><td data-l="La journée">Le château, puis les thermes d'Egerszalók</td></tr>
+        <tr class=mv><td data-l="Jour"><b>ven 14</b> 🚌</td><td data-l="Où"><a href="#hongrie">🇭🇺 Eger → 🇭🇺 Budapest</a></td><td data-l="La journée">Retour en début d'après-midi</td></tr>
+        <tr><td data-l="Jour"><b>sam 15</b></td><td data-l="Où"><a href="#hongrie">🇭🇺 Budapest</a></td><td data-l="La journée">Sziget</td></tr>
+        <tr><td data-l="Jour"><b>dim 16</b></td><td data-l="Où"><a href="#hongrie">🇭🇺 Budapest</a></td><td data-l="La journée">Récupération</td></tr>
+        <tr><td data-l="Jour"><b>lun 17</b></td><td data-l="Où"><a href="#hongrie">🇭🇺 Budapest</a></td><td data-l="La journée">Thermes, ou un day-trip</td></tr>
+        <tr class=mv><td data-l="Jour"><b>mar 18</b> 🚌</td><td data-l="Où"><a href="#hongrie">🇭🇺 Budapest</a></td><td data-l="La journée">Budapest → Beauvais, puis route jusqu'à Reims</td></tr>
+      </tbody>
+    </table></div>
+    <p style="margin:10px 0 0;font-size:13px;color:var(--muted)">Les jours marqués 🚌 sont des jours de trajet.</p>
   </section>
 
   <!-- ============ BOSNIE ============ -->
