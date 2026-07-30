@@ -30,7 +30,7 @@ Zones à distinguer : **Hongrie = UE + Schengen** (CNI seule, roaming FR, CEAM v
 
 Les jours de base à Budapest restent ouverts à des day-trips (Szentendre, coude du Danube) ; rien à réserver.
 
-Pistes explorées puis écartées (Monténégro, Pologne/Cracovie, Tatras…) : `PISTES-ABANDONNEES.md` en garde le détail chiffré, le dossier complet n'en garde que la décision.
+Pistes explorées puis écartées (Monténégro, Pologne/Cracovie, Tatras…) : leur détail chiffré est archivé hors du dépôt, avec le dossier complet, qui n'en garde que la décision.
 
 ## Modifier
 
